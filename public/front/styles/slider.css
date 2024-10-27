@@ -1,0 +1,8 @@
+section .home__slider{
+    border: 3px solid red;
+    height: 200px;
+}
+section .home__slider a img{
+    width: 100%;
+    height: 100%;
+}
