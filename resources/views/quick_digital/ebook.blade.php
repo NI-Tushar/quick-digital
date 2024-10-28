@@ -7,7 +7,7 @@
                 <span class="ebook__heading">"লাভের খনি পাইকারি বাজার"</span> <br> বইটি আপনাকে টাকার খনি খুঁজে দিবে
             </h1>
             <p class="fw-semibold lh-base py-3 hero-description text-two text-center">
-                ফেসবুক, টিকটিক, ইন্সটাগ্রাম, ইউটিউব, হোয়াটসঅ্যাপ এর মাধ্যমে অসংখ্য ক্ষুদ্র ব্যবসার যাত্রা শুরু হচ্ছে
+                ফেসবুক, টিকটক, ইন্সটাগ্রাম, ইউটিউব, হোয়াটসঅ্যাপ এর মাধ্যমে অসংখ্য ক্ষুদ্র ব্যবসার যাত্রা শুরু হচ্ছে
                 প্রতিনিয়ত। আপনি কেন পিছিয়ে থাকবেন? চাকুরীর পাশাপাশি একটি সাইড ইনকাম সোর্স বর্তমান এই প্রতিযোগিতামূলক
                 জীবন যাত্রায় আপনাকে নিশ্চিন্তে আর্থিক সচ্ছলতা প্রদান করবে।
             </p>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-            <a href="{{ route('cart.checkout', ['id' => 4]) }}" class="">
+            <a href="{{ route('user_checkout', ['id' => 1]) }}" class="">
                     <button class="buy-btn btn btn-warning mt-5 px-4 py-2 rounded-5 fs-4 fw-bold text-success">
                         বইটি কিনতে চাই &rarr;
                     </button>

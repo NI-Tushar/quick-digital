@@ -190,15 +190,18 @@ class CartController extends Controller
      */
     public function checkout(Request $request, $cartId)
     {
+
+        $request->session()->put('user_book_id',$cartId);
+        $ebooks = Ebook::where('id', $cartId)->get();
+
+        return view('quick_digital.ebook_checkout', compact('ebooks'));
+
         // try {
         //     $cartDetails = cart::findOrFail($cartId);
         //     print_r($cartDetails);
         // } catch (\Throwable $th) {
         //     abort(404);
         // }
-        // print_r('e book checkout');
-        // return view('quick_digital.ebook_checkout', compact('cartDetails'));
-        return view('quick_digital.ebook_checkout');
     }
 
     /**
@@ -256,7 +259,7 @@ class CartController extends Controller
             abort(404);
         }
 
-        $cartDetails->customer_info = json_encode($customerDetails);
+        $cartDetails->customer_info = json_encode($customerDetails);    
         $cartDetails->save();
 
         // Create payment

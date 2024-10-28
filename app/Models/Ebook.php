@@ -12,4 +12,12 @@ class Ebook extends Model
     protected $casts = [
         'release_date' => 'date', 
     ];
+    
+    protected $table = 'ebooks';
+    protected $primaryKey = 'id';
 }
+
+
+  
+
+

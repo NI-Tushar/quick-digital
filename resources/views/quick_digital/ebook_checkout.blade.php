@@ -1,14 +1,15 @@
 @extends('quick_digital.layout.layout')
 @section('content')
 <main>
+    @foreach($ebooks as $ebook)
     <section class="container max-width custom-padding my-5">
-        <form action="{{ route('cart.payment') }}" method="post">@csrf
+        <form action="{{ route('cart.payment') }}" method="post">
+            @csrf
             <div class="row justify-content-center g-3">
                 <div class="col-md-8">
                     <h4 class="p-2 bg-black text-white rounded">আপনি এই পর্যন্ত এসেছেন,তারমানে আপনি একজন একশন টেকার 💪
                     </h4>
-                    <!-- <input type="hidden" name="cart_id" value="{{ $cartDetails->id }}"> -->
-                    <input type="hidden" name="cart_id" value="5">
+                    <input type="hidden" name="book_id" value="{{ $ebook->id }}">
                     <div class="px-4"  style="border: 2px solid rgb(181, 181, 181)">
                         <h4 class="px-4 my-5">আপনার অর্ডার </h4>
                         <table class="table">
@@ -20,16 +21,16 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="py-3">{{ $cartDetails->ebook_title }} </td>
-                                    <td class="py-3 text-end font_change">{{ $cartDetails->price }} ৳</td>
+                                    <td class="py-3">{{ $ebook->ebook_title }} </td>
+                                    <td class="py-3 text-end font_change">{{ $ebook->price }} ৳</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3">সাবটোটাল</td>
-                                    <td class="py-3 text-end font_change">{{ $cartDetails->price }} ৳</td>
+                                    <td class="py-3 text-end font_change">{{ $ebook->price }} ৳</td>
                                 </tr>
                                 <tr>
                                     <th class="py-3" scope="row">টোটাল</th>
-                                    <td class="py-3 text-end font_change">{{ $cartDetails->price }} ৳</td>
+                                    <td class="py-3 text-end font_change">{{ $ebook->price }} ৳</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -78,5 +79,6 @@
             </div>
         </form>
     </section>
+    @endforeach
 </main>
 @endsection

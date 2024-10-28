@@ -86,7 +86,11 @@
     });
 
 
+
 //front - user
+
+
+
 // ____________________________________________________________________ user middle ware
     Route::prefix('/user')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::match(['get', 'post'], 'login', 'UserController@loginUser')->name('user.login');
@@ -94,7 +98,6 @@
         Route::match(['get', 'post'], 'forgot-password', 'UserController@forgotPassword');
         Route::match(['get', 'post'], 'reset-password/{code?}', 'UserController@resetPassword');
         Route::middleware('user')->group(function () {
-            Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
             Route::get('index', 'UserController@index')->name('user.index');
             //  Route::match(['get','post'], '')
             Route::post('check_current_password', 'UserController@checkCurrentPassword');
@@ -104,7 +107,7 @@
         });
     });
 
-    
+
     Route::middleware('user')->group(function () {
         Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
     });
@@ -162,6 +165,7 @@
         //course
         Route::get('course-details/{id}', 'HomeController@course_details')->name('course.details');
         Route::get('all-course', 'HomeController@show_all_courses')->name('course.all');
+        Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('user_checkout');
     });
 
     //ebook
@@ -213,6 +217,18 @@
             Route::get('delete-course-category/{id?}', 'CourseController@destroyCategory');
         });
     });
+
+
+
+
+
+
+
+    // ____________________________________________________ ecommerce | single page with payment
+    Route::get('/ecommerce', function () {
+        return view('quick_digital.ecommerce');
+    });
+
 
 
 
