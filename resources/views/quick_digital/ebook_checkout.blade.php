@@ -7,7 +7,8 @@
                 <div class="col-md-8">
                     <h4 class="p-2 bg-black text-white rounded">আপনি এই পর্যন্ত এসেছেন,তারমানে আপনি একজন একশন টেকার 💪
                     </h4>
-                    <input type="hidden" name="cart_id" value="{{ $cartDetails->id }}">
+                    <!-- <input type="hidden" name="cart_id" value="{{ $cartDetails->id }}"> -->
+                    <input type="hidden" name="cart_id" value="5">
                     <div class="px-4"  style="border: 2px solid rgb(181, 181, 181)">
                         <h4 class="px-4 my-5">আপনার অর্ডার </h4>
                         <table class="table">

@@ -190,12 +190,15 @@ class CartController extends Controller
      */
     public function checkout(Request $request, $cartId)
     {
-        try {
-            $cartDetails = cart::findOrFail($cartId);
-        } catch (\Throwable $th) {
-            abort(404);
-        }
-        return view('quick_digital.ebook_checkout', compact('cartDetails'));
+        // try {
+        //     $cartDetails = cart::findOrFail($cartId);
+        //     print_r($cartDetails);
+        // } catch (\Throwable $th) {
+        //     abort(404);
+        // }
+        // print_r('e book checkout');
+        // return view('quick_digital.ebook_checkout', compact('cartDetails'));
+        return view('quick_digital.ebook_checkout');
     }
 
     /**

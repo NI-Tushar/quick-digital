@@ -13,6 +13,8 @@
         rel="stylesheet">
     <!-- index -->
     <link rel="stylesheet" href="{{ url('front/styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url('front/styles/slider.css') }}">
+    <link rel="stylesheet" href="{{ url('front/styles/banner.css') }}">
     <!-- ebook -->
     <link rel="stylesheet" href="{{ url('front/styles/ebook.css') }}">
     <!-- digital service -->

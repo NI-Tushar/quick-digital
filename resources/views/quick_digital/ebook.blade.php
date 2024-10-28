@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="/quick-digital/ebook/4" class="">
+            <a href="{{ route('cart.checkout', ['id' => 4]) }}" class="">
                     <button class="buy-btn btn btn-warning mt-5 px-4 py-2 rounded-5 fs-4 fw-bold text-success">
                         বইটি কিনতে চাই &rarr;
                     </button>

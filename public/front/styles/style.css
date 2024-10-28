@@ -149,10 +149,10 @@
     border: 1px solid black;
 }
 
-.about-descripttion {
+.about-section .about-descripttion {
     line-height: 33px;
     font-size: 18px;
-    text-align: justify;
+    text-align: left !important;
 }
 
 .about-img-element {
@@ -166,6 +166,46 @@
 .resources-section {
     background-color: #f6e3FFFC;
 }
+.resources-section  .d-flex button a{
+    color: aliceblue;
+}
+.resources-section  .d-flex button{
+    border: 1px solid var(--plyr-color-main);
+    background-color: var(--plyr-color-main);
+}
+.resources-section  .d-flex button:hover{
+    background-color:aliceblue;
+    color: black;
+    border: 1px solid var(--plyr-color-main);
+}
+.resources-section  .d-flex button:hover a{
+    color: black;
+}
+.resources-section  .button{
+    width: 100%;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+.resources-section  .button a{
+    right:15px;
+    position: absolute;
+}
+.resources-section  .button a button{
+    padding: 5px;
+    width: 100px;
+    border: 1px solid var(--plyr-color-main);
+    border-radius: 3px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+.resources-section  .button a button:hover{
+    background-color: var(--plyr-color-main);
+    color: aliceblue;
+}
+
 
 .resources-heading {
     font-size: 40px;
@@ -204,6 +244,95 @@
 .resource-link {
     color: #3A0256;
 }
+
+
+/* __________________________courses_book start */
+.courses_book{
+    height: auto;
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.courses_book .centered_div{
+    max-width: 70rem;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+}
+.courses_book .centered_div .centered_part{
+    padding: 15px;
+    width: 50%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+.courses_book .centered_div .centered_part .img{
+    width: 50%;
+    border-radius: 5px;
+    margin: auto;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+.courses_book .centered_div .centered_part .img p,
+.courses_book .centered_div .centered_part .img button{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.courses_book .centered_div .centered_part .img p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 80px;
+}
+.courses_book .centered_div .centered_part .img button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid var(--plyr-color-main);
+    border-radius: 5px;
+    font-weight: 600;
+}
+.courses_book .centered_div .centered_part img{
+    height: 300px;
+    border-radius: 5px;
+    width: 100%;
+}
+.courses_book .centered_div .centered_part .img button:hover{
+    background-color: var(--plyr-color-main);
+    color: aliceblue;
+}
+
+@media (max-width: 950px) {
+    .courses_book .centered_div{
+        display: block;
+    }
+    .courses_book .centered_div .centered_part{
+        width: 100%;
+        margin: auto;
+    }
+    /* .courses_book .centered_div .centered_part .img{
+        display: block;
+    } */
+}
+@media (max-width: 400px) {
+    .courses_book .centered_div{
+        display: block;
+    }
+    .courses_book .centered_div .centered_part{
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+    .courses_book .centered_div .centered_part .img{
+        margin: auto;
+       width: 100%;
+    }
+}
+/* __________________________courses_book end */
 
 /*---------------------------------------
 |            course section             |

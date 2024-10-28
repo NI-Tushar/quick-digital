@@ -85,13 +85,16 @@
         });
     });
 
-    //front - user
+
+//front - user
+// ____________________________________________________________________ user middle ware
     Route::prefix('/user')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::match(['get', 'post'], 'login', 'UserController@loginUser')->name('user.login');
         Route::match(['get', 'post'], 'register', 'UserController@registerUser')->name('user.register');
         Route::match(['get', 'post'], 'forgot-password', 'UserController@forgotPassword');
         Route::match(['get', 'post'], 'reset-password/{code?}', 'UserController@resetPassword');
         Route::middleware('user')->group(function () {
+            Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
             Route::get('index', 'UserController@index')->name('user.index');
             //  Route::match(['get','post'], '')
             Route::post('check_current_password', 'UserController@checkCurrentPassword');
@@ -99,6 +102,11 @@
             Route::match(['get', 'post'], 'update_user_details', 'UserController@updateUserDetails');
             Route::get('logout', 'UserController@logoutUser');
         });
+    });
+
+    
+    Route::middleware('user')->group(function () {
+        Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
     });
 
     //front- QUICK DIGITAL
@@ -158,7 +166,7 @@
 
     //ebook
     Route::get('/carts/{id}', [CartController::class, 'create'])->name('cart.create');
-    Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
+   
     Route::post('/payment', [CartController::class, 'payment'])->name('cart.payment');
     Route::get('/success', [CartController::class, 'success'])->name('payment.success');
     //subscription
@@ -205,3 +213,8 @@
             Route::get('delete-course-category/{id?}', 'CourseController@destroyCategory');
         });
     });
+
+
+
+
+

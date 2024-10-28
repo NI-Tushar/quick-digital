@@ -1,12 +1,12 @@
 @extends('quick_digital.layout.layout')
 @section('content')
 @push('css')
-<link rel="stylesheet" href="{{ url('front/styles/slider.css') }}">
+
 @endpush
 
 <main>
     @if (Session::has('error_message'))
-    <div class="alert bg-danger alert-icon-left alert-dismissible mb-2" role="alert">
+    <div class="alert  alert-icon-left alert-dismissible mb-2" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -30,15 +30,24 @@
         </ul>
     </div>
     @endif
+    
     <section class="py-2">
         <div class="home__slider">
             <div>
-                <a href="{{ url('quick-digital/courses') }}">
+                <div class="slider_text">
+                    <h1>Grow Your <span>Business</span> And <span>Skills</span> In Digital Marketing</h1>
+                    <p>Unlock growth by mastering digital marketing skills and strategies to boost your business's online presence, attract more customers, and achieve measurable results.</p>
+                    <div class="slider_buttons">
+                        <a href="#"><button class="active">View Courses</button></a>
+                        <a href="#"><button>View Services</button></a>
+                    </div>
+                </div>
+                <a href="#">
                     <img class="w-100" src="{{ asset('front/assets/images/heroimage.jpg') }}" alt="">
                 </a>
             </div>
             <!-- <div>
-                <a href="{{ url('quick-digital/ebook') }}">
+                <a href="{{ url('quick-digital/ebook') }}">~
                     <img class="w-100" src="{{ asset('front/assets/images/h_slider_2.png') }}" alt="">
                 </a>
             </div> -->
@@ -59,7 +68,36 @@
             </div> -->
         </div>
     </section>
-    <section class="hero-section">
+
+
+
+
+
+
+
+
+    <!-- __________________________________ banner start -->
+     <section>
+        <div class="banner">
+            <img src="{{ asset('front/assets/images/newmarkeing.jpg') }}" alt="">
+            <div class="button_div">
+                <div class="buttons">
+                    <a href="#"><button>Ebook</button></a>
+                    <a href="#"><button class="active">Digital Service</button></a>
+                    <a href="#"><button>Course</button></a>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- __________________________________ banner end -->
+
+
+
+
+
+
+
+    <section class="hero-section" style="display:none;">
         <div class="container hero-container d-flex flex-coloumn justify-content-center max-width py-5">
             <div class="row">
                 <div class="col-12 col-lg-6 custom-padding">
@@ -77,12 +115,12 @@
                     </p>
                     <div class="d-flex gap-5">
                         <div class="d-flex justify-content-center">
-                            <button class="border-0 rounded-1 bg-danger py-1 px-4 ">
+                            <button class="border-0 rounded-1  py-1 px-4 ">
                                 <a class="text-decoration-none text-white py-auto fw-medium btn-stylish" aria-current="page" href="{{ url('quick-digital/ebook') }}">ই-বুক</a>
                             </button>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button class="border-0 rounded-1 bg-danger py-1 px-4">
+                            <button class="border-0 rounded-1  py-1 px-4">
                                 <a class="text-decoration-none text-white py-auto fw-medium btn-stylish" aria-current="page" href="{{ url('quick-digital/courses') }}">মোবাইল ফ্রিল্যান্সিং</a>
                             </button>
                         </div>
@@ -107,66 +145,73 @@
     <section class="about-section" id="about">
         <div class="container max-width">
             <div class="row py-5 gap-5 align-items-center about-element-container">
+
+                <!-- ______________________ -->
+                <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                    <div class="about-img-element">
+                        <img class="img-fluid rounded-3" src="{{ asset('front/assets/images/about-img.jpg') }}" alt="">
+                    </div>
+                </div>
+                <!-- ______________________ -->
                 <div class="col-12 col-md-6 d-flex flex-column custom-padding">
                     <h3 class="about-heading fw-bold">
                         About Us
                         <div class="b-bottom"></div>
                     </h3>
                     <p class="about-descripttion text-center py-1">
-                        "কুইক ডিজিটাল"একটি ডিজিটাল উদ্ভাবনী প্ল্যাটফর্ম। আজকের যুবকদের গতিশীল ডিজিটাল চাহিদার জন্য আমরা সদা সচেষ্ট। কুইক ডিজিটাল হচ্ছে একটি সাম্প্রতিকতম বেস্টসেলার প্লাটফর্ম।
+                    কুইক ডিজিটাল"একটি ডিজিটাল সেবা, পন্য, এবং ট্রেনিং  প্রদানকারী প্ল্যাটফর্ম। বর্তমানে মানুষের  ডিজিটাল চাহিদার জন্য আমরা সদা সচেষ্ট।
                     </p>
                     <p class="about-descripttion text-center py-1">
-                        আমাদের ভান্ডারে আছে একটি ইউজার ফ্রেন্ডলি এবং সুবিশাল ক্যাটালগ যেখান থেকে আপনি পাবেন: ই-বুক, ডিজিটাল পণ্য এবং ফ্রিল্যান্সিং কোর্স সমূহ।
+                    আমাদের ভান্ডারে আছে  ইউজার ফ্রেন্ডলি এবং সুবিশাল ক্যাটালগ যেখান থেকে আপনি পাবেন: ই-বুক, ডিজিটাল পণ্য  বা সেবা এবং ফ্রিল্যান্সিং কোর্স সমূহ। যার মাধ্যমে আপনি ঘরে বসেই আপনার পন্য বা সেবা গ্রহন করতে পারবেন খুব সহজেই।
                     </p>
                     <p class="about-descripttion text-center py-1">
-                        বিশেষ কিছু অর্জন করতে হলে বা স্পেশাল কিছু পেতে হলে অথবা লাইভ এবং রেকর্ডকৃত ফ্রিল্যান্সিং কোর্সের মাধ্যমে নতুন দক্ষতা আয়ত্ত করা - যাই হোক না কেন, কুইক ডিজিটাল আপনাদের ডিজিটাল যাত্রা অনায়াসে ভরিয়ে তুলতে সক্ষম৷ আমরা নিরবিচ্ছিন্নভাবে সুবিধা দিয়ে থাকি এবং প্রোডাক্ট এবং সার্ভিস-এর গুণমানকে সর্বাধিক গুরুত্ব দিয়ে থাকি।
+                    "কুইক ডিজিটাল"একটি ডিজিটাল উদ্ভাবনী প্ল্যাটফর্ম। আজকের যুবকদের গতিশীল ডিজিটাল চাহিদার জন্য আমরা সদা সচেষ্ট। কুইক ডিজিটাল হচ্ছে একটি সাম্প্রতিকতম বেস্টসেলার প্লাটফর্ম।
                     </p>
-                    <p class="about-descripttion text-center py-1">
-                        আমরা, কুইক ডিজিটাল, শুধুমাত্র শিক্ষামূলক এবং ব্যবসায়িক বিষয়বস্তুর বিভিন্ন পরিসরে অ্যাক্সেসের সুবিধা দেই না বরং ডিজিটাল বিজিনেস ল্যান্ডস্কেপে উন্নতি করতে আগ্রহী শিক্ষার্থীদের এবং ব্যবসায়ীদেরকে বিভিন্ন ভাবে সহযোগিতা করে থাকি।
-                    </p>
+
                     <!-- <div class="">
-                            <button class="border-0 rounded-1 bg-danger py-2 px-4 btn-stylish">
+                            <button class="border-0 rounded-1  py-2 px-4 btn-stylish">
                                 <a class="text-decoration-none text-white py-auto fw-medium fs-5" aria-current="page" href="#">
                                     <i aria-hidden="true" class="far fa-hand-point-right"></i> Read More</a>
                             </button>
                         </div> -->
                 </div>
-                <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
-                    <div class="about-img-element">
-                        <img class="img-fluid rounded-3" src="{{ asset('front/assets/images/about-img.jpg') }}" alt="">
-                    </div>
-                </div>
+                <!-- ____________________ -->
+
             </div>
         </div>
     </section>
     <!-- resources -->
-    <section class="resources-section py-5">
+    <section class="resources-section py-5" >
+
         <div class="container max-width px-0">
             <h3 class="resources-heading text-center custom-padding">
-                আমাদের প্রোডাক্ট ও সার্ভিস সমূহ
+                <!-- আমাদের প্রোডাক্ট ও সার্ভিস সমূহ -->
+                 Our Services
                 <span class="d-flex justify-content-center">
                     <div class="b-bottom-middle"></div>
                 </span>
             </h3>
             <p class="resources-description text-center py-2 custom-padding">
-                আপনার জন্য আমরা নিয়ে এসেছি ডিজিটাল জগতের সবকিছু। যা দিয়ে এই নতুন যুগের ডিজিটাল বিজনেস গুলোকে আপনি নিয়ে যেতে পারবেন অনন্য উচ্চতায়।
-                আমাদের মোবাইল ফ্রিল্যান্সিং কোর্স গুলো শিখে আপনি উপার্জনের নতুন পন্থাগুলো সম্পর্কে জানতে পারবেন...ইনশাল্লাহ।
+                <!-- আপনার জন্য আমরা নিয়ে এসেছি ডিজিটাল জগতের সবকিছু। যা দিয়ে এই নতুন যুগের ডিজিটাল বিজনেস গুলোকে আপনি নিয়ে যেতে পারবেন অনন্য উচ্চতায়।
+                আমাদের মোবাইল ফ্রিল্যান্সিং কোর্স গুলো শিখে আপনি উপার্জনের নতুন পন্থাগুলো সম্পর্কে জানতে পারবেন...ইনশাল্লাহ। -->
             </p>
+            <div class="button"><a href="#"><button>View All</button></a></div>
             <div class="row resource-package-container">
                 <div class="col-12 col-lg-4 d-flex justify-content-center card-container p-1">
                     <div class="card shadow border-0" style="width: 22rem;">
-                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/thumb-1.jpeg') }}" alt="Card image cap">
+                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/services/S-1-01.jpg') }}" alt="Card image cap">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="d-flex flex-column justify-content-center align-items-center">
                                 <p class="card-text fs-5 text-center fw-bold">
                                     <a class="text-decoration-none resource-link" href="{{ url('quick-digital/ebook') }}">
-                                        আপনার ব্যাবসায়িক এবং পার্সোনাল ডেভেলপমেন্ট-এর জন্য আমাদের ইবুক গুলো সংগ্রহে রাখুন
+                                       হয়ে উঠুন একজন সফল গ্রাফিক্স ডিজাইনার আপনার ভালো ক্যারিয়ার এর জন্য।
                                     </a>
+                                    <!-- <p>Become a Proffesional Graphics Designer</p> -->
                                 </p>
                             </div>
                             <div class="d-flex justify-content-center my-2">
-                                <button class="border-0 rounded-1 bg-danger py-2 px-4 btn-stylish">
-                                    <a class="text-decoration-none text-white py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/ebook') }}">ই-বুক কিনুন</a>
+                                <button class="border-1 rounded-1 py-2 px-4 btn-stylish" style="width:95%;">
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/ebook') }}">Book Now</a>
                                 </button>
                             </div>
                         </div>
@@ -174,18 +219,18 @@
                 </div>
                 <div class="col-12 col-lg-4 d-flex justify-content-center card-container p-1">
                     <div class="card shadow border-0" style="width: 22rem;">
-                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/thumb-2.jpeg') }}" alt="Card image cap">
+                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/services/S-2-02.jpg') }}" alt="Card image cap">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="d-flex flex-column justify-content-center align-items-center">
                                 <p class="card-text fs-5 text-center fw-bold">
                                     <a class="text-decoration-none resource-link" href="{{ url('quick-digital/courses') }}">
-                                        ফ্রিল্যান্সিং ও ডিজিটাল জগতে আপনার ক্যারিয়ার গড়তে এবং ইনকাম শুরু করতে আমাদের কোর্স-এ ভর্তি হোন।
+                                    পেশাদার ভিডিও এডিটিং সার্ভিসের মাধ্যমে আপনার প্রোজেক্টকে আরও আকর্ষণীয় এবং প্রভাবশালী করে তুলুন।
                                     </a>
                                 </p>
                             </div>
                             <div class="d-flex justify-content-center my-2">
-                                <button class="border-0 rounded-1 bg-danger py-2 px-4 btn-stylish">
-                                    <a class="text-decoration-none text-white py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/courses') }}">কোর্স এ ভর্তি হোন</a>
+                                <button class="border-1 rounded-1  py-2 px-4 btn-stylish" style="width:95%;">
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/courses') }}">Book Now</a>
                                 </button>
                             </div>
                         </div>
@@ -193,18 +238,18 @@
                 </div>
                 <div class="col-12 col-lg-4 d-flex justify-content-center card-container p-1">
                     <div class="card shadow border-0" style="width: 22rem;">
-                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/thumb-3.jpeg') }}" alt="Card image cap">
+                        <img class="card-img-top rounded" src="{{ asset('front/assets/images/services/S-3-03.jpg') }}" alt="Card image cap">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="d-flex flex-column justify-content-center align-items-center">
                                 <p class="card-text fs-5 text-center fw-bold">
                                     <a class="text-decoration-none resource-link" href="{{ url('quick-digital/digital-products') }}">
-                                        আমাদের ডিজিটাল প্রোডাক্টগুলো ব্যবহার করুন এবং আপনার জীবনকে সহজ করুন।
+                                    পেশাদার ভিডিও কন্টেন্ট তৈরি সার্ভিসের মাধ্যমে আপনার ব্র্যান্ড বা প্রোজেক্টকে আরও আকর্ষণীয় ও প্রভাবশালী করে তুলুন।
                                     </a>
                                 </p>
                             </div>
                             <div class="d-flex justify-content-center my-2">
-                                <button class="border-0 rounded-1 bg-danger py-2 px-4 btn-stylish">
-                                    <a class="text-decoration-none text-white py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/digital-products') }}">ডিজিটাল প্রোডাক্ট কিনুন</a>
+                                <button class="border-1 rounded-1  py-2 px-4 btn-stylish" style="width:95%;">
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/digital-products') }}">Book Now</a>
                                 </button>
                             </div>
                         </div>
@@ -212,5 +257,42 @@
                 </div>
             </div>
         </div>
-</main>
+    </section>
+
+
+
+    <section class="courses_book">
+        <div class="centered_div">
+            <div class="centered_part">
+                <div class="img">
+                    <img src="{{ asset('front/assets/images/courses/fb_marketing.png') }}" alt="">
+                    <p>ফেসবুক মার্কেটিংয়ের কার্যকরী কৌশল শিখে আপনার ব্যবসা বা ব্র্যান্ডকে নতুন উচ্চতায় নিয়ে যান।</p>
+                    <a href=""><button>Book Now</button></a>
+                </div>
+                <div class="img">
+                    <img src="{{ asset('front/assets/images/courses/thumnail.jpg') }}" alt="">
+                    <p>থাম্বনেল ডিজাইন কৌশল শিখে আপনার কনটেন্টকে আকর্ষণীয় ও নজরকাড়া করুন।</p>
+                    <a href=""><button>Book Now</button></a>
+                </div>
+            </div>
+            <div class="centered_part">
+                <div class="img">
+                    <img src="{{ asset('front/assets/images/courses/book1.png') }}" alt="">
+                    <p>লাভের খনি পাইকারি বাজার" বইটি আপনাকে টাকার খনি খুঁজে দিবে</p>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+                <div class="img">
+                    <img src="{{ asset('front/assets/images/courses/book2.jpeg') }}" alt="">
+                    <p>এই বইটি পড়ে আপনি ১০০ টি সফল অনলাইন ব্যবসার আইডিয়া পাবেন</p>
+                    <a href=""><button>Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    </main>
 @endsection
