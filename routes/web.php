@@ -2,6 +2,7 @@
 
     use App\Http\Controllers\Admin\InstructorRequestController;
     use App\Http\Controllers\CartController;
+    use App\Http\Controllers\PaymentController;
     use App\Http\Controllers\Front\HomeController;
     use App\Http\Controllers\PDFController;
     use Illuminate\Support\Facades\Route;
@@ -184,7 +185,7 @@
     Route::post('/product/payment', [CartController::class, 'payment_product'])->name('cart.product.payment');
     Route::get('/product/success', [CartController::class, 'product_payment_success'])->name('product.payment.success');
 
-
+    
     Route::get('/cancel-fail', [CartController::class, 'fail'])->name('payment.cancel.fail');
 
     Route::get('/admin/errors/error_403', function () {
@@ -226,7 +227,13 @@
 
     // ____________________________________________________ ecommerce | single page with payment
     Route::get('/ecommerce', function () {
-        return view('quick_digital.ecommerce');
+        return view('ecommerce.ecommerce_site');
+    });
+    Route::post('/payment/user', [PaymentController::class, 'payment'])->name('quick.payment');
+
+    Route::get('/payment/success', function () {
+        print_r('success');
+        // return view('ecommerce.ecommerce_site');
     });
 
 

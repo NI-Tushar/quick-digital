@@ -2,6 +2,7 @@
     height: auto;
     width: 100%;
     position: relative;
+    color:rgba(0, 0, 0, 0.624);
 }
 .banner img{
     width: 100%; /* Make the image width responsive to its container */

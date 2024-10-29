@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76e37f84d22997dfab18cbb750eaa9c0",
+    "content-hash": "9a97f241e9762ae857e27cd2e59d76e8",
     "packages": [
         {
             "name": "brick/math",
@@ -3271,6 +3271,98 @@
                 }
             ],
             "time": "2024-09-02T10:17:15+00:00"
+        },
+        {
+            "name": "shurjomukhi/shurjopay-plugin-php",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shurjopay-plugins/sp-plugin-php.git",
+                "reference": "c2e19b20b6bc409911f2bcbc92adb76aefa2c337"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shurjopay-plugins/sp-plugin-php/zipball/c2e19b20b6bc409911f2bcbc92adb76aefa2c337",
+                "reference": "c2e19b20b6bc409911f2bcbc92adb76aefa2c337",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ShurjopayPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shurjomukhi Plugin Devs",
+                    "email": "plugindev@shurjomukhi.com.bd"
+                },
+                {
+                    "name": "Md Wali Mosnad Ayshik",
+                    "email": "ayshik.wali@shurjomukhisolutions.com.bd",
+                    "role": "Software Engineer"
+                },
+                {
+                    "name": "Rayhan Khan Ridoy",
+                    "email": "redoy@shurjomukhisolutions.com.bd",
+                    "role": "Software Engineer"
+                }
+            ],
+            "description": "shurjoPay is a online payment gateway and easy payment solution",
+            "keywords": [
+                "codeigniter",
+                "laravel",
+                "payment-gateway",
+                "payments",
+                "php",
+                "shurjomukhi",
+                "shurjopay",
+                "shurjopay-plugin",
+                "symphony"
+            ],
+            "support": {
+                "issues": "https://github.com/shurjopay-plugins/sp-plugin-php/issues",
+                "source": "https://github.com/shurjopay-plugins/sp-plugin-php/tree/v0.1.1"
+            },
+            "time": "2023-01-27T13:15:08+00:00"
+        },
+        {
+            "name": "smukhidev/shurjopay-laravel-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smukhidev/shurjopay-laravel-package.git",
+                "reference": "f084769fb30c4f6e1754cecb56d08794ed6fea6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smukhidev/shurjopay-laravel-package/zipball/f084769fb30c4f6e1754cecb56d08794ed6fea6c",
+                "reference": "f084769fb30c4f6e1754cecb56d08794ed6fea6c",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ShurjopayLaravelPackage\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Sanaullah Asif",
+                    "email": "shurjopay@shurjomukhi.com.bd"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/smukhidev/shurjopay-laravel-package/issues",
+                "source": "https://github.com/smukhidev/shurjopay-laravel-package/tree/master"
+            },
+            "time": "2021-10-17T10:13:35+00:00"
         },
         {
             "name": "symfony/clock",
@@ -8363,12 +8455,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "smukhidev/shurjopay-laravel-package": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

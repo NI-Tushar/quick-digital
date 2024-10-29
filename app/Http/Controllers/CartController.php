@@ -35,6 +35,7 @@ class CartController extends Controller
         $this->url = env('API_URL');
         $this->storeUser = env('STORE_USER');
         $this->password = env('STORE_PASSWORD');
+        $this->prefix = env('MERCHANT_KEY_PREFIX');
 
         // dd($this->url);
     }

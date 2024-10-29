@@ -10,6 +10,8 @@
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "setasign/fpdi": "^2.6",
+        "shurjomukhi/shurjopay-plugin-php": "^0.1.1",
+        "smukhidev/shurjopay-laravel-package": "@dev",
         "tecnickcom/tcpdf": "^6.7"
     },
     "require-dev": {
