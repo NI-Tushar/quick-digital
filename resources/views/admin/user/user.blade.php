@@ -30,7 +30,7 @@
             <section id="column">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card">hp
                             <div class="card-header">
                                 @if ($showAddButton && ($usersModule['edit_access'] == 1 || $usersModule['full_access'] == 1))
                                 <a href="{{ url('admin/add-edit-user') }}">

@@ -2,70 +2,55 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
-use App\Models\CartProducts;
-use App\Models\CartSubscription;
-use App\Models\Ebook;
-use App\Models\Order;
-use App\Models\OrderProducts;
-use App\Models\OrderStatus;
-use App\Models\OrderStatusProduct;
-use App\Models\OrderSubscription;
-use App\Models\Products;
-use App\Models\Subscription;
-use App\Models\User;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Redirect;
-
-use Shurjomukhi\ShurjopayLaravelPlugin\Http\Controllers\Shurjopay;
-use Shurjomukhi\ShurjopayLaravelPlugin\Http\Controllers\TransactionClasses\PaymentRequest;
+use Raziul\Shurjopay\Facades\Shurjopay;
 
 class PaymentController extends Controller
 {
     public function payment(Request $request)
     {
-        $request->validate(
-            [
-                'name'=> 'required|max:100',
-                'address'=> 'required',
-                'phone'=> 'required',
-                'email'=> 'required',
-                'amount'=> 'required',
-                ]
-            );
-            
-            $name = $request['name'];
-            $address = $request['address'];
-            $phone = $request['phone'];
-            $email = $request['email'];
-            $amount = $request['amount'];
-            
-            // dd($request->all());
 
+        // Generate a unique order ID
+        $orderId = uniqid('order_', true);
 
-            $requestArray = array($request->all());
-            $request = new PaymentRequest($requestArray);
-            $shurjopay_service = new Shurjopay();
-            return $shurjopay_service->makePayment($request);
+        // Prepare data for the payment
+        $data = [
+            'currency' => "BDT",
+            'amount' => '550',
+            'order_id' => $orderId,
+            'customer_name' => 'customer name', 
+            'customer_address' => 'address',
+            'customer_phone' => '01777608508',
+            'customer_email' => 'demomail@gmail.com',
+            'customer_city' => 'dhaka',
+        ];
 
-            // $shurjopay_service = new ShurjopayService();
-            // $tx_id = $shurjopay_service->generateTxId();
-            // $success_route = route('/payment/success');
+        // Set the callback URLs
+        $success_url = route('payment.successfull'); // Ensure this route exists
+        $cancel_url = route('payment.cancel');   // Ensure this route exists
 
-            // $data=array(
-            //     'currency'=>"BTD",
-            //     'amount'=>$request['amount'],
-            //     'order_id'=>"lfhnjfurhgdhjf",
-            //     'name'=>$request['name'],
-            //     'address'=>$request['address'],
-            //     'phone'=> $request['phone'],
-            //     'email'=> $request['email']
-            // );
+        if(Shurjopay::setCallbackUrl($success_url, $cancel_url)){
+            Shurjopay::setCallbackUrl($success_url, $cancel_url)->makePayment($data);
+        }else{
+            print_r('not');
+        }
 
-            // $shurjopay_service->sendPayment($data, $success_route);
+        // Set callback URLs and make payment
+        // try {
+        //     Shurjopay::setCallbackUrl($successUrl, $cancelUrl)->makePayment($data);
+        // } catch (\Exception $e) {
+        //     return $e->getMessage();
+        // }
     }
 
+    public function success(Request $request)
+    {
+        print_r('success');
+        // return response()->json(['message' => 'Payment successful']);
+    }
+
+    public function cancel(Request $request)
+    {
+        return response()->json(['message' => 'Payment canceled']);
+    }
 }

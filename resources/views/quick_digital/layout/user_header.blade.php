@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand w-25" href="{{ url('quick-digital/index') }}">
-                    <img class="py-2" height="auto" width="80%" src="{{ asset('front/assets/images/logo.png') }}" alt="">
+                    <img class="py-2" height="auto" width="80%" src="{{ asset('front/assets/images/primary_logo2.png') }}" alt="">
                 </a>
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,11 +24,6 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item fw-semibold px-md-2 nav-link" href="{{ url('quick-digital/ebook-list') }}">
-                                            সকল ইবুক
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a class="dropdown-item fw-semibold px-md-2 nav-link" href="{{ url('quick-digital/ebook') }}">
                                             লাভের খনি পাইকারি বাজার
                                         </a>
@@ -41,6 +36,11 @@
                                     <li>
                                         <a class="dropdown-item fw-semibold px-md-2 nav-link" href="{{ url('quick-digital/100-business-idea') }}">
                                             <span class="font_change">১০০</span> টা ব্যবসার আইডিয়া
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item fw-semibold px-md-2 nav-link" href="{{ url('quick-digital/ebook-list') }}">
+                                            সকল ইবুক
                                         </a>
                                     </li>
                                 </ul>

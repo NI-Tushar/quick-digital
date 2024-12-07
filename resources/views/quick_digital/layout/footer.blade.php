@@ -6,30 +6,30 @@
                     <img class="footer-logo" src="{{ asset('front/assets/images/primary_logo2.png') }}" alt="logo">
                 </div>
                 <p class="footer-text py-3">
-                    For any query please call Or SMS to this number
+                    যে কোনো প্রশ্ন বা কোনো তথ্য জানতে আমাদের কল কিংবা এসএমএস করুন এই নম্বরে
                     <span style="color: #ffffff;">
-                        <a class="text-decoration-none" style="color: #ffffff;" href="tel:01973784959">01973784959</a>
-                    </span>(10AM – 10PM)
-                    OR send email to this address
+                        <a class="text-decoration-none" style="color: #ffffff;" href="tel:01973784959">০১৯৭৩৭৮৪৯৫৯</a>
+                    </span>(সকাল ১০টা – রাত ১০টা)
+                    অথবা ইমেইল করুন এই এড্রেসে 
                     <span style="color: #ffffff;">
                         <a class="text-decoration-none" style="color: #ffffff;" href="mailto:quickdigital121@gmail.com">quickdigital121@gmail.com</a>
                     </span>
                 </p>
             </div>
             <div class="col-12 col-lg-3 footer-elements">
-                <h5 class="text-white fs-4 text-start">Company</h5>
+                <h5 class="text-white fs-4 text-start">কোম্পানি</h5>
                 <div class="pt-2">
                     <a class="text-decoration-none footer-link" href="/#about">
-                        About Us
+                         আমাদের সম্পর্কে
                     </a>
                     <a class="text-decoration-none footer-link" href="{{ url('quick-digital/privacy-policy') }}">
-                        Privacy Policy
+                        প্রাইভেসি পলিসি 
                     </a>
                     <a class="text-decoration-none footer-link" href="{{ url('quick-digital/terms-condition') }}">
-                        Terms Of Use
+                        ব্যবহার শর্তাবলী
                     </a>
                     <a class="text-decoration-none footer-link" href="{{ url('quick-digital/refund-policy') }}">
-                        Refund Policy
+                        রিফান্ড শর্তাবলী
                     </a>
                 </div>
             </div>
@@ -40,17 +40,17 @@
                 </div>
             </div>
             <div class="col-12 col-lg-3 footer-elements">
-                <h5 class="text-white fs-4 text-start">Our Address</h5>
+                <h5 class="text-white fs-4 text-start">আমাদের ঠিকানা</h5>
                 <p class="footer-text pt-2">
-                    Address: Baridhara DOHS, Dhaka, 1206<br>Mobile No:
+                    ঠিকানা: বারিধারা ডি.ও.এইচ.এস, ঢাকা, ১২০৬<br>মোবাইল নম্বর:
                     <span style="color: #ffffff;">
-                        <a class="text-decoration-none" style="color: #ffffff;" href="tel:01973784959">01973784959</a>
+                        <a class="text-decoration-none" style="color: #ffffff;" href="tel:01973784959">০১৯৭৩৭৮৪৯৫৯</a>
                     </span><br>
-                    Email:
+                    ইমেইল:
                     <span style="color: #ffffff;">
                         <a class="text-decoration-none" style="color: #ffffff;" href="mailto:quickdigital121@gmail.com">quickdigital121@gmail.com</a>
                     </span><br>
-                    Website:
+                    ওয়েবসাইট:
                     <span style="color: #ffffff;">
                         <a class="text-decoration-none" style="color: #ffffff;" href="https://www.quickdigital.online">www.quickdigital.online</a>
                     </span>
@@ -58,11 +58,11 @@
             </div>
         </div>
         <hr class="py-3">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-6 d-flex gap-5 social-links-top-left">
-                <div class="text-center">
-                    <p class="text-control-6 fw-medium">
-                        Copyright &copy; - Quick Digital - All Rights Reserved.
+        <div class="row justify-content-between" style="text-align:center;width:100%;">
+            <div class="col-12 col-md-6 d-flex gap-5 social-links-top-left" style="text-align:center;width:100%;">
+                <div class="text-center" style="text-align:center;width:100%;">
+                    <p class="text-control-6 fw-medium" style="text-align:center;width:100%;">
+                        Copyright &copy; 2024 - Quick Digital - All Rights Reserved.
                     </p>
                 </div>
             </div>

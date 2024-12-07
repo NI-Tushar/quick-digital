@@ -1,0 +1,94 @@
+/* __________________________________ top bar start */
+.sticky_bar{
+    width: 100%;
+    height:auto;
+    position:fixed; 
+    top:0;
+    left:0;
+    z-index:1000;
+    background-color:white;
+    box-shadow: 0px 15px 10px -15px #111;    
+}
+.sticky_bar>div{
+    width: 100%;
+}
+.sticky_bar .bg-first .container{
+    width: 100%;
+    padding: 5px;
+}
+.sticky_bar .top-contacts{
+    display: flex;
+}
+.sticky_bar .top-contacts>div{
+    display: flex;
+}
+.sticky_bar .top-contacts .mail_num{
+    width: 90%;
+}
+.sticky_bar .top-contacts .user_part{
+    width: 10%;
+}
+.sticky_bar .top-contacts .user_part>div{
+    width: 100%;
+}
+.sticky_bar .top-contacts div a{
+    display: flex;
+    float: right;
+    color: aliceblue;
+    width: fit-content;
+    text-decoration:none;
+}
+
+.sticky_bar .top-contacts .mail_num a{
+    margin-right: 10px;
+    display: flex;
+}
+.sticky_bar .top-contacts .mail_num a svg{
+    margin: auto;
+    margin-right: 5px;
+}
+.sticky_bar .top-contacts .user_part>div a span{
+    color: aliceblue;
+    width: 100%;
+    text-align: right;
+}
+.sticky_bar .top-contacts>div a{
+    display: flex;
+}
+
+
+@media (max-width: 995px) {
+    .sticky_bar .max-width .custom-padding{
+        padding: 0px;
+    }
+    .top-contacts{
+        display: flex !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .sticky_bar .top-contacts .mail_num .phone_number{
+        display: none;
+    }
+}
+/* __________________________________ top bar end */
+
+
+
+
+
+
+
+
+
+/* __________________________________ Header bar start */
+.header_bar  .navbar a{
+    padding-top:0px; 
+    padding-bottom:0px;
+}
+
+.header_bar  .navbar a img{
+    height:100%;
+    max-width:100%;
+}
+/* __________________________________ Header bar end */

@@ -5,6 +5,8 @@
     use App\Http\Controllers\PaymentController;
     use App\Http\Controllers\Front\HomeController;
     use App\Http\Controllers\PDFController;
+    use App\Http\Controllers\CheckoutController;
+    use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
 
     Route::get('/', function () {
@@ -87,9 +89,7 @@
     });
 
 
-
 //front - user
-
 
 
 // ____________________________________________________________________ user middle ware
@@ -113,6 +113,7 @@
         Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
     });
 
+    
     //front- QUICK DIGITAL
     Route::prefix('/quick-digital')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::get('index', 'HomeController@index')->name('quick-digital.index');
@@ -224,20 +225,38 @@
 
 
 
+    //_______________________ SSLCOMMERZ Start
+    Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+    Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+    Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+    Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+    Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+    Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+    Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+    Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+    ////_______________________SSLCOMMERZ END
+
+
+
 
     // ____________________________________________________ ecommerce | single page with payment
     Route::get('/ecommerce', function () {
         return view('ecommerce.ecommerce_site');
     });
     Route::post('/payment/user', [PaymentController::class, 'payment'])->name('quick.payment');
-
-    Route::get('/payment/success', function () {
-        print_r('success');
-        // return view('ecommerce.ecommerce_site');
-    });
-
-
+    
+    
+    Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.successfull');
+    Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+    
 
 
 
-
+    // ______________________________________________________________
+    // Route::get('/checkout_form', function () {
+    //     return view('ecommerce.checkout');
+    // });
+    // Route::post('/checkout', [CheckoutController::class, 'processCheckout']);

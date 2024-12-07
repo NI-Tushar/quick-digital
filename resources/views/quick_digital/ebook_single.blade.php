@@ -6,7 +6,7 @@
                 <div class="col-12 col-md-5 d-flex justify-content-center">
                     <img class="card_img_top"
                         src="{{ $ebook->cover_image ? asset($ebook->cover_image) : asset('no_image.jpg') }}"
-                        alt="{{ $ebook->title }}">
+                        alt="{{ $ebook->title }}" style="width:350px;">
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="px-4">
@@ -42,14 +42,14 @@
         </section>
         <section class="container max-width custom-padding mb-5">
             <h4 class="fw-bold border-bottom border-2 pb-3 mb-3">অন্যান্য ই-বুক</h4>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 ">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 justify-content-center">
                 @foreach($ebooks as $book)
                 @if ($book != $ebook)
                 <div class="col d-flex justify-content-center mx-1">
                     <div class="d-flex flex-column justify-content-between gap-3 gap-md-0 pt-0 ebook__list__card">
                         <a href="{{ url('quick-digital/ebook/' . $book->id) }}" class="overflow-hidden">
-                            <img class="img-fluid rounded-top-3 ebook__list__img w-100"
-                                src="{{ asset($book->cover_image ? $book->cover_image : 'front/assets/images/no_image.jpg') }}" alt="{{ $book->title }}">
+                            <img class="img-fluid rounded-top-3 ebook__list__img"
+                                src="{{ asset($book->cover_image ? $book->cover_image : 'front/assets/images/no_image.jpg') }}" alt="{{ $book->title }}" style="width:300px;height:500px;">
                         </a>
                         <a href="{{ url('quick-digital/ebook/' . $book->id) }}"
                             class="text-decoration-none text-dark py-2">

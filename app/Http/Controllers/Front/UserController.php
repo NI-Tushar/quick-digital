@@ -72,11 +72,11 @@ class UserController extends Controller
             ];
 
             $customMessages = [
-                'name.required' => 'Name is required',
-                'mobile.required' => 'মোবাইল নম্বর খালি রাখা যাবে না',
+                'name.required' => 'নাম লিখুন',
+                'mobile.required' => 'মোবাইল নম্বর লিখুন',
                 'mobile.numeric' => 'মোবাইল নম্বর অবশ্যই সংখ্যামূলক হতে হবে।',
                 'mobile.digits' => 'মোবাইল নম্বর ১১ টি সংখ্যা হতে হবে',
-                'email.required' => 'Email is required',
+                'email.required' => 'ইমেইল লিখুন',
                 'email.email' => 'Invalid email format',
                 'email.unique' => 'Email is already taken',
                 'password.required' => 'Password is required',

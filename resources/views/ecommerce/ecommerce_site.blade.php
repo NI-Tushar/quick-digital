@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>E-Commerce Website | Online Business | QuickDigital</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Development | QuickDigital</title>
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <link rel="stylesheet" href="{{ asset('Frontend/assets/css/ecommerce_site.css')}}">
-
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            
+            <link rel="stylesheet" href="{{ asset('Frontend/assets/css/ecommerce_site.css')}}">
 </head>
+
+
+
+
 <style>
 
 :root {
@@ -242,11 +243,14 @@ body{
 
 </style>
 
-<body class="bg-Light">
 
 
 
-<section class="banner">
+
+<body>
+
+
+<section class="banner" style="display:none">
     <div class="stacked_banner">
         <div class="banner_items">
 
@@ -254,40 +258,40 @@ body{
                 <img class="bg_img" src="https://themefisher.com/blog/flipmart.webp" alt="">
                 <img class="fg_img" src="https://themefisher.com/blog/flipmart.webp" alt="">
                 <div class="item_desc">
-                    <p>Lorem ipsum dolor sit, amet conelit. Deleniti,</p>
-                    <a href="#"><button>এখনই কিনুন</button></a>
+                    <p>আপনার ব্যবসার জটিলতা দূর করার সহজ উপায়</p>
+                    <a href="#checkout_section"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
             <div class="banner_item" onclick="toggleEffect(this)">
                 <img class="bg_img" src="https://themefisher.com/blog/flatastic.webp" alt="">
                 <img class="fg_img" src="https://themefisher.com/blog/flatastic.webp" alt="">
                 <div class="item_desc">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipidem quasi</p>
-                    <a href="#"><button>এখনই কিনুন</button></a>
+                    <p>সম্পূর্ণ প্রস্তুত ই-কমার্স ওয়েবসাইট</p>
+                    <a href="#checkout_section"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
             <div class="banner_item" onclick="toggleEffect(this)">
                 <img class="bg_img" src="https://themewagon.com/wp-content/uploads/2022/03/image-3-1.png" alt="">
                 <img class="fg_img" src="https://themewagon.com/wp-content/uploads/2022/03/image-3-1.png" alt="">
                 <div class="item_desc">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicin</p>
-                    <a href="#"><button>এখনই কিনুন</button></a>
+                    <p>সহজে পরিচালনা যোগ্য ই-কমার্স ওয়েবসাইট</p>
+                    <a href="#checkout_section"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
             <div class="banner_item" onclick="toggleEffect(this)">
                 <img class="bg_img" src="https://codescandy.com/wp-content/uploads/2023/01/FreshCart-Bootstrap-5-E-commerce-Template.jpg" alt="">
                 <img class="fg_img" src="https://codescandy.com/wp-content/uploads/2023/01/FreshCart-Bootstrap-5-E-commerce-Template.jpg" alt="">
                 <div class="item_desc">
-                    <p>Lorem ipsum dolor sit, ameting elit. Deleniti,</p>
-                    <a href="#"><button>এখনই কিনুন</button></a>
+                    <p>অনলাইন মার্কেটপ্লেসের জন্য সম্পূর্ণ রেডি ই-কমার্স সাইট!</p>
+                    <a href="#checkout_section"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
             <div class="banner_item" onclick="toggleEffect(this)">
                 <img class="bg_img" src="https://themewagon.com/wp-content/uploads/2022/05/screencapture-technext-github-io-farmfresh-product-html-2022-05-15-16_28_02-1.png" alt="">
                 <img class="fg_img" src="https://themewagon.com/wp-content/uploads/2022/05/screencapture-technext-github-io-farmfresh-product-html-2022-05-15-16_28_02-1.png" alt="">
                 <div class="item_desc">
-                    <p>Lorem ipsum dolor sit, amet consecteb quidem quasi</p>
-                    <a href="#"><button>এখনই কিনুন</button></a>
+                    <p>শুরু করুন অনলাইন ব্যবসা, কিনুন একটি তৈরি ই-কমার্স ওয়েবসাইট।</p>
+                    <a href="#checkout_section"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
 
@@ -308,11 +312,13 @@ body{
 
     <header class="container">
         <div class="mx-auto py-3 text-center">
-            <h3 class="p-2">আপনার ব্যাবসার জটিলতার সহজ সমাধান</h3>
+            <h3 class="p-2 bg_color color_white">আপনার ব্যবসার জটিলতার সহজ সমাধান</h3>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item youtube w-100 mh-100 d-inline-block rounded" style="height: 700px"
-                    src="{{ asset('front/assets/vid/ecommerce_video.mp4') }}">
-                </iframe>
+            <video class="embed-responsive-item youtube  mh-100 d-inline-block rounded" style="height: 700px;width:auto;" controls>
+                <source src="{{ asset('front/assets/vid/ecommerce_video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
             </div>
             <h3 class="p-2 text-black h-5">
             প্রযুক্তির সাহায্যে ব্যবসা বাড়ান! আমাদের ই-কমার্স সাইটের মাধ্যমে আপনার পণ্য বিক্রি শুরু করুন!
@@ -329,9 +335,8 @@ body{
     <section class="bg_dim_color w-100 p-5">
         <div class="accordion dark-accordion bg_color container py-5" id="simpleaccordion">
             <h4 class="h4 text-center text-white">
-                নীচের প্রশ্নগুলো আমরা প্রতিনিয়ত পেয়ে থাকি। আশা করি এর মধ্যে
-                আপনি আপনার প্রশ্নের উত্তর পেয়ে যাবেন এবং আমাদের তেলের
-                সম্পর্কে বিস্তারিত জানতে পারবেন...
+            কেন আমাদের কাছ থেকে আপনি আপনার অনলাইন ব্যবসার জন্য একটি ই-কমার্স ওয়েবসাইট কিনবেন? 
+            আপনার ব্যবসার প্রসার কিংবা অধিক লাভের জন্য একটি ই-কমার্স ওয়েবসাইট কেন দরকার?
             </h4>
             <!-- Section 1 -->
             <div class="accordion-item bg_color border-0 border-bottom">
@@ -339,12 +344,14 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
-                        খরচের সাশ্রয়  
+                        সাশ্রয়ী খরচে ব্যবসা পরিচালনা 
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseOne">
                     <div class="accordion-body text-white">
-                    ফিজিক্যাল শপের তুলনায়, ই-কমার্স সাইটে আপনার খরচ কমে যায়। আপনি ভাড়া, ইউটিলিটি বিল এবং অন্যান্য খরচ বাঁচাতে পারেন, যা আপনার লাভজনকতা বাড়ায়।
+                    ফিজিক্যাল শপের তুলনায়, ই-কমার্স সাইটে আপনার খরচ কমে যায়। আপনি ভাড়া, ইউটিলিটি বিল এবং অন্যান্য খরচ বাঁচাতে পারেন,
+                     যা আপনার লাভজনকতা বাড়ায়। ই-কমার্স ব্যবসা পরিচালনায় স্টোর রেন্ট, স্টাফ খরচ ইত্যাদি কমানোর সুবিধা থাকে। শুধু একটি
+                     ওয়েবসাইট পরিচালনা করেই আপনি গ্রাহকদের কাছে পৌঁছাতে পারেন, ফলে অপারেশনাল খরচ কম হয় এবং লাভের পরিমাণ বাড়ে।
                     </div>
                 </div>
             </div>
@@ -371,23 +378,13 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                         aria-controls="collapseThree">
-                        আমার প্রচুর চুল পড়ছে। আমার কি চুল পড়া কম হবে কিংবা
-                        নতুন চুল গজাবে?
+                        ব্যবসার বিস্তার / প্রসার
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseThree">
                     <div class="accordion-body text-white">
-                        চুল পড়ার বিভিন্ন কারণ থাকতে পারে। কারও বংশগত কারণে
-                        হয় কারও বা আবার প্রোটিনের অভাবে। আসলে চুল পড়া শুরু
-                        হওয়ার আগে আমরা খুব কম মানুষই চুলের যত্ন নিই। কিন্তু
-                        সময় থাকতে আপনি সঠিকভাবে যত্ন নিলে আপনি একদম টাক হয়ে
-                        যাওয়া থেকে রক্ষা পাবেন। চুলের জন্য উপকারী প্রায় ৩০
-                        টি প্রাকৃতিক উপাদানে তৈরি আমার তেলটি ব্যবহারে চুল
-                        পড়া কমবে, নতুন চুল গজাবে, চুল লম্বা ও ঘন হবে, চুল
-                        সিল্কি, শাইনি এবং কালো হবে, খুশকি থাকলে সেটাও কমে
-                        যাবে, তেলটি ব্যবহারের অল্প কিছুদিনের মধ্যেই আপনি
-                        পরিবর্তন টা বুঝতে পারবেন। মোটকথা চুলের যেকোনো
-                        সমস্যার সমাধান আমার এই ন্যাচারাল হেয়ার অয়েল।
+                    ই-কমার্স ওয়েবসাইট আপনাকে দেশের গণ্ডি ছাড়িয়ে আন্তর্জাতিক পর্যায়ে পৌঁছাতে সাহায্য করে। অনলাইনে পণ্য বা সেবা প্রদর্শনের মাধ্যমে বিভিন্ন 
+                    স্থানের গ্রাহকদের কাছে সহজেই পৌঁছানো যায়। এটি ব্যবসার বিস্তৃতির জন্য অত্যন্ত গুরুত্বপূর্ণ।
                     </div>
                 </div>
             </div>
@@ -398,18 +395,13 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                         aria-controls="collapseFour">
-                        আমার চুল অকালে পেকে যাচ্ছে। এই তেল কি আমার চুল কালো
-                        করবে?
+                        গ্রাহকের চাহিদা পূরণ
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseFour">
                     <div class="accordion-body text-white">
-                        অকালে চুল পেকে যাওয়া চুলের জন্য খুব খারাপ লক্ষণ। এর
-                        মানে আপনার চুলের স্বাস্থ্য ভালো নেই কিংবা প্রোটিনের
-                        অভাব। সময় থাকতে সঠিক ভাবে যত্ন না নিলে সামনে আরও
-                        ক্ষতি হবে। আমার তেলটি প্রাকৃতিক ভাবে আপনার চুলকে
-                        কালো করবে শতভাগ। বহু মানুষের অকাল পক্কতার সমাধান
-                        করছে আমার প্রাকৃতিক তেলটি।
+                    ই-কমার্সের মাধ্যমে ২৪/৭ সেবা প্রদান করা সম্ভব হয়। গ্রাহক যে কোনো সময় তাদের প্রয়োজনীয়
+                     পণ্য বা সেবা ক্রয় করতে পারে, যা গ্রাহক সন্তুষ্টির জন্য একটি বড় প্লাস পয়েন্ট।
                     </div>
                 </div>
             </div>
@@ -420,14 +412,13 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                         aria-controls="collapseFive">
-                        আমার খুশকির সমস্যা আছে। এই তেল কি খুশকি দূর করবে?
+                        স্বয়ংক্রিয়করণ এবং ডেটা/তথ্য বিশ্লেষণ
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseFive">
                     <div class="accordion-body text-white">
-                        খুশকি হওয়া চুল পড়ে যাওয়ার প্রধান কারণ। আমার এই তেল
-                        নিয়মিত ব্যবহারে খুশকি শতভাগ দূর হবে এবং আপনার চুল
-                        পড়ে যাওয়া থেকে রক্ষা পাবে।
+                    ই-কমার্স ওয়েবসাইটের মাধ্যমে আপনি গ্রাহকের কেনাকাটার অভ্যাস, তাদের পছন্দ এবং আগ্রহ সম্পর্কে সহজেই 
+                    তথ্য সংগ্রহ করতে পারেন। এই ডেটা ব্যবহার করে বাজার বিশ্লেষণ এবং বিজ্ঞাপন পরিকল্পনা করা সহজ হয়।
                     </div>
                 </div>
             </div>
@@ -438,15 +429,13 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
                         aria-controls="collapseSix">
-                        কি কি উপদান দিয়ে তৈরি?
+                        ব্র্যান্ড আপনার কোম্পানির পরিচিতি বৃদ্ধি
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseSix">
                     <div class="accordion-body text-white">
-                        খাটি নারিকেল তেলের সাথে জবা ফুলের নির্যাস, আমলকি,
-                        মেথি, ব্রাহ্মি, কারিপাতা, শিকাকাই, রিঠা সহ প্রায় ৩০
-                        টি প্রাকৃতিক উপাদান ব্যবহার করা হয়েছে যা চুলের জন্য
-                        অনেক অনেক উপকারী।
+                    ই-কমার্স প্ল্যাটফর্মে পণ্য বা সেবার বিস্তারিত বিবরণ, গ্রাহক রিভিউ, এবং বিভিন্ন অফার প্রদর্শনের মাধ্যমে ব্র্যান্ডের প্রতি 
+                    গ্রাহকদের আস্থা ও আগ্রহ বাড়ে। ওয়েবসাইটটি কাস্টমাইজ করার মাধ্যমে আপনার ব্র্যান্ডের অনন্যতা তুলে ধরতে পারবেন।
                     </div>
                 </div>
             </div>
@@ -457,21 +446,13 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
                         aria-controls="collapseSeven">
-                        আপনারা কি কোন গ্যারান্টি দেন?
+                        সহজ পেমেন্ট প্রসেস
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseSeven">
                     <div class="accordion-body text-white">
-                        ১০০% গ্যারান্টির কথা বলা বিক্রির জন্য মিথ্যার আশ্রয়
-                        ছাড়া আর কিছুই না। কারণ চুলপড়ার অনেক কারণ থাকতে
-                        পারে। অনেকের বংশগত কারণেও চুল পড়ে থাকে। আবার অনেকের
-                        প্রোটিনের অভাবে চুল পড়ে। আমরা শতভাগ গ্যারান্টি
-                        দিইনা তবে প্রাকৃতিক যেসব উপাদান চুলের জন্য উপকারী
-                        এমন প্রায় ৩০ টা উপাদান দিয়ে তেলটি তৈরি করেছি। আমি
-                        এবং আরও অনেকে উপকার পেয়েছে। আশা করছি আপনিও উপকার
-                        পাবেন। এছাড়াও আমাদের পেইজে আপনি উপকার পেয়েছে এমন
-                        মানুষের প্রচুর পরিমাণে রিভিউ দেখতে পাবেন। নিয়ম মেনে
-                        ব্যবহার করলে আপনি অবশ্যই উপকার পাবেন।
+                    ই-কমার্স ওয়েবসাইটে গ্রাহকরা অনলাইনে বিভিন্ন পেমেন্ট গেটওয়ে (যেমন মোবাইল ব্যাংকিং, 
+                    কার্ড পেমেন্ট ইত্যাদি) ব্যবহার করে পেমেন্ট করতে পারেন, যা গ্রাহকদের জন্য কেনাকাটাকে আরও সুবিধাজনক করে তোলে।
                     </div>
                 </div>
             </div>
@@ -482,21 +463,20 @@ body{
                     <button class="accordion-button text-white h-5 collapsed shadow-none border-bottom bg_color"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
                         aria-controls="collapseEight">
-                        আগে থেকে কোন টাকা দেয়া লাগবে?
+                        শেষ কথা
                     </button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseEight">
                     <div class="accordion-body text-white">
-                        আগে থেকে এক টাকাও দেয়া লাগবে না। ডেলিভারি ম্যান এর
-                        কাছ থেকে প্রোডাক্ট বুঝে পেয়ে তারপর টাকা দিবেন।
-                        অর্ডার করতে নীচের ফর্মটি পূরণ করুন।
+                    বর্তমান সময়ে ই-কমার্স ব্যবসার জন্য একটি ওয়েবসাইট থাকা অত্যন্ত গুরুত্বপূর্ণ। এটি ব্যবসার প্রসার, 
+                    গ্রাহক সন্তুষ্টি বৃদ্ধি, এবং ব্যবসায়িক কৌশলগুলোকে উন্নত করার মাধ্যমে আপনাকে একটি আধুনিক ও প্রতিযোগিতামূলক বাজারে টিকে থাকার জন্য শক্তিশালী প্ল্যাটফর্ম প্রদান করবে।
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="container p-3 text-center">
+    <section class="container p-3 text-center" style="display:none;">
         <h3 class="py-3">Pricing</h3>
         <div class="container mx-auto card-deck row gap-4">
             <div class="card col-md pt-2 shadow-lg">
@@ -547,82 +527,86 @@ body{
     <section id="checkout_section">
         <div class="container my-5 border border-black rounded p-5">
             <h4 class="text-center py-4">
-                অর্ডার করতে আপনার সঠিক তথ্য দিয়ে নিচের ফর্মটি সম্পূর্ণ পূরন
-                করুন। (আগে থেকে কোন টাকা দেয়া লাগবে না। প্রোডাক্ট হাতে পাবার
-                পর টাকা দিবেন)
+                অর্ডার করতে আপনার সঠিক তথ্য দিয়ে নিচের ফর্মটি পূরণ
+                করুন। <br> 
+                 <!-- (আগে থেকে কোন টাকা দেয়া লাগবে না। প্রোডাক্ট হাতে পাবার
+                 পর টাকা দিবেন) -->
             </h4>
             <div class="row">
                 <!-- Billing Details -->
                 <div class="col-md-6">
                     <h4>Billing Details</h4>
-                    <form action="{{ route('quick.payment') }}" method="post">
+                <form action="{{ url('pay') }}" method="post">
                     @csrf
                         <div class="mb-3">
-                            <label for="name" class="form-label">আপনার নাম লিখুন *</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="আপনার নাম লিখুন" required />
-                            <small class="text-danger">আপনার নাম লিখুন is required</small>
+                            <label for="name" class="form-label">আপনার নাম *</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="আপনার নাম লিখুন"  required/>
+                           
                         </div>
                         <div class="mb-3">
-                            <label for="address" class="form-label">আপনার ঠিকানা লিখুন *</label>
+                            <label for="address" class="form-label">আপনার ঠিকানা *</label>
                             <input type="text" class="form-control" name="address" id="address"
                                 placeholder="বাসা নং, রোড নং, থানা, জেলা" required />
-                            <small class="text-danger">আপনার ঠিকানা লিখুন is required</small>
+                           
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">আপনার মোবাইল নাম্বারটি লিখুন</label>
-                            <input type="number" class="form-control" id="phone" name="phone" placeholder="মোবাইল নাম্বার" />
+                            <label for="phone" class="form-label">আপনার মোবাইল নম্বর *</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="মোবাইল নাম্বার" required/>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">আপনার ইমেইল এড্রেস লিখুন</label>
-                            <input type="email" class="form-control" id="phone" name="email" placeholder="মোবাইল ইমেইল এড্রেস" />
+                            <label for="phone" class="form-label">আপনার ইমেইল এড্রেস *</label>
+                            <input type="email" class="form-control" id="phone" name="email" placeholder="ইমেইল এড্রেস" required/>
                         </div>
 
-                      
-
-                </div>
-
-                <!-- Order Summary -->
-                <div class="col-md-6">
-                    <h4>Your Order</h4>
-                    <div class="p-3 mb-3">
-                        <div class="d-flex justify-content-between border-bottom">
-                            <p>Product</p>
-                            <p>Subtotal</p>
+            
                         </div>
 
-                        <div class="d-flex justify-content-between">
-                            <p>50% Pre-Payment</p>
-                            <p>৳ 4,999.50</p>
+                        <!-- Order Summary -->
+                        <div class="col-md-6">
+                            <h4>Your Order</h4>
+                            <div class="p-3 mb-3">
+                                <div class="d-flex justify-content-between border-bottom">
+                                    <p>সার্ভিস</p>
+                                    <p>এমাউন্ট</p>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <p>সর্বমোট</p>
+                                    <p>৳ ৯৯৯৯.০০</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>৫০% অগ্রীম</p>
+                                    <p>৳ ৪,৯৯৯.৫০</p>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <p>বকেয়া</p>
+                                    <p>৳ ৪,৯৯৯.৫০</p>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-between">
+                                    <p>সর্বমোট</p>
+                                    <p>৳ ৪,৯৯৯.৫০</p>
+                                </div>
+                                <div class="alert alert-secondary mt-3">
+                                    ৫০% প্রি-পেমেন্ট এবং পরবর্তী ৫০% আপনার সার্ভিস পাওয়ার পরে পেমেন্ট করবেন।
+                                </div>
+                                <input type="hidden" name="amount" value="4999">
+                                <input type="submit" class="btn btn-primary bg_color w-100" style="font-weight: 600;" value="অর্ডার করুন ৳ ৪,৯৯৯.৫০">
+                                    
+                            </div>
                         </div>
-                        <hr />
-                        <div class="d-flex justify-content-between">
-                            <p>Subtotal</p>
-                            <p>৳ 4,999.50</p>
-                        </div>
-                        <hr />
-                        <div class="d-flex justify-content-between">
-                            <p>Total</p>
-                            <p>৳ 4,999.50</p>
-                        </div>
-                        <div class="alert alert-secondary mt-3">
-                            ৫০% প্রি-পেমেন্ট <br />
-                            পরবর্তী ৫০% আপনার সার্ভিস বা প্রোডাক্ট পাওয়ার পরে পেমেন্ট করতে পারবেন।
-                        </div>
-                        <input type="hidden" name="amount" value="4999">
-                        <input type="submit" class="btn btn-primary bg_color w-100" style="font-weight: 600;" value="Place Order ৳ 4,999.50">
-                            
                     </div>
-                </div>
-            </div>
-            </form>
+                </form>
+                
             <h3 class="fg_color text-center">
-                কোন প্রশ্ন বা সাহায্যের প্রয়োজনে কল করুনঃ 09613-651212
+                কোন প্রশ্ন বা সাহায্যের প্রয়োজনে কল করুনঃ ০১৯৭৩৭৮৪৯৫৯
             </h3>
         </div>
     </section>
 
-    <main></main>
-    <footer>
+    
+    <!-- <footer>
         <div class="help-button-wrapper position-fixed bottom-0 start-0 text-right">
             <ul class="help-list list-unstyled">
                 <li class="pb-2 position-relative">
@@ -645,7 +629,7 @@ body{
                 <span class="tooltip-text">Message</span>
             </button>
         </div>
-    </footer>
+    </footer> -->
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -657,6 +641,9 @@ body{
             $('.help-button-wrapper').toggleClass('expanded');
         });
     </script>
-</body>
 
+
+
+
+</body>
 </html>

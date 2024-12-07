@@ -22,11 +22,11 @@
     height: auto;
     padding: 10px;
     top: 25%;
-    left: 5%;
+    left: 15%;
     font-family: "Hind Siliguri", sans-serif;
 }
 .py-2 .home__slider .slider_text h1{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 .py-2 .home__slider .slider_text h1 span{
     color: var(--banner-front-color);

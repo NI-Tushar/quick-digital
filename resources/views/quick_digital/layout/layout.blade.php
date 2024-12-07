@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <link rel="icon" href="{{ url('icon.png') }}" type="image/png">
     <!-- index -->
     <link rel="stylesheet" href="{{ url('front/styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url('front/styles/header.css') }}">
     <link rel="stylesheet" href="{{ url('front/styles/slider.css') }}">
     <link rel="stylesheet" href="{{ url('front/styles/banner.css') }}">
     <!-- ebook -->

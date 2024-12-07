@@ -134,7 +134,7 @@
 --------------------------------------- */
 
 .about-section {
-    background-color: #faefff;
+    background-color: #f6e3FFFC;
 }
 
 .about-heading {
@@ -163,9 +163,7 @@
 |          resources section            |
 --------------------------------------- */
 
-.resources-section {
-    background-color: #f6e3FFFC;
-}
+
 .resources-section  .d-flex button a{
     color: aliceblue;
 }
@@ -248,6 +246,7 @@
 
 /* __________________________courses_book start */
 .courses_book{
+    background-color: #f6e3FFFC;
     height: auto;
     display: flex;
     padding-top: 3rem;
@@ -318,7 +317,7 @@
         display: block;
     } */
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .courses_book .centered_div{
         display: block;
     }
@@ -636,3 +635,39 @@ footer {
     border: 0.5px solid #eb29a1;
     color: #eb29a1;
 }
+
+
+
+.bg-first .container{
+    padding-right:35px;
+}
+
+.col-12 .link-fb:hover svg{
+    color: #eb29a1;
+}
+.col-12 .link-fb:hover .text-control-6{
+    color: #eb29a1;
+}
+.offcanvas-body{
+    display:flex;
+    justify-content: flex-end;
+}
+.offcanvas-body .nav-item a{
+    border-radius: 5px;
+}
+.offcanvas-body ul{
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+.offcanvas-body ul li{
+    align-items:end;
+    float:right;
+}
+.offcanvas-body ul .dropdown li{
+    width: 100%;
+}
+.offcanvas-body ul .dropdown li a{
+    width: 100%;
+    text-align:left;
+}
+

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a97f241e9762ae857e27cd2e59d76e8",
+    "content-hash": "268041e75fb6be53d1d9e2515cd8e9a7",
     "packages": [
         {
             "name": "brick/math",
@@ -3199,6 +3199,67 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "raziul/shurjopay-laravel",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iRaziul/shurjopay-laravel.git",
+                "reference": "73ff3e8a5ce53e4e2422d2965fb5378916992e91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iRaziul/shurjopay-laravel/zipball/73ff3e8a5ce53e4e2422d2965fb5378916992e91",
+                "reference": "73ff3e8a5ce53e4e2422d2965fb5378916992e91",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Raziul\\Shurjopay\\ShurjopayServiceProvider"
+                    ],
+                    "aliases": {
+                        "Shurjopay": "Raziul\\Shurjopay\\Facades\\Shurjopay"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raziul\\Shurjopay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raziul Islam",
+                    "email": "raziul.cse@gmail.com"
+                }
+            ],
+            "description": "ShurjoPay payment gateway integration for Laravel.",
+            "keywords": [
+                "payment gateway",
+                "shurjopay",
+                "shurjopay gateway",
+                "shurjopay laravel",
+                "shurjopay payment gateway laravel",
+                "shurjopay php"
+            ],
+            "support": {
+                "issues": "https://github.com/iRaziul/shurjopay-laravel/issues",
+                "source": "https://github.com/iRaziul/shurjopay-laravel/tree/v1.0.0"
+            },
+            "time": "2022-06-16T18:08:57+00:00"
         },
         {
             "name": "setasign/fpdi",

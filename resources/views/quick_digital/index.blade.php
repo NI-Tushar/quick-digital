@@ -35,11 +35,12 @@
         <div class="home__slider">
             <div>
                 <div class="slider_text">
-                    <h1>Grow Your <span>Business</span> And <span>Skills</span> In Digital Marketing</h1>
-                    <p>Unlock growth by mastering digital marketing skills and strategies to boost your business's online presence, attract more customers, and achieve measurable results.</p>
+                <h1>আপনার <span>ব্যবসা</span> এবং <span>দক্ষতা</span> বৃদ্ধি করুন কুইক ডিজিটাল এর মাধ্যমে </h1>
+                <p>ডিজিটাল মার্কেটিং এ দক্ষতা এবং কৌশল আয়ত্ত করে আপনার ব্যবসা অনলাইনে প্রশার বাড়ান, আরও গ্রাহক বাড়ান এবং নির্ভরযোগ্য ফলাফল অর্জন করুন।</p>
+
                     <div class="slider_buttons">
-                        <a href="#"><button class="active">View Courses</button></a>
-                        <a href="#"><button>View Services</button></a>
+                        <a href="#"><button class="active">কোর্সগুলো দেখুন</button></a>
+                        <a href="#"><button>সার্ভিসগুলো দেখুন</button></a>
                     </div>
                 </div>
                 <a href="#">
@@ -82,9 +83,9 @@
             <img src="{{ asset('front/assets/images/newmarkeing.jpg') }}" alt="">
             <div class="button_div">
                 <div class="buttons">
-                    <a href="#"><button>Ebook</button></a>
-                    <a href="#"><button class="active">Digital Service</button></a>
-                    <a href="#"><button>Course</button></a>
+                    <a href="#"><button>আমাদের বইগুলো</button></a>
+                    <a href="#"><button class="active">ডিজিটাল সার্ভিস</button></a>
+                    <a href="#"><button>আমাদের সার্ভিসগুলো</button></a>
                 </div>
             </div>
         </div>
@@ -155,7 +156,7 @@
                 <!-- ______________________ -->
                 <div class="col-12 col-md-6 d-flex flex-column custom-padding">
                     <h3 class="about-heading fw-bold">
-                        About Us
+                        আমাদের সম্পর্কে 
                         <div class="b-bottom"></div>
                     </h3>
                     <p class="about-descripttion text-center py-1">
@@ -185,8 +186,7 @@
 
         <div class="container max-width px-0">
             <h3 class="resources-heading text-center custom-padding">
-                <!-- আমাদের প্রোডাক্ট ও সার্ভিস সমূহ -->
-                 Our Services
+                আমাদের সার্ভিস সমূহ
                 <span class="d-flex justify-content-center">
                     <div class="b-bottom-middle"></div>
                 </span>
@@ -195,7 +195,7 @@
                 <!-- আপনার জন্য আমরা নিয়ে এসেছি ডিজিটাল জগতের সবকিছু। যা দিয়ে এই নতুন যুগের ডিজিটাল বিজনেস গুলোকে আপনি নিয়ে যেতে পারবেন অনন্য উচ্চতায়।
                 আমাদের মোবাইল ফ্রিল্যান্সিং কোর্স গুলো শিখে আপনি উপার্জনের নতুন পন্থাগুলো সম্পর্কে জানতে পারবেন...ইনশাল্লাহ। -->
             </p>
-            <div class="button"><a href="#"><button>View All</button></a></div>
+            <div class="button"><a href="#"><button>সব সার্ভিস</button></a></div>
             <div class="row resource-package-container">
                 <div class="col-12 col-lg-4 d-flex justify-content-center card-container p-1">
                     <div class="card shadow border-0" style="width: 22rem;">
@@ -211,7 +211,7 @@
                             </div>
                             <div class="d-flex justify-content-center my-2">
                                 <button class="border-1 rounded-1 py-2 px-4 btn-stylish" style="width:95%;">
-                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/ebook') }}">Book Now</a>
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/ebook') }}">এখনই বুক করুন</a>
                                 </button>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                             </div>
                             <div class="d-flex justify-content-center my-2">
                                 <button class="border-1 rounded-1  py-2 px-4 btn-stylish" style="width:95%;">
-                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/courses') }}">Book Now</a>
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/courses') }}">এখনই বুক করুন</a>
                                 </button>
                             </div>
                         </div>
@@ -249,7 +249,7 @@
                             </div>
                             <div class="d-flex justify-content-center my-2">
                                 <button class="border-1 rounded-1  py-2 px-4 btn-stylish" style="width:95%;">
-                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/digital-products') }}">Book Now</a>
+                                    <a class="text-decoration-none py-auto fw-medium fs-5" aria-current="page" href="{{ url('quick-digital/digital-products') }}">এখনই বুক করুন</a>
                                 </button>
                             </div>
                         </div>
@@ -267,24 +267,24 @@
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/fb_marketing.png') }}" alt="">
                     <p>ফেসবুক মার্কেটিংয়ের কার্যকরী কৌশল শিখে আপনার ব্যবসা বা ব্র্যান্ডকে নতুন উচ্চতায় নিয়ে যান।</p>
-                    <a href=""><button>Book Now</button></a>
+                    <a href=""><button>এখনই বুক করুন</button></a>
                 </div>
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/thumnail.jpg') }}" alt="">
                     <p>থাম্বনেল ডিজাইন কৌশল শিখে আপনার কনটেন্টকে আকর্ষণীয় ও নজরকাড়া করুন।</p>
-                    <a href=""><button>Book Now</button></a>
+                    <a href=""><button>এখনই বুক করুন</button></a>
                 </div>
             </div>
             <div class="centered_part">
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/book1.png') }}" alt="">
                     <p>লাভের খনি পাইকারি বাজার" বইটি আপনাকে টাকার খনি খুঁজে দিবে</p>
-                    <a href=""><button>Buy Now</button></a>
+                    <a href=""><button>এখনই কিনুন</button></a>
                 </div>
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/book2.jpeg') }}" alt="">
                     <p>এই বইটি পড়ে আপনি ১০০ টি সফল অনলাইন ব্যবসার আইডিয়া পাবেন</p>
-                    <a href=""><button>Buy Now</button></a>
+                    <a href=""><button>এখনই কিনুন</button></a>
                 </div>
             </div>
         </div>

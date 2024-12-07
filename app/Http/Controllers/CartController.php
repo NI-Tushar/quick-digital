@@ -84,7 +84,7 @@ class CartController extends Controller
         if (!Auth::guard('user')->check()) {
             return redirect()->route('user.login')->with('error_message', 'অর্ডার করার আগে লগইন করুন');
         }
-
+        
         $user = Auth::guard('user')->user();
 
         // dd($user);
@@ -108,7 +108,7 @@ class CartController extends Controller
         $cart['ebook_id'] = $ebook->id;
         $cart['ebook_title'] = $ebook->title;
         $cart['price'] = $ebook->price;
-
+        
         try {
             $cart = Cart::create($cart);
         } catch (\Throwable $th) {
@@ -193,9 +193,9 @@ class CartController extends Controller
     {
 
         $request->session()->put('user_book_id',$cartId);
-        $ebooks = Ebook::where('id', $cartId)->get();
+        $carts = Cart::where('id', $cartId)->get();
 
-        return view('quick_digital.ebook_checkout', compact('ebooks'));
+        return view('quick_digital.ebook_checkout', compact('carts'));
 
         // try {
         //     $cartDetails = cart::findOrFail($cartId);
@@ -253,45 +253,46 @@ class CartController extends Controller
             'email' => $user->email,
             'mobile' => $user->mobile, // Ensure this field exists in your users table
         ];
-        try {
-            $cartDetails = Cart::findOrFail($request->cart_id);
-        } catch (\Throwable $th) {
+        // try {
+        //     $cartDetails = Cart::findOrFail($request->cart_id);
+        // } catch (\Throwable $th) {
 
-            abort(404);
-        }
+        //     abort(404);
+        // }
 
-        $cartDetails->customer_info = json_encode($customerDetails);    
-        $cartDetails->save();
+        // $cartDetails->customer_info = json_encode($customerDetails);    
+        // $cartDetails->save();
 
         // Create payment
         $tokenInfo = json_decode($this->_token(), true);
-        // dd( $tokenInfo);
-        $token = $tokenInfo['token'];
-        $execute_url = $tokenInfo['execute_url'];
-        $store_id = $tokenInfo['store_id'];
-        $postData = [];
+        dd( $tokenInfo);
+        // $token = $tokenInfo['token'];
+        // $execute_url = $tokenInfo['execute_url'];
+        // $store_id = $tokenInfo['store_id'];
+        // $postData = [];
+
         // Payment information
-        $postData['prefix']     = 'NOK';
-        $postData['token']      = $token;
-        $postData['return_url'] = route('payment.success');
-        $postData['cancel_url'] = route('payment.cancel.fail');
-        $postData['store_id']   = $store_id;
-        $postData['amount']     = $cartDetails->price;
-        $postData['order_id']   = 'quick-' . rand(100000, 999999);
-        $postData['currency']   = 'BDT';
-        // Customer information
-        $postData['customer_name'] = $user->name;
-        $postData['customer_address'] = 'Dhaka';
-        $postData['customer_phone'] = $user->mobile;
-        $postData['customer_city'] = 'Dhaka';
-        $postData['client_ip'] = $_SERVER['REMOTE_ADDR'];
-        $postData['value1'] = $cartDetails->id;
+        // $postData['prefix']     = 'NOK';
+        // $postData['token']      = $token;
+        // $postData['return_url'] = route('payment.success');
+        // $postData['cancel_url'] = route('payment.cancel.fail');
+        // $postData['store_id']   = $store_id;
+        // $postData['amount']     = $cartDetails->price;
+        // $postData['order_id']   = 'quick-' . rand(100000, 999999);
+        // $postData['currency']   = 'BDT';
+        // // Customer information
+        // $postData['customer_name'] = $user->name;
+        // $postData['customer_address'] = 'Dhaka';
+        // $postData['customer_phone'] = $user->mobile;
+        // $postData['customer_city'] = 'Dhaka';
+        // $postData['client_ip'] = $_SERVER['REMOTE_ADDR'];
+        // $postData['value1'] = $cartDetails->id;
 
         // Go to checkout
-        $res = $this->_curl($execute_url, $postData, $token, NULL);
-        $urlData = json_decode($res);
-        header('Location: ' . $urlData->checkout_url);
-        exit();
+        // $res = $this->_curl($execute_url, $postData, $token, NULL);
+        // $urlData = json_decode($res);
+        // header('Location: ' . $urlData->checkout_url);
+        // exit();
     }
 
     /**
