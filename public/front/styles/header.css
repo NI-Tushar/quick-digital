@@ -55,14 +55,40 @@
 .sticky_bar .top-contacts>div a{
     display: flex;
 }
+.header_bar  .navbar a{
+    padding-top:0px; 
+    padding-bottom:0px;
+}
+
+.header_bar  .navbar a img{
+    height:auto;
+    max-width:180px;
+    width: 100%;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 20px; 
+}
+
+.navbar-nav {
+    flex-grow: 0; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 
 @media (max-width: 995px) {
     .sticky_bar .max-width .custom-padding{
         padding: 0px;
     }
-    .top-contacts{
+    .sticky_bar .top-contacts{
         display: flex !important;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
 
@@ -70,25 +96,52 @@
     .sticky_bar .top-contacts .mail_num .phone_number{
         display: none;
     }
+    .header_bar  .navbar a img{
+        height:auto;
+        max-width:120px;
+        width: 100%;
+    }
 }
 /* __________________________________ top bar end */
 
 
 
 
+/* __________________________________ header bar start */
 
-
-
-
-
-/* __________________________________ Header bar start */
-.header_bar  .navbar a{
-    padding-top:0px; 
-    padding-bottom:0px;
+.offcanvas-body .navbar-nav{
+    padding-right:5px;
+    display: flex;
+}
+.offcanvas-body ul li ul li{
+    line-height: 2;
 }
 
-.header_bar  .navbar a img{
-    height:100%;
-    max-width:100%;
+
+/* __________________________________ header bar end */
+
+
+
+
+
+
+.header_gap{
+    height: 80px;
+    width: 100%;
 }
-/* __________________________________ Header bar end */
+
+@media (max-width: 995px) {
+    .header_gap{
+        height: 60px;
+        width: 100%;
+    }
+    .offcanvas-body ul li{
+        line-height: 2;
+    }
+}
+@media (max-width: 550px) {
+    .header_gap{
+        height: 60px;
+        width: 100%;
+    }
+}

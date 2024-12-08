@@ -113,21 +113,32 @@
         Route::get('/checkout/{id}', [CartController::class, 'checkout'])->name('cart.checkout');
     });
 
+
+   
+
     
     //front- QUICK DIGITAL
     Route::prefix('/quick-digital')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::get('index', 'HomeController@index')->name('quick-digital.index');
-        Route::get('ebook', 'HomeController@ebook');
+        Route::get('contact-us', 'HomeController@contact_us');
+
+        // _______________ STATIC BOOK PAGE VIEW START
+        Route::get('paikari_bazar', 'HomeController@ebook1');
+        Route::get('14-days-online-business', 'HomeController@ebook2');
+        Route::get('100-business-idea', 'HomeController@ebook3');
+        // _______________ STATIC BOOK PAGE VIEW END
+
         Route::get('digital-services', 'HomeController@digital_services');
         Route::get('digital-products', 'HomeController@digital_products');
         Route::get('courses', 'HomeController@course');
         Route::get('terms-condition', 'HomeController@terms');
         Route::get('privacy-policy', 'HomeController@privacy_policy');
         Route::get('refund-policy', 'HomeController@refund_policy');
-        Route::get('100-business-idea', 'HomeController@business_idea');
-        Route::get('14-days-online-business', 'HomeController@onlne_business');
         Route::get('ebook-list', 'HomeController@ebook_list');
         Route::get('ebook/{id?}', 'HomeController@individual_ebook');
+
+         // REDIRECT TO CHECKOUT | SKIPPING BOOK VIEW PAGE
+        Route::get('/your_book/{id?}', 'HomeController@ebook_checkout'); 
 
         // Route::get('ebook-checkout', 'HomeController@ebook_checkout');
         Route::get('mobile-video-checkout', 'HomeController@mobile_video_checkout');

@@ -28,14 +28,32 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('quick_digital.index', compact('user'));
     }
+    public function contact_us()
+    {
+       return view('quick_digital.contact_us');
+    }
 
     //old one
-    public function ebook()
+    // ____________________STATIC BOOK PAGE VIEW START
+    public function ebook1()
     {
         // Session::put('page', 'ebook');
-
-        return view('quick_digital.ebook');
+        return view('quick_digital.static_product_page.paikari_bazar');
     }
+    public function ebook2()
+    {
+        // Session::put('page', 'ebook');
+        return view('quick_digital.static_product_page.14_days_onlne_business');
+    }
+    public function ebook3()
+    {
+        // Session::put('page', 'ebook');
+        return view('quick_digital.static_product_page.100_business_idea');
+    }
+
+    // ____________________STATIC BOOK PAGE VIEW END
+
+
 
     //new one individual ebook
     public function individual_ebook($id)
@@ -44,6 +62,12 @@ class HomeController extends Controller
         $ebooks = Ebook::all();
 
         return view('quick_digital.ebook_single')->with(compact('ebook', 'ebooks'));
+    }
+    // DIRECTE TO CHECKOUT PAGE
+    public function ebook_checkout($id)
+    {
+        $book = Ebook::findOrFail($id);
+        return view('quick_digital.ebook_checkout')->with(compact('book'));
     }
 
 
@@ -90,14 +114,14 @@ class HomeController extends Controller
     {
         // Session::put('page', '14_days_onlne_business');
 
-        return view('quick_digital.14_days_onlne_business');
+
     }
 
     public function business_idea()
     {
         // Session::put('page', 'refund_policy');
 
-        return view('quick_digital.100_business_idea');
+        // return view('quick_digital.100_business_idea');
     }
 
     public function ebook_list()
@@ -107,10 +131,7 @@ class HomeController extends Controller
         return view('quick_digital.ebook_list', compact('ebooks'));
     }
 
-    public function ebook_checkout()
-    {
-        return view('quick_digital.ebook_checkout');
-    }
+
 
     public function mobile_video_checkout()
     {

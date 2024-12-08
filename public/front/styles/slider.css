@@ -4,44 +4,70 @@
     --banner-front-color:rgb(253, 172, 57);
 }
 
-.py-2 .home__slider{
+.home_slider {
     height: auto;
+    width: 100%;
     position: relative;
-}
-.py-2 .home__slider a img {
-    width: 100%; /* Make the image width responsive to its container */
-    height: calc(80vh - 10%); /* Reduce the height relative to the viewport, adjusting for smaller screens */
-    object-fit: cover; /* Maintain the aspect ratio and cover the entire area */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
 }
 
+.home_slider img {
+    width: 100%;
+    height: calc(80vh - 10%);
+    object-fit: cover;
+}
 
-.py-2 .home__slider .slider_text{
-    position: absolute;
-    color: aliceblue;
-    width: calc(50vw - 10%); 
-    height: auto;
+.home_slider .centered_div {
+    position: absolute; 
+    z-index: 10; 
+    max-width:  1140px;
+    width: 100%;
+    margin: auto;
+    /* background: rgba(0, 0, 0, 0.5);  */
     padding: 10px;
-    top: 25%;
-    left: 15%;
-    font-family: "Hind Siliguri", sans-serif;
+    border-radius: 10px; 
+    display: flex;
 }
-.py-2 .home__slider .slider_text h1{
+
+.home_slider .centered_div .slider_text {
+    color: aliceblue;
+    font-family: "Hind Siliguri", sans-serif;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+}
+.home_slider .centered_div .banner_img{
+    width: 50%;
+    height: auto;
+}
+.home_slider .centered_div .banner_img img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+ .home_slider .slider_text h1{
     font-size: 2vw;
 }
-.py-2 .home__slider .slider_text h1 span{
+ .home_slider .slider_text h1 span{
     color: var(--banner-front-color);
 }
-.py-2 .home__slider .slider_text p{
+ .home_slider .slider_text p{
     font-size: 20px;
     color: rgba(240, 248, 255, 0.554);
     font-weight: 600;
     font-size: 1.1vw;
 }
-.py-2 .home__slider .slider_text .slider_buttons{
+ .home_slider .slider_text .slider_buttons{
     display: flex;
     gap: 10px;
 }
-.py-2 .home__slider .slider_text .slider_buttons button{
+ .home_slider .slider_text .slider_buttons button{
     width:150px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -50,21 +76,21 @@
     background:transparent;
     color: aliceblue;
 }
-.py-2 .home__slider .slider_text .slider_buttons button:hover{
+ .home_slider .slider_text .slider_buttons button:hover{
     background-color: var(--banner-front-color);
 }
 
-.py-2 .home__slider .slider_text .slider_buttons .active{
+ .home_slider .slider_text .slider_buttons .active{
     background-color: var(--banner-front-color);
 }
-.py-2 .home__slider .slider_text .slider_buttons .active:hover{
+ .home_slider .slider_text .slider_buttons .active:hover{
     background-color: rgb(252, 208, 147);
     color: black;
 }
 
 
 @media (max-width: 1100px) {
-    .py-2 .home__slider .slider_text .slider_buttons button{
+     .home_slider .slider_text .slider_buttons button{
         width:100px;
         padding-top: 6px;
         padding-bottom: 6px;
@@ -72,21 +98,24 @@
     }
 }
 @media (max-width: 650px) {
-    .py-2 .home__slider .slider_text .slider_buttons button{
+     .home_slider .slider_text .slider_buttons button{
         width:70px;
         padding-top: 3px;
         padding-bottom: 3px;
         font-size: 10px;
     }
+    .home_slider {
+        padding-top: 15px;
+    }
 }
 @media (max-width: 400px) {
-    .py-2 .home__slider .slider_text .slider_buttons button{
+     .home_slider .slider_text .slider_buttons button{
         width:60px;
         padding-top: 2px;
         padding-bottom: 2px;
         font-size: 8px;
     }
-    .py-2 .home__slider .slider_text{
+     .home_slider .slider_text{
         top: 20%;
     }
-}
+} 

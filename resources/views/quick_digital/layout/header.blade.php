@@ -70,14 +70,14 @@
                     <div class="offcanvas-header">
                         <a class="navbar-brand" href="{{ url('quick-digital/index') }}" style="">
                             <img class="py-2" height="auto" width="50%"
-                                src="{{ asset('front/assets/images/logo.png') }}" alt="">
+                                src="{{ asset('front/assets/images/primary_logo2.png') }}" alt="">
                         </a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
+
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav d-flex
-                          flex-grow-1 pe-3" style="width:auto;">
+                        <ul class="navbar-nav d-flex pe-2" style="width:auto; height:auto;">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle fw-semibold px-md-3"
                                     href="{{ url('quick-digital/ebook-list') }}" role="button"
@@ -88,7 +88,7 @@
                                     
                                     <li>
                                         <a class="dropdown-item fw-semibold px-md-4 nav-link"
-                                            href="{{ url('quick-digital/ebook') }}">
+                                            href="{{ url('quick-digital/paikari_bazar') }}">
                                             লাভের খনি পাইকারি বাজার
                                         </a>
                                     </li>
@@ -158,7 +158,7 @@
                           
                             <li class="nav-item">
                                 <a class="nav-link fw-semibold px-md-3" aria-current="page"
-                                    href="{{ url('/') }}">যোগাযোগ</a>
+                                    href="{{ url('/quick-digital/contact-us') }}">যোগাযোগ</a>
                             </li>
 
                             <!-- <li class="nav-item">
@@ -173,10 +173,10 @@
                 </div> --}} -->
             </div>
         </nav>
-    </div>
-
-        
+    </div>        
 </div>
+
+<div class="header_gap"></div>
 
 
 

@@ -31,22 +31,23 @@
     </div>
     @endif
     
-    <section class="py-2">
-        <div class="home__slider">
-            <div>
+    <section>
+        <div class="home_slider">
+            <img class="w-100" src="{{ asset('front/assets/images/banner_bg.png') }}" alt="">
+            <div class="centered_div">
                 <div class="slider_text">
-                <h1>আপনার <span>ব্যবসা</span> এবং <span>দক্ষতা</span> বৃদ্ধি করুন কুইক ডিজিটাল এর মাধ্যমে </h1>
-                <p>ডিজিটাল মার্কেটিং এ দক্ষতা এবং কৌশল আয়ত্ত করে আপনার ব্যবসা অনলাইনে প্রশার বাড়ান, আরও গ্রাহক বাড়ান এবং নির্ভরযোগ্য ফলাফল অর্জন করুন।</p>
-
+                    <h1>আপনার <span>ব্যবসা</span> এবং <span>দক্ষতা</span> বৃদ্ধি করুন কুইক ডিজিটাল এর মাধ্যমে </h1>
+                    <p>ডিজিটাল মার্কেটিং এ দক্ষতা এবং কৌশল আয়ত্ত করে আপনার ব্যবসা অনলাইনে প্রশার বাড়ান, আরও গ্রাহক বাড়ান এবং নির্ভরযোগ্য ফলাফল অর্জন করুন।</p>
                     <div class="slider_buttons">
                         <a href="#"><button class="active">কোর্সগুলো দেখুন</button></a>
                         <a href="#"><button>সার্ভিসগুলো দেখুন</button></a>
                     </div>
                 </div>
-                <a href="#">
-                    <img class="w-100" src="{{ asset('front/assets/images/heroimage.jpg') }}" alt="">
-                </a>
+                <div class="banner_img">
+                    <img class="w-100" src="{{ asset('front/assets/images/about-img.JPG') }}" alt="">
+                </div>
             </div>
+
             <!-- <div>
                 <a href="{{ url('quick-digital/ebook') }}">~
                     <img class="w-100" src="{{ asset('front/assets/images/h_slider_2.png') }}" alt="">

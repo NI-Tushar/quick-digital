@@ -12,7 +12,7 @@
             @foreach($ebooks as $ebook)
                 <div class="col d-flex justify-content-center mx-1">
                     <div class="d-flex flex-column justify-content-between gap-3 gap-md-0 pt-0 ebook__list__card">
-                        <a href="{{ url('quick-digital/ebook/' . $ebook->id) }}" class="overflow-hidden">
+                        <a href="{{ url('quick-digital/your_book/' . $ebook->id) }}" class="overflow-hidden">
                             <img class="img-fluid rounded-top-3 ebook__list__img"
                                 src="{{ asset($ebook->cover_image ? $ebook->cover_image : 'front/assets/images/no_image.jpg') }}" alt="{{ $ebook->title }}" style="width:300px;">
                         </a>
@@ -26,9 +26,10 @@
                                 <span class="text-decoration-line-through">৳ {{ $ebook->original_price }}</span>
                             @endif
                         </div>
-                        <a href="{{ url('quick-digital/ebook/' . $ebook->id) }}" class="mx-2 text-center text-decoration-none fw-bold add__to__cart__btn py-2">
-                            এখনই কিনুন
-                        </a>
+                        <!-- this link will redirec to Book Description view page
+                         <a href="{{ url('quick-digital/ebook/' . $ebook->id) }}" class="mx-2 text-center text-decoration-none fw-bold add__to__cart__btn py-2">এখনই কিনুন</a> 
+                         -->
+                         <a href="{{ url('/quick-digital/your_book/' . $ebook->id) }}" class="mx-2 text-center text-decoration-none fw-bold add__to__cart__btn py-2">এখনই কিনুন</a> 
                     </div>
                 </div>
             @endforeach

@@ -5,20 +5,18 @@
     <section class="header-bg text-white py-5 d-flex flex-column align-items-center justify-content-center gap-5">
         <div class="container max-width custom-padding">
             <h1 class="text-one text-center fw-bold">
-                <span class="ebook__heading">"১৪ দিনে অনলাইন ব্যবসা"</span> <br> ফেসবুকে শূন্য থেকে ৪০ লক্ষ টাকার <br> ব্যবসা দার করার গাইড
+                <span class="ebook__heading">"১০০ টা ব্যবসার আইডিয়া"</span> <br> ৩০ দিন পর সফলতা নিশ্চিত
             </h1>
             <p class="fw-semibold lh-base py-3 hero-description text-two text-center">
-                ফেসবুক এবং হোয়াটসঅ্যাপ এর মাধ্যমে অসংখ্য ক্ষুদ্র ব্যবসার যাত্রা শুরু হচ্ছে প্রতি নিয়ত।
-                আপনি কেন পিছিয়ে থাকবেন? চাকুরীর পাশাপাশি একটি সাইড ইনকাম সোর্স বর্তমান এই
-                প্রতিযোগিতামূলক জীবন যাত্রায় আপনাকে নিশ্চিন্তে আর্থিক সচ্ছলতা প্রদান করবে।
+                এই বইটি পড়ে একটি নতুন ব্যবসা শুরু করে মাত্র ৩০ দিনে নিজেকে একজন সফল ব্যবসায়ীর কাতারে দেখতে পারবেন।
             </p>
             <div class="d-flex justify-content-center col-12 col-md-8 col-lg-8 mx-auto">
                 <div class="iframe-wrapper">
-                    <iframe class="rounded" src="https://www.youtube.com/embed/Uuf6aBTeZw0?si=9fhMTm2DZGeuotuq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="rounded" src="https://www.youtube.com/embed/SaDV6GhV-x4?si=_NpH6flXcMpCzIWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="#" class="">
+                <a href="/quick-digital/your_book/3" class="">
                     <button class="buy-btn btn btn-warning mt-5 px-4 py-2 rounded-5 fs-4 fw-bold text-success">
                         বইটি কিনতে চাই &rarr;
                     </button>
@@ -30,24 +28,32 @@
 
     <section class="my-5 quote container max-width custom-padding">
         <h1 class="bg-dark rounded text-white text-center p-3 text-one fw-bold">
-            এই বইটি পড়ে মাত্র ১৪ দিনে আপনি একটি সফল অনলাইন ব্যবসা দাড় করাতে পারবেন
+            এই বইটি পড়ে আপনি ১০০ টি সফল অনলাইন ব্যবসার আইডিয়া পাবেন
         </h1>
         <div class="d-flex justify-content-center col-12 col-md-8 col-lg-8 mx-auto">
             <!-- <div class="iframe-wrapper">
-                    <iframe src="https://www.youtube.com/embed/0ewF0cYNoBk?si=yd2-QujaVQ_g3HJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/0ewF0cYNoBk?si=yd2-QujaVQ_g3HJ6"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div> -->
         </div>
     </section>
 
     <section class="my-5 container max-width custom-padding">
         <p class="fw-semibold text-two text-center">
-            অনলাইন নতুন ব্যাবসায়ীরা শুরুতেই ভুল প্রোডাক্ট নিয়ে কাজ করে যা ফলে
-            অধিকাংশ ব্যবসায়ীরা লসের সম্মুখীম্মু খীন হয়।
-            এতে অন্যদের থেকে পিছিয়ে পড়তে হয় এবং প্রচুর অর্থ-সময় নষ্ট হয়ে যায়।
-            এই সমস্যার দারুণ সমাধান হতে পারে " <span class="text-success">"১৪ দিনে অনলাইন ব্যবসা"</span> বইটি।
+            বর্তমান সময়ে নতুন ব্যাবসায়ীরা শুরুতেই ভুল প্রোডাক্ট নিয়ে কাজ করে যার
+            ফলে ৯৫% শতাংশ ব্যবসায়ীরা লসের সম্মুখীন হয়। এতে অন্যদের থেকে পিছিয়ে
+            পড়তে হয় এবং প্রচুর অর্থ-সময় নষ্ট হয়ে যায়।
+            এই সমস্যার দারুণ সমাধান হতে পারে
+            <span class="text-success">"১০০ টা ব্যবসার আইডিয়া"</span> বইটি।
+            অল্প টাকায় ব্যবসা শুরু করতে চাচ্ছেন অনেকদিন ধরে কিন্তু কিভাবে শুরু করবেন বা
+            কিসের ব্যবসা করলে সফল হতে পারবেন এ নিয়ে খুব চিন্তিত আছেন ? চিন্তার কেন কারণ
+            নেই আপনার কাছে চলে এসেছে বিশাল সুযোগ ``১০০ টা ব্যবসার আইডিয়া
+            ৩০ দিন পর সফলতা নিশ্চিত `` এই বইটি আপনাকে দিবে সকল প্রশ্নের সহজ সমাধান।
         </p>
         <div class="d-flex justify-content-center">
-            <a href="#" class="">
+            <a href="/quick-digital/your_book/3" class="">
                 <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                     বইটি কিনতে চাই &rarr;
                 </button>
@@ -59,7 +65,7 @@
         <div class="container max-width custom-padding">
             <div class="bg-white text-dark rounded">
                 <h1 class="fw-bold p-3 text-one text-center">
-                    কেন <span class="text-success">"১৪ দিনে অনলাইন ব্যবসা শিখুন"</span> বইটি আপনার কাছে থাকা উচিত?
+                    কেন <span class="text-success">"১০০ টা ব্যবসার আইডিয়া"</span> বইটি আপনার কাছে থাকা উচিত?
                 </h1>
             </div>
             <div class="my-3">
@@ -72,25 +78,29 @@
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
                     <p class="fw-semibold text-two text-white text-start">
-                        ই-বুকটিতে থেকে আপনি মাত্র ১৪ দিনে কিভাবে শুরু থেকে কিভাবে একটি সফল ব্যবসা দাঁড় করতে হয় তা জানতে পারবেন।
+                        ই-বুকটিতে থেকে আপনার পছন্দ অনুসারে যেকোন একটি ব্যবসার আইডিয়া নিয়ে মাত্র ৩০
+                        দিনে শুরু থেকে কিভাবে একটি সফল ব্যবসা দাঁড় করতে হয় তা শিখতে পারবেন।
                     </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
                     <p class="fw-semibold text-two text-white text-start">
-                        এই বইটি এর সাথে পাচ্ছেন ১৪ দিনের চেক লিষ্ট।
+                        এই বইটিতে পাচ্ছেন একটি নতুন ব্যবসা শুরু করার জন্য কি পরিমান বিনিয়োগ প্রয়োজন হতে
+                        পারে , উক্ত ব্যবসা থেকে লাভ কেমন হবে এ নিয়ে বিশদ আলোচনা যা থেকে আপনি সঠিক
+                        ধারনা পাবেন।
                     </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
                     <p class="fw-semibold text-two text-white text-start">
-                        এই বইটি এর সাথে পাচ্ছেন টেন্ডিং ও লাভ জনক প্রডাক্টের আইডিয়া ব্যাংক।
+                        এই বইটিতে পাচ্ছেন লাভ জনক প্রডাক্টের আইডিয়া। খুব সামান্য পুজি নিয়ে চাইলে এখন
+                        থেকেই ব্যবসা শুরু করতে পারবেন।
                     </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
                     <p class="fw-semibold text-two text-white text-start">
-                        একজন অনলাইন ব্যবসায়ীর জীবনে অনেক চ্যালেঞ্জিং সময় আসে, ঠিক সেই সময়ে আপনার পাশে থাকবে "১৪ দিনে অনলাইন ব্যবসা শিখুন" বইটি।
+                        বইটিয়ে থাকছে একাধিক সিক্রেট টিপস যে গুলো ফলো করলে আপনার ব্যবসায় সফলতা ১০০% নিশ্চিত।
                     </p>
                 </div>
                 <!-- <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
@@ -99,7 +109,7 @@
                             সময়ে আপনার পাশে থাকবে "উদ্যোক্তাদের প্রথম ঠিকানা" বইটি।</p>
                     </div> -->
                 <div class="d-flex justify-content-center">
-                    <a href="#" class="">
+                    <a href="/quick-digital/your_book/3" class="">
                         <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                             বইটি কিনতে চাই &rarr;
                         </button>
@@ -119,7 +129,7 @@
             <div class="col-12 col-md-5">
                 <div class="book-img-container d-flex justify-content-center">
                     <!-- <img class="book-img shadow" src="/assets/images/1.png" alt=""> -->
-                    <img class="book-img shadow" src="{{ asset('front/assets/images/14_days_online_buisness.jpeg') }}" alt="">
+                    <img class="book-img shadow" src="{{ asset('front/assets/books/cover/book3.jpeg') }}" alt="">
                 </div>
             </div>
             <div class="col-12 col-lg-5 py-5">
@@ -160,7 +170,7 @@
                                 পেজ সংখ্যা
                             </h4>
                             <p class="fs-4 fs-sm-6 my-auto">
-                                ১৩৩
+                                ৬৫
                             </p>
                         </div>
                     </div>
@@ -169,7 +179,7 @@
             <div class="col-md-1"></div>
         </div>
         <div class="d-flex justify-content-center">
-            <a href="#" class="">
+            <a href="/quick-digital/your_book/3" class="">
                 <button class="buy-btn btn btn-success px-4 py-2 rounded-5 fs-4 fw-bold text-white custom-btn">
                     বইটি কিনতে চাই &rarr;
                 </button>
@@ -179,11 +189,13 @@
 
     <section class="py-5">
         <div class="container max-width custom-padding">
-            <h1 class="text-center fw-bold border-top border-bottom py-4 rounded text-one"><span class="text-success">"১৪ দিনে অনলাইন ব্যবসা"</span> বইটি কাদের জন্য?
+            <h1 class="text-center fw-bold border-top border-bottom py-4 rounded text-one"><span class="text-success">"১০০ টা ব্যবসার আইডিয়া"</span> বইটি কাদের জন্য?
             </h1>
             <p class="text-two fw-semibold text-center">
                 <!-- <strong>"লাভের খনি পাইকারি বাজার"</strong> -->
-                অনেকদিন ধরেই অনলাইন ব্যবসা শুরু করতে চাচ্ছেন কিন্তু সঠিক গাইডলাইন এ অভাবে শুরু করতে পারছেন না অথবা অনলাইনে অনেকদিন ধরে ব্যবসা করছেন কিন্তু সফল হতে পারছেন না। মূলত এই দুই শ্রেনীর মানুষ এর জন্য অনলাইন ব্যবসায় সফলতার রাস্তা দেখানোর জন্য এই বইটি বানানো হয়েছে তৈরী করা হয়েছে।
+                অনেকদিন ধরেই অনলাইন ব্যবসা শুরু করতে চাচ্ছেন কিন্তু সঠিক গাইডলাইন এ অভাবে শুরু করতে পারছেন না অথবা
+                অনলাইনে অনেকদিন ধরে ব্যবসা করছেন কিন্তু সফল হতে পারছেন না। মূলত এই দুই শ্রেনীর মানুষ এর জন্য অনলাইন
+                ব্যবসায় সফলতার রাস্তা দেখানোর জন্য এই বইটি বানানো হয়েছে তৈরী করা হয়েছে।
             </p>
         </div>
     </section>
@@ -194,8 +206,10 @@
                 ই-বুকটির মূল্য কতো?
             </h1>
             <p class="text-two fw-semibold text-white pt-5 text-center">
-                বইটির পিছনে ৫ জনের একটি টিম প্রায় ২ বছর সময় দিয়েছেন, অনলাইন এ রিচার্চ করেছেন সঠিক তথ্যের সন্ধানে।
-                পরীক্ষামূলক ভাবে বইটির নাম মাত্র মূল্য ধরা হয়েছে <span class="font_change text-success">১৪৯৳</span> যা সামনের সপ্তাহে আমরা আরো বৃদ্ধি করবো।
+                বইটির পিছনে ১৫ জনের একটি টিম প্রায় ৩ বছর এর অধিক সময় দিয়েছেন, মাঠ পর্যায়ে ঘুরে বেড়িয়েছেন শুধু মাত্র
+                লাভজনক ব্যবসার আইডিয়া খুজে বের করার জন্য । পরীক্ষামূলক ভাবে বইটির নাম মাত্র মূল্য ধরা হয়েছে
+                <span class="font_change text-success">২০০৳</span>
+                যা সামনের সপ্তাহে আমরা আরো বৃদ্ধি করবো।
             </p>
         </div>
     </section>
@@ -218,7 +232,7 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width: 18%">18%</div>
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="#" class="">
+                <a href="/quick-digital/your_book/3" class="">
                     <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                         বইটি কিনতে চাই &rarr;
                     </button>
@@ -233,10 +247,12 @@
                 ই-বুকটি কিভাবে পাবেন?
             </h1>
             <p class="text-two fw-semibold pt-5 text-center">
-                ইবুকটি কিনতে আগ্রহী হলে <span class="text-success">"কিনতে চাই"</span> বাটন এ ক্লিক করু। এর পর আপনাকে পেমেন্ট করে একটি নির্দিষ্ট ফর্ম এ পেমেন্ট সংক্রাত তথ্য দিয়ে সাবমিট করলে আপনাকে ডাউনলোড অপসন দেওয়া হব।
+                ইবুকটি কিনতে আগ্রহী হলে <span class="text-success">"কিনতে চাই"</span> বাটন এ ক্লিক করু। এর পর আপনাকে
+                পেমেন্ট করে একটি নির্দিষ্ট ফর্ম এ পেমেন্ট সংক্রাত তথ্য দিয়ে সাবমিট করলে আপনাকে ডাউনলোড অপসন দেওয়া
+                হব।
             </p>
             <div class="d-flex justify-content-center mt-3">
-                <a href="#" class="">
+                <a href="/quick-digital/your_book/3" class="">
                     <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                         বইটি কিনতে চাই &rarr;
                     </button>

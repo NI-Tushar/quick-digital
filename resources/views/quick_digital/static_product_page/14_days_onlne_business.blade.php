@@ -1,23 +1,24 @@
 @extends('quick_digital.layout.layout')
 @section('content')
+
 <main>
-    <section class="ebook__header-bg text-white py-5 d-flex flex-column align-items-center justify-content-center gap-5">
+    <section class="header-bg text-white py-5 d-flex flex-column align-items-center justify-content-center gap-5">
         <div class="container max-width custom-padding">
             <h1 class="text-one text-center fw-bold">
-                <span class="ebook__heading">"লাভের খনি পাইকারি বাজার"</span> <br> বইটি আপনাকে টাকার খনি খুঁজে দিবে
+                <span class="ebook__heading">"১৪ দিনে অনলাইন ব্যবসা"</span> <br> ফেসবুকে শূন্য থেকে ৪০ লক্ষ টাকার <br> ব্যবসা দার করার গাইড
             </h1>
             <p class="fw-semibold lh-base py-3 hero-description text-two text-center">
-                ফেসবুক, টিকটক, ইন্সটাগ্রাম, ইউটিউব, হোয়াটসঅ্যাপ এর মাধ্যমে অসংখ্য ক্ষুদ্র ব্যবসার যাত্রা শুরু হচ্ছে
-                প্রতিনিয়ত। আপনি কেন পিছিয়ে থাকবেন? চাকুরীর পাশাপাশি একটি সাইড ইনকাম সোর্স বর্তমান এই প্রতিযোগিতামূলক
-                জীবন যাত্রায় আপনাকে নিশ্চিন্তে আর্থিক সচ্ছলতা প্রদান করবে।
+                ফেসবুক এবং হোয়াটসঅ্যাপ এর মাধ্যমে অসংখ্য ক্ষুদ্র ব্যবসার যাত্রা শুরু হচ্ছে প্রতি নিয়ত।
+                আপনি কেন পিছিয়ে থাকবেন? চাকুরীর পাশাপাশি একটি সাইড ইনকাম সোর্স বর্তমান এই
+                প্রতিযোগিতামূলক জীবন যাত্রায় আপনাকে নিশ্চিন্তে আর্থিক সচ্ছলতা প্রদান করবে।
             </p>
             <div class="d-flex justify-content-center col-12 col-md-8 col-lg-8 mx-auto">
                 <div class="iframe-wrapper">
-                    <iframe class="rounded" src="https://www.youtube.com/embed/IEnPLF2k6p0?si=Cu2ga8uk4jzjS7S-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="rounded" src="https://www.youtube.com/embed/Uuf6aBTeZw0?si=9fhMTm2DZGeuotuq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-            <a href="{{ route('user_checkout', ['id' => 1]) }}" class="">
+                <a href="/quick-digital/your_book/2" class="">
                     <button class="buy-btn btn btn-warning mt-5 px-4 py-2 rounded-5 fs-4 fw-bold text-success">
                         বইটি কিনতে চাই &rarr;
                     </button>
@@ -25,24 +26,28 @@
             </div>
         </div>
     </section>
+
+
     <section class="my-5 quote container max-width custom-padding">
         <h1 class="bg-dark rounded text-white text-center p-3 text-one fw-bold">
-            একমাত্র স্থান যেখানে কাজের আগে সাফল্য আসে আর সেটা হলো - "লাভের খনি পাইকারি বাজার"
+            এই বইটি পড়ে মাত্র ১৪ দিনে আপনি একটি সফল অনলাইন ব্যবসা দাড় করাতে পারবেন
         </h1>
         <div class="d-flex justify-content-center col-12 col-md-8 col-lg-8 mx-auto">
-            <div class="iframe-wrapper">
-                <iframe src="https://www.youtube.com/embed/0ewF0cYNoBk?si=yd2-QujaVQ_g3HJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            <!-- <div class="iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0ewF0cYNoBk?si=yd2-QujaVQ_g3HJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div> -->
         </div>
     </section>
 
     <section class="my-5 container max-width custom-padding">
         <p class="fw-semibold text-two text-center">
-            নতুন ব্যাবসায়ীরা শুরুতেই ভুল মানুষ ও ভুল জায়গা থেকে পণ্য সোর্সিং করে, এতে অন্যদের থেকে পিছিয়ে পড়তে হয় এবং
-            প্রচুর অর্থ-সময় নষ্ট হয়ে যায়। এই সমস্যার দারুণ সমাধান হতে পারে <span class="text-success">"লাভের খনি পাইকারি বাজার"</span> বইটি।
+            অনলাইন নতুন ব্যাবসায়ীরা শুরুতেই ভুল প্রোডাক্ট নিয়ে কাজ করে যা ফলে
+            অধিকাংশ ব্যবসায়ীরা লসের সম্মুখীম্মু খীন হয়।
+            এতে অন্যদের থেকে পিছিয়ে পড়তে হয় এবং প্রচুর অর্থ-সময় নষ্ট হয়ে যায়।
+            এই সমস্যার দারুণ সমাধান হতে পারে " <span class="text-success">"১৪ দিনে অনলাইন ব্যবসা"</span> বইটি।
         </p>
         <div class="d-flex justify-content-center">
-            <a href="/quick-digital/ebook/4" class="">
+            <a href="/quick-digital/your_book/2" class="">
                 <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                     বইটি কিনতে চাই &rarr;
                 </button>
@@ -54,62 +59,47 @@
         <div class="container max-width custom-padding">
             <div class="bg-white text-dark rounded">
                 <h1 class="fw-bold p-3 text-one text-center">
-                    কেন <span class="text-success">"লাভের খনি পাইকারি বাজার"</span> বইটি আপনার কাছে থাকা উচিত?
+                    কেন <span class="text-success">"১৪ দিনে অনলাইন ব্যবসা শিখুন"</span> বইটি আপনার কাছে থাকা উচিত?
                 </h1>
             </div>
             <div class="my-3">
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">ই-বুকটিতে বাংলাদেশের সকল পণ্যের পাইকারি বাজারের ঠিকানা
-                        এবং পাইকারি বাজার সম্পর্কিত বিভিন্ন তথ্য উল্লেখ করা হয়েছে।</p>
+                    <p class="fw-semibold text-two text-white text-start">
+                        আপনি কোন পণ্য নিয়ে ব্যবসা শুরু করলে দ্রুত সফল হতে পারবেন এ নিয়ে রয়েছে বিশদ আলোচনা।
+                    </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">কোন পণ্যের জন্য কোন পাইকারি বাজারে যেতে হবে,কোথায় গেলে
-                        সবচেয়ে কমদামে সোর্সিং করতে পারবেন এই তথ্য গুলো খুব সুন্দর ভাবে উপস্থাপন করা হয়েছে।</p>
+                    <p class="fw-semibold text-two text-white text-start">
+                        ই-বুকটিতে থেকে আপনি মাত্র ১৪ দিনে কিভাবে শুরু থেকে কিভাবে একটি সফল ব্যবসা দাঁড় করতে হয় তা জানতে পারবেন।
+                    </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">এটি এমন একটি বই যেখানে অনেক ধরনের প্রডাক্ট নিয়ে আলোচনা
-                        করা হয়েছে,আপনি অনায়াসে এমন কিছু আইডিয়া পেয়ে যেতে পারেন যা আগে কখনো ভাবেননি।</p>
+                    <p class="fw-semibold text-two text-white text-start">
+                        এই বইটি এর সাথে পাচ্ছেন ১৪ দিনের চেক লিষ্ট।
+                    </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">পাইকারি বাজারের ঠিকানার পাশাপাশি গুগল ম্যাপের লিংক দেওয়া
-                        হয়েছে,যেন আপনি খুব সহজেই পৌঁছাতে পারেন।</p>
+                    <p class="fw-semibold text-two text-white text-start">
+                        এই বইটি এর সাথে পাচ্ছেন টেন্ডিং ও লাভ জনক প্রডাক্টের আইডিয়া ব্যাংক।
+                    </p>
                 </div>
                 <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                     <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">যেকোনো পাইকারি বাজারে বড় ধরনের কোন পরিবর্তন আসলে সাথে
-                        সাথে আপডেট পেয়ে যাবেন।</p>
-                </div>
-                <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
-                    <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                    <p class="fw-semibold text-two text-white text-start">একজন উদ্যোক্তার জীবনে অনেক চ্যালেঞ্জিং সময় আসে, ঠিক সেই
-                        সময়ে আপনার পাশে থাকবে "উদ্যোক্তাদের প্রথম ঠিকানা" বইটি।</p>
+                    <p class="fw-semibold text-two text-white text-start">
+                        একজন অনলাইন ব্যবসায়ীর জীবনে অনেক চ্যালেঞ্জিং সময় আসে, ঠিক সেই সময়ে আপনার পাশে থাকবে "১৪ দিনে অনলাইন ব্যবসা শিখুন" বইটি।
+                    </p>
                 </div>
                 <!-- <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
                         <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                        <p class="text-white my-auto fs-4">ভিভিন্ন কর্মক্ষেত্রে ভিডিও এডিটিং-এর ভূমিকা বোঝা, যেমন :
-                            টেলিভিশন, ফিল্ম, এডভার্টাইজিং এবং সোশ্যাল মিডিয়া।</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
-                        <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                        <p class="text-white my-auto fs-4">যোগাযোগে দক্ষতা সহ একটি ভিডিও প্রোডাকশন টিমে অন্যদের সাথে
-                            সহযোগিতা করার দক্ষতা এবং ওয়ার্কফ্লো ম্যানেজমেন্ট।</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
-                        <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                        <p class="text-white my-auto fs-4">ভিডিও এডিটিংর কৌশলগুলির সাথে পরিচিতি হওয়া, যেমন : মোশন
-                            গ্রাফিক্স এবং অ্যানিমেশন।</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-3 py-2 border-bottom border-white my-2">
-                        <i class="fa-solid fa-circle-check text-success fs-3"></i>
-                        <p class="text-white my-auto fs-4">প্র্যাকটিক্যাল প্রজেক্টের অভিজ্ঞতা যা শিক্ষার্থীদের তাদের
-                            দক্ষতা প্রয়োগ এবং পোর্টফোলিও তৈরি করতে সাহায্য করবে।</p>
+                        <p class="fw-semibold text-two text-white text-start">একজন উদ্যোক্তার জীবনে অনেক চ্যালেঞ্জিং সময় আসে, ঠিক সেই
+                            সময়ে আপনার পাশে থাকবে "উদ্যোক্তাদের প্রথম ঠিকানা" বইটি।</p>
                     </div> -->
                 <div class="d-flex justify-content-center">
-                    <a href="/quick-digital/ebook/4" class="">
+                    <a href="/quick-digital/your_book/2" class="">
                         <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                             বইটি কিনতে চাই &rarr;
                         </button>
@@ -128,7 +118,7 @@
             <div class="col-md-1"></div>
             <div class="col-12 col-md-5">
                 <div class="book-img-container d-flex justify-content-center">
-                    <img class="book-img shadow" src="{{ asset('front/assets/images/1.png') }}" alt="">
+                    <img class="book-img shadow" src="{{ asset('front/assets/books/cover/book2.jpeg') }}" alt="">
                 </div>
             </div>
             <div class="col-12 col-lg-5 py-5">
@@ -139,7 +129,7 @@
                                 রিলিজ ডেট
                             </h4>
                             <p class="fs-4 fs-sm-6 my-auto">
-                                এপ্রিল ১০, ২০২৪
+                                এপ্রিল ১৮, ২০২৪
                             </p>
                         </div>
                     </div>
@@ -169,7 +159,7 @@
                                 পেজ সংখ্যা
                             </h4>
                             <p class="fs-4 fs-sm-6 my-auto">
-                                ৮৭
+                                ১৩৩
                             </p>
                         </div>
                     </div>
@@ -178,7 +168,7 @@
             <div class="col-md-1"></div>
         </div>
         <div class="d-flex justify-content-center">
-            <a href="/quick-digital/ebook/4" class="">
+            <a href="/quick-digital/your_book/2" class="">
                 <button class="buy-btn btn btn-success px-4 py-2 rounded-5 fs-4 fw-bold text-white custom-btn">
                     বইটি কিনতে চাই &rarr;
                 </button>
@@ -188,12 +178,11 @@
 
     <section class="py-5">
         <div class="container max-width custom-padding">
-            <h1 class="text-center fw-bold border-top border-bottom py-4 rounded text-one"><span class="text-success">"লাভের
-                    খনি পাইকারি বাজার"</span> বইটি কাদের জন্য?
+            <h1 class="text-center fw-bold border-top border-bottom py-4 rounded text-one"><span class="text-success">"১৪ দিনে অনলাইন ব্যবসা"</span> বইটি কাদের জন্য?
             </h1>
             <p class="text-two fw-semibold text-center">
-                <strong>"লাভের খনি পাইকারি বাজার"</strong> বইটি এমন কয়েকটা সমস্যার সমাধান নিয়ে লেখা হয়েছে যে সমস্যা গুলো আমাদের জীবনে
-                বহুবার আসে। আপনি যে ব্যবসাতেই নিয়োজিত থাকুন না কেন, এইরকম একটি ই-বুক অবশ্যই আপনার কাছে থাকা উচিত।
+                <!-- <strong>"লাভের খনি পাইকারি বাজার"</strong> -->
+                অনেকদিন ধরেই অনলাইন ব্যবসা শুরু করতে চাচ্ছেন কিন্তু সঠিক গাইডলাইন এ অভাবে শুরু করতে পারছেন না অথবা অনলাইনে অনেকদিন ধরে ব্যবসা করছেন কিন্তু সফল হতে পারছেন না। মূলত এই দুই শ্রেনীর মানুষ এর জন্য অনলাইন ব্যবসায় সফলতার রাস্তা দেখানোর জন্য এই বইটি বানানো হয়েছে তৈরী করা হয়েছে।
             </p>
         </div>
     </section>
@@ -204,9 +193,8 @@
                 ই-বুকটির মূল্য কতো?
             </h1>
             <p class="text-two fw-semibold text-white pt-5 text-center">
-                বইটির পিছনে ৫ জনের একটি টিম প্রায় ৮ মাস সময় দিয়েছেন, মাঠ পর্যায়ে ঘুরে বেড়িয়েছেন শুধু মাত্র সঠিক তথ্যের
-                সন্ধানে। পরীক্ষামূলক ভাবে বইটির নাম মাত্র মূল্য ধরা হয়েছে BDT 149 যা সামনের সপ্তাহে আমরা আরো বৃদ্ধি
-                করবো।
+                বইটির পিছনে ৫ জনের একটি টিম প্রায় ২ বছর সময় দিয়েছেন, অনলাইন এ রিচার্চ করেছেন সঠিক তথ্যের সন্ধানে।
+                পরীক্ষামূলক ভাবে বইটির নাম মাত্র মূল্য ধরা হয়েছে <span class="font_change text-success">১৪৯৳</span> যা সামনের সপ্তাহে আমরা আরো বৃদ্ধি করবো।
             </p>
         </div>
     </section>
@@ -229,7 +217,7 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width: 18%">18%</div>
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="#" class="">
+                <a href="/quick-digital/your_book/2" class="">
                     <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                         বইটি কিনতে চাই &rarr;
                     </button>
@@ -247,7 +235,7 @@
                 ইবুকটি কিনতে আগ্রহী হলে <span class="text-success">"কিনতে চাই"</span> বাটন এ ক্লিক করু। এর পর আপনাকে পেমেন্ট করে একটি নির্দিষ্ট ফর্ম এ পেমেন্ট সংক্রাত তথ্য দিয়ে সাবমিট করলে আপনাকে ডাউনলোড অপসন দেওয়া হব।
             </p>
             <div class="d-flex justify-content-center mt-3">
-                <a href="#" class="">
+                <a href="/quick-digital/your_book/2" class="">
                     <button class="buy-btn btn btn-success mt-3 px-4 py-2 rounded-5 fs-4 fw-bold text-white">
                         বইটি কিনতে চাই &rarr;
                     </button>
@@ -256,4 +244,5 @@
         </div>
     </section>
 </main>
+
 @endsection
