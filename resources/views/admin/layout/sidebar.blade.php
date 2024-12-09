@@ -178,7 +178,7 @@
             $active = Session::get('page') == 'productCategory'||Session::get('page') == 'order_product'||Session::get('page') == 'products'||Session::get('page') == 'add-edit-product' || Session::get('page') == 'add-edit-category' ? 'active' : '';
             @endphp
             <li class="nav-item {{ $active }}"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Users">Quick Shop</span></a>
-                <ul class="menu-content">
+                {{-- <ul class="menu-content">
                     @php
                     $active = Session::get('page') == 'productCategory' ? 'active' : '';
                     @endphp
@@ -213,6 +213,16 @@
                     <li class="{{ $active }}">
                         <a class="menu-item" href="{{ url('admin/product/orders') }}" data-i18n="Vertical">Product Order</a>
                     </li>
+                </ul> --}}
+
+                <ul class="menu-content">
+                    @php
+                    $active = Session::get('page') == 'productCategory' ? 'active' : '';
+                    @endphp
+                    <li class="{{ $active }}">
+                        <a class="menu-item" href="{{ route('quick-shopping-category.index') }}" data-i18n="Vertical">Manage Category</a>
+                    </li>
+
                 </ul>
             </li>
         </ul>
