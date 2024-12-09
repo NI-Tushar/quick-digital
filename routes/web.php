@@ -6,7 +6,8 @@
     use App\Http\Controllers\Front\HomeController;
     use App\Http\Controllers\PDFController;
     use App\Http\Controllers\CheckoutController;
-    use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\QuickShopCategoryController;
+use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
 
     Route::get('/', function () {
@@ -85,6 +86,14 @@
                 Route::get('delete-subadmin/{id?}', 'AdminController@deleteSubadmin');
                 Route::match(['get', 'post'], 'update-permission/{id}', 'AdminController@updatePermission');
             });
+
+
+            // Quick Shopping Category
+            Route::get('/quick-shopping-category', [QuickShopCategoryController::class, 'index'])->name('quick-shopping-category.index');
+            Route::post('/quick-shopping-category', [QuickShopCategoryController::class, 'store'])->name('quick-shopping-category.store');
+            Route::get('/quick-shopping-category/{quickShopCategory}/edit', [QuickShopCategoryController::class, 'edit'])->name('quick-shopping-category.edit');
+            Route::post('/quick-shopping-category-update', [QuickShopCategoryController::class, 'update'])->name('quick-shopping-category.update');
+            Route::delete('/quick-shopping-category/{quickShopCategory}', [QuickShopCategoryController::class, 'destroy'])->name('quick-shopping-category.destroy');
         });
     });
 
@@ -114,9 +123,9 @@
     });
 
 
-   
 
-    
+
+
     //front- QUICK DIGITAL
     Route::prefix('/quick-digital')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::get('index', 'HomeController@index')->name('quick-digital.index');
@@ -138,7 +147,7 @@
         Route::get('ebook/{id?}', 'HomeController@individual_ebook');
 
          // REDIRECT TO CHECKOUT | SKIPPING BOOK VIEW PAGE
-        Route::get('/your_book/{id?}', 'HomeController@ebook_checkout'); 
+        Route::get('/your_book/{id?}', 'HomeController@ebook_checkout');
 
         // Route::get('ebook-checkout', 'HomeController@ebook_checkout');
         Route::get('mobile-video-checkout', 'HomeController@mobile_video_checkout');
@@ -183,7 +192,7 @@
 
     //ebook
     Route::get('/carts/{id}', [CartController::class, 'create'])->name('cart.create');
-   
+
     Route::post('/payment', [CartController::class, 'payment'])->name('cart.payment');
     Route::get('/success', [CartController::class, 'success'])->name('payment.success');
     //subscription
@@ -197,7 +206,7 @@
     Route::post('/product/payment', [CartController::class, 'payment_product'])->name('cart.product.payment');
     Route::get('/product/success', [CartController::class, 'product_payment_success'])->name('product.payment.success');
 
-    
+
     Route::get('/cancel-fail', [CartController::class, 'fail'])->name('payment.cancel.fail');
 
     Route::get('/admin/errors/error_403', function () {
@@ -258,11 +267,11 @@
         return view('ecommerce.ecommerce_site');
     });
     Route::post('/payment/user', [PaymentController::class, 'payment'])->name('quick.payment');
-    
-    
+
+
     Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.successfull');
     Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
-    
+
 
 
 

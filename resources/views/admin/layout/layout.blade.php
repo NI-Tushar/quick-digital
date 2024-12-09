@@ -132,6 +132,8 @@
 
     <!-- END: Page JS-->
 
+    @stack('script')
+
 </body>
 <!-- END: Body-->
 
