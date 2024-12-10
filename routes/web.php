@@ -7,6 +7,7 @@
     use App\Http\Controllers\PDFController;
     use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\QuickShopCategoryController;
+use App\Http\Controllers\QuickShopProductController;
 use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
 
@@ -87,20 +88,37 @@ use App\Http\Controllers\SslCommerzPaymentController;
                 Route::match(['get', 'post'], 'update-permission/{id}', 'AdminController@updatePermission');
             });
 
+            // E-commerce All Route Here
 
-            // Quick Shopping Category
+            // Quick Shopping Categories
             Route::get('/quick-shopping-category', [QuickShopCategoryController::class, 'index'])->name('quick-shopping-category.index');
             Route::post('/quick-shopping-category', [QuickShopCategoryController::class, 'store'])->name('quick-shopping-category.store');
             Route::get('/quick-shopping-category/{quickShopCategory}/edit', [QuickShopCategoryController::class, 'edit'])->name('quick-shopping-category.edit');
             Route::post('/quick-shopping-category-update', [QuickShopCategoryController::class, 'update'])->name('quick-shopping-category.update');
             Route::delete('/quick-shopping-category/{quickShopCategory}', [QuickShopCategoryController::class, 'destroy'])->name('quick-shopping-category.destroy');
+
+            // Quick Shopping Products
+            Route::resource('/quick-shopping-product', QuickShopProductController::class);
         });
     });
 
 
+    // E-commerce All Route Here
+    Route::prefix('/admin')->middleware('admin')->group(function () {
+
+        // Quick Shopping Categories
+        Route::get('/quick-shopping-category', [QuickShopCategoryController::class, 'index'])->name('quick-shopping-category.index');
+        Route::post('/quick-shopping-category', [QuickShopCategoryController::class, 'store'])->name('quick-shopping-category.store');
+        Route::get('/quick-shopping-category/{quickShopCategory}/edit', [QuickShopCategoryController::class, 'edit'])->name('quick-shopping-category.edit');
+        Route::post('/quick-shopping-category-update', [QuickShopCategoryController::class, 'update'])->name('quick-shopping-category.update');
+        Route::delete('/quick-shopping-category/{quickShopCategory}', [QuickShopCategoryController::class, 'destroy'])->name('quick-shopping-category.destroy');
+
+        // Quick Shopping Products
+        Route::resource('/quick-shopping-product', QuickShopProductController::class);
+    });
+
+
 //front - user
-
-
 // ____________________________________________________________________ user middle ware
     Route::prefix('/user')->namespace('App\Http\Controllers\Front')->group(function () {
         Route::match(['get', 'post'], 'login', 'UserController@loginUser')->name('user.login');

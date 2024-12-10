@@ -28,7 +28,7 @@ class QuickShopCategoryController extends Controller
             'message'=> 'New cateogry Save Successfully',
             'type'=> 'success'
         );
-        return redirect()->back()->with($notification);
+        return redirect()->back()->with('success', 'Category added successfully!');
     }
 
     public function edit(QuickShopCategory $quickShopCategory)
@@ -51,7 +51,7 @@ class QuickShopCategoryController extends Controller
             'message'=> 'Category Updated Successfully',
             'type'=> 'success'
         );
-        return redirect()->back()->with($notification);
+        return redirect()->back()->with('success', 'Category Updated successfully!');
     }
 
     public function destroy(QuickShopCategory $quickShopCategory)
@@ -65,7 +65,7 @@ class QuickShopCategoryController extends Controller
                 'type' => 'warning'
             ];
 
-            return redirect()->back()->with($notification);
+            return redirect()->back()->with('success', 'Category Deleted successfully!');
         }
     }
 }

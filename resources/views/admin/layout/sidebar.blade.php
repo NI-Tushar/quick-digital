@@ -216,11 +216,12 @@
                 </ul> --}}
 
                 <ul class="menu-content">
-                    @php
-                    $active = Session::get('page') == 'productCategory' ? 'active' : '';
-                    @endphp
-                    <li class="{{ $active }}">
-                        <a class="menu-item" href="{{ route('quick-shopping-category.index') }}" data-i18n="Vertical">Manage Category</a>
+
+                    <li>
+                        <a class="menu-item" href="{{ route('quick-shopping-category.index') }}" data-i18n="Vertical">Manage Categories</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{{ route('quick-shopping-product.index') }}" data-i18n="Vertical">Manage Products</a>
                     </li>
 
                 </ul>

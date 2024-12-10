@@ -58,6 +58,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url('admin/assets/css/style.css') }}">
     <!-- END: Custom CSS-->
+    @stack('css')
 
 </head>
 <!-- END: Head-->
