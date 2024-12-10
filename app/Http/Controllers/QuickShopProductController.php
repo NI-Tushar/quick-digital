@@ -87,8 +87,9 @@ class QuickShopProductController extends Controller
             }
         }
 
-        return redirect()->back()->with('success', 'Product and variations added successfully!');
+        return redirect()->back()->with('success', 'Product added successfully!');
     }
+
 
 
 

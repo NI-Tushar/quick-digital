@@ -6,23 +6,23 @@
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-2">
-                <h3 class="content-header-title mb-0">PRODUCT LIST</h3>
+                <h3 class="content-header-title mb-0">Categories LIST</h3>
                 <div class="row breadcrumbs-top">
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ url('admin/dashboard') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Product List</li>
+                            <li class="breadcrumb-item"><a href="{{ route('quick-shopping-category.index') }}">Home</a></li>
+                            <li class="breadcrumb-item active">Categories List</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
-        @if (Session::has('success_message'))
+        @if (Session::has('success'))
         <div class="alert bg-success alert-icon-left alert-dismissible mb-2" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <strong>Well done!</strong> {{ Session::get('success_message') }}
+            <strong>Well done!</strong> {{ Session::get('success') }}
         </div>
         @endif
         <div class="content-body">
