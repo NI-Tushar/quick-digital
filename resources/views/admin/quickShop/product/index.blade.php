@@ -17,12 +17,12 @@
                 </div>
             </div>
         </div>
-        @if (Session::has('success_message'))
+        @if (Session::has('success'))
         <div class="alert bg-success alert-icon-left alert-dismissible mb-2" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <strong>Well done!</strong> {{ Session::get('success_message') }}
+            <strong>Well done!</strong> {{ Session::get('success') }}
         </div>
         @endif
         <div class="content-body">

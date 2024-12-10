@@ -145,8 +145,8 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="description" class="text-gray">Description</label>
-                                            <div id="quill-editor" class="mb-3" style="height: 200px;"></div>
-                                            <textarea rows="3" class="mb-3 d-none" name="description" class="form-control @error('discount') is-invalid @enderror" id="description">{{ old('description') }}</textarea>
+                                            <div id="quill-editor" class="mb-3" style="height: 200px;">{!! old('description') !!}</div>
+                                            <textarea rows="3" class="mb-3 d-none" name="description" class="form-control @error('discount') is-invalid @enderror" id="description">{!! old('description') !!}</textarea>
                                             @error('description')
                                             <div id="emailHelp" class="form-text text-danger">{{ $message }}</div>
                                             @enderror

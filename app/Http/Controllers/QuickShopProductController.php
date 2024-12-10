@@ -35,7 +35,7 @@ class QuickShopProductController extends Controller
             'thumbnail_image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:10048'],
             'images' => 'required',
             'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,svg', 'max:10048'],
-            'variations' => ['required', 'array', 'min:1'],
+            'variations' => ['nullable', 'array', 'min:1'],
             'variations.*.color' => ['required', 'string', 'min:2', 'max:50'],
             'variations.*.color_code' => ['required', 'regex:/^#[0-9A-Fa-f]{3,6}$/'],
             'variations.*.size' => ['required', 'string', 'min:1', 'max:5'],
@@ -114,7 +114,7 @@ class QuickShopProductController extends Controller
             'thumbnail_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:10048'],
             'images' => ['nullable', 'array'],
             'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,svg', 'max:10048'],
-            'variations' => ['required', 'array', 'min:1'],
+            'variations' => ['nullable', 'array', 'min:1'],
             'variations.*.color' => ['required', 'string', 'min:2', 'max:50'],
             'variations.*.color_code' => ['required', 'regex:/^#[0-9A-Fa-f]{3,6}$/'],
             'variations.*.size' => ['required', 'string', 'min:1', 'max:5'],
@@ -167,17 +167,49 @@ class QuickShopProductController extends Controller
 
         // Handle variations
         $product->variations()->delete(); // Remove old variations
-        foreach ($request->variations as $variation) {
-            QuickShopProductVariation::create([
-                'quick_shop_product_id' => $product->id,
-                'color' => $variation['color'],
-                'color_code' => $variation['color_code'],
-                'size' => $variation['size'],
-                'qty' => $variation['quantity'],
-            ]);
+        if($request->variations){
+            foreach ($request->variations as $variation) {
+                QuickShopProductVariation::create([
+                    'quick_shop_product_id' => $product->id,
+                    'color' => $variation['color'],
+                    'color_code' => $variation['color_code'],
+                    'size' => $variation['size'],
+                    'qty' => $variation['quantity'],
+                ]);
+            }
         }
 
         return redirect()->back()->with('success', 'Product updated successfully!');
+    }
+
+    public function destroy(QuickShopProduct $quick_shopping_product)
+    {
+        $product = $quick_shopping_product;
+
+        $images = $product->images ? explode('|', $product->images) : [];
+        $thumbnailImage = $product->thumbnail_image;
+
+        // Delete old images if new ones are uploaded
+        if ($images) {
+            foreach ($images as $image) {
+                $imagePath = public_path($image);
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                }
+            }
+        }
+
+        // Delete old thumbnail image if a new one is uploaded
+        if ($thumbnailImage) {
+            $thumbnailPath = public_path($thumbnailImage);
+            if ($thumbnailImage && file_exists($thumbnailPath)) {
+                unlink($thumbnailPath);
+            }
+        }
+
+        $product->delete();
+
+        return redirect()->back()->with('success', 'Product Deleted successfully!');
     }
 
 
