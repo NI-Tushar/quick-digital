@@ -67,10 +67,10 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex" style="gap: 1em">
-                                                        <a href="#" class="editProduct btn btn-sm btn-info" data-id="{{ $product->id }}" data-toggle="modal" data-target="#editModal">
+                                                        <a href="{{ route('quick-shopping-product.edit', $product->slug) }}" class="btn btn-sm btn-info">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
-                                                        <form action="{{ route('quick-shopping-product.destroy', $product->id) }}"
+                                                        <form action="{{ route('quick-shopping-product.destroy', $product->slug) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
