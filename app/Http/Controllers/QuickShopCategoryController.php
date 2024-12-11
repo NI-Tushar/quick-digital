@@ -33,7 +33,6 @@ class QuickShopCategoryController extends Controller
 
     public function edit(QuickShopCategory $quickShopCategory)
     {
-        info($quickShopCategory);
         return response()->json($quickShopCategory);
     }
 

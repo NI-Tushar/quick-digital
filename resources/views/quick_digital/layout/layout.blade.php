@@ -70,6 +70,7 @@
 
     {{-- videojs --}}
     <link href="//vjs.zencdn.net/8.3.0/video-js.min.css" rel="stylesheet">
+    @stack('css')
 </head>
 
 <body>
@@ -128,6 +129,8 @@
       const player = new Plyr('#player');
         const player2 = new Plyr('#player-2');
     </script>
+
+    @stack('script')
 </body>
 
 </html>
