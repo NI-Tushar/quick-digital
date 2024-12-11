@@ -25,6 +25,7 @@ class PaymentController extends Controller
        $payment_request->customerName = 'Mr. Piter';
        $payment_request->customerPhone = '01722222222';
        $payment_request->customerEmail = 'test@gmail.com';
+       
        $payment_request->customerAddress = 'Dhaka';
        $payment_request->customerCity = 'Dhaka';
        $payment_request->customerState = 'Dhaka';

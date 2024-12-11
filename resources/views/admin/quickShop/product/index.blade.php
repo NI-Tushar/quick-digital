@@ -57,7 +57,7 @@
                                                 <td>
                                                     <img width="50px" height="50px" src="{{ asset($product->thumbnail_image) }}" alt="">
                                                 </td>
-                                                <td>{{ $product->name }}</td>
+                                                <td>{!! Str::limit($product->name, 50) !!}</td>
                                                 <td>{{ $product->price }}</td>
                                                 <td>
                                                     @foreach ($product->variations as $variation)
