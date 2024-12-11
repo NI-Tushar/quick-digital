@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 
 class BootcampController extends Controller
 {
+    public function requestForm()
+    {
+        return view('quick_digital.boot_camp.request_form');
+    }
+
     public function index()
     {
-        return view('quick_digital.boot_camp.index');
+        $bootcamps = Bootcamp::latest()->paginate(50);
+        return view('quick_digital.boot_camp.index', compact('bootcamps'));
     }
 
     public function store(Request $request)
@@ -46,6 +52,18 @@ class BootcampController extends Controller
         $bootcamp->save();
 
         return redirect()->back()->with('success', 'Your Request Send successfully!');
+    }
+
+    public function show(Bootcamp $bootcamp)
+    {
+        return response()->json($bootcamp);
+    }
+
+    public function destroy(Bootcamp $bootcamp)
+    {
+        $bootcamp->delete();
+
+        return redirect()->back()->with('success', 'Delete Record successfully!');
     }
 
 }

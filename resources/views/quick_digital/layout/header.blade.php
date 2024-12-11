@@ -80,7 +80,7 @@
                         <ul class="navbar-nav d-flex pe-2" style="width:auto; height:auto;">
                             <li class="nav-item">
                                 <a class="nav-link fw-semibold px-md-3" aria-current="page"
-                                    href="{{ route('bootcamp.index') }}" style="background: #eb29a1;color:#ffff !important">
+                                    href="{{ route('bootcamp.requestForm') }}" style="background: #eb29a1;color:#ffff !important">
                                     বুট ক্যাম্প
                                 </a>
                             </li>

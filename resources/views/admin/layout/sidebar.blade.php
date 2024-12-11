@@ -174,6 +174,20 @@
                 </ul>
             </li>
 
+            <li class="nav-item"><a href="#"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Users">Bootcamp</span></a>
+
+                <ul class="menu-content">
+
+                    <li>
+                        <a class="menu-item" href="{{ route('bootcamp.index') }}" data-i18n="Vertical">All Request</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{{ route('quick-shopping-product.index') }}" data-i18n="Vertical">Manage Products</a>
+                    </li>
+
+                </ul>
+            </li>
+
             @php
             $active = Session::get('page') == 'productCategory'||Session::get('page') == 'order_product'||Session::get('page') == 'products'||Session::get('page') == 'add-edit-product' || Session::get('page') == 'add-edit-category' ? 'active' : '';
             @endphp

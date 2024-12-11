@@ -107,10 +107,15 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Quick Shopping Products
         Route::resource('/quick-shopping-product', QuickShopProductController::class);
+
+        // Bootcamp
+        Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
+        Route::get('/bootcamp/{bootcamp}/show', [BootcampController::class, 'show'])->name('bootcamp.show');
+        Route::delete('/bootcamp/{bootcamp}', [BootcampController::class, 'destroy'])->name('bootcamp.destroy');
     });
 
-    // Boot Camp
-    Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
+    // Boot Request Form
+    Route::get('/bootcamp', [BootcampController::class, 'requestForm'])->name('bootcamp.requestForm');
     Route::post('/bootcamp', [BootcampController::class, 'store'])->name('bootcamp.store');
 
 
