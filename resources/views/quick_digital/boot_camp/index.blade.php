@@ -143,6 +143,11 @@
                                             <td id="address" colspan="3">N/A</td>
                                         </tr>
                                     </table>
+
+                                    <div class="card p2">
+                                        <button class="btn btn-success" id="convertAffiliator" data-id="">Convert to Affiliator </button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -170,7 +175,6 @@
                 type: 'GET',
                 dataType: 'json',
                 success: function(res) {
-                    console.log(res);
                     //Populate Organization Information
                     $('#creator_name').text(res.name || 'N/A');
                         const date = new Date(res.created_at);
@@ -199,6 +203,7 @@
                     $('#division').text(res.division  || 'N/A');
                     $('#district').text(res.district  || 'N/A');
                     $('#address').text(res.address  || 'N/A');
+                    $('#convertAffiliator').data('id', res.id || 'N/A'); // Updates the jQuery data cache
 
                     // Show the modal
                     const modal = new bootstrap.Modal(document.getElementById('bootcampViewModla'));
@@ -209,6 +214,48 @@
                 }
             });
         });
+
+        // Convert Affiliator
+        $('#convertAffiliator').click(function(event) {
+        var affiliatorId = $(this).data("id");
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "Do you really want to convert this data into a Affiliator?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, convert it!',
+            cancelButtonText: 'No, cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: '/admin/create-affiliator/' + affiliatorId,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(res) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'This data has been successfully converted to a Affiliator.',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        // Display the backend error message in SweetAlert
+                        var errorMessage = xhr.responseJSON.error || 'Something went wrong. Please try again.';
+                        Swal.fire({
+                            title: 'Error!',
+                            text: errorMessage,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                });
+            }
+        });
+    });
 
 
         // Clear modal data and backdrop when it is hidden

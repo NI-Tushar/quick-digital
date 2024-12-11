@@ -112,6 +112,9 @@ use App\Http\Controllers\SslCommerzPaymentController;
         Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
         Route::get('/bootcamp/{bootcamp}/show', [BootcampController::class, 'show'])->name('bootcamp.show');
         Route::delete('/bootcamp/{bootcamp}', [BootcampController::class, 'destroy'])->name('bootcamp.destroy');
+
+        // Convert Affiliator to Bootcamp Request
+        Route::get('/create-affiliator/{bootcamp}', [BootcampController::class, 'creatAffiliator'])->name('bootcamp.creatAffiliator');
     });
 
     // Boot Request Form

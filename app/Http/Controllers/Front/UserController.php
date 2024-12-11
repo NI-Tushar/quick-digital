@@ -25,22 +25,22 @@ class UserController extends Controller
     {
         if ($request->isMethod('post')) {
             $data = $request->all();
-    
+
             $rules = [
                 'email' => 'required|email|max:255',
                 'password' => 'required|max:30|min:6',
             ];
-    
+
             $customMessage = [
                 'email.required' => "Email is required",
                 'email.email' => "Valid email is required",
                 'password.required' => 'Password is required'
             ];
-    
+
             $request->validate($rules, $customMessage);
-    
+
             $remember = $request->filled('remember_me');
-    
+
             if (Auth::guard('user')->attempt(['email' => $data['email'], 'password' => $data['password']], $remember)) {
                 $user = Auth::guard('user')->user();
                 if ($user->status == 1) {
@@ -55,7 +55,7 @@ class UserController extends Controller
         }
         return view('front.users.login');
     }
-    
+
 
 
     public function registerUser(Request $request)

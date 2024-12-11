@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bootcamp;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class BootcampController extends Controller
 {
@@ -64,6 +66,44 @@ class BootcampController extends Controller
         $bootcamp->delete();
 
         return redirect()->back()->with('success', 'Delete Record successfully!');
+    }
+
+    // Crate Affiliator
+    public function creatAffiliator($id)
+    {
+        $bootcamp = Bootcamp::find($id);
+
+        if (!$bootcamp) {
+            return response()->json(['error' => 'Bootcamp data not found'], 404);
+        }
+
+        $userExists = User::where('email', $bootcamp->email)
+            ->where('mobile', $bootcamp->phone)
+            ->exists();
+
+        if ($userExists) {
+            return response()->json(['error' => 'This data already exists in the User table'], 409);
+        }
+
+        $user = new User;
+        $user->name = $bootcamp->name;
+        $user->user_type = 'affiliator';
+        $user->mobile = $bootcamp->phone;
+        $user->email = $bootcamp->email;
+        $user->password = bcrypt('123456');
+        $user->address = $bootcamp->address;
+        $user->city = '';
+        $user->state = '';
+        $user->country = '';
+        $user->zipcode = '';
+        $user->status = 1;
+        $user->is_instructor = 0;
+        $user->save();
+
+        // Send Email or SMS Affiliator
+        //
+
+        return response()->json($user, 201);
     }
 
 }
