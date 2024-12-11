@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ url('front/styles/color.css') }}">
 
     <link rel="stylesheet" href="{{ url('front/styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url('front/styles/ebook_checkout.css') }}">
     <link rel="stylesheet" href="{{ url('front/styles/header.css') }}">
     <link rel="stylesheet" href="{{ url('front/styles/slider.css') }}">
     <link rel="stylesheet" href="{{ url('front/styles/banner.css') }}">

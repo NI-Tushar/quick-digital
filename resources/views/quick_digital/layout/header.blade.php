@@ -1,5 +1,16 @@
 
 <header>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBXJWQEP3W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MBXJWQEP3W');
+</script>
+
+
 
 <div class="sticky_bar">
 

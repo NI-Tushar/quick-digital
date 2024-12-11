@@ -211,7 +211,8 @@ use App\Http\Controllers\SslCommerzPaymentController;
     //ebook
     Route::get('/carts/{id}', [CartController::class, 'create'])->name('cart.create');
 
-    Route::post('/payment', [CartController::class, 'payment'])->name('cart.payment');
+
+    Route::post('/payment', [PaymentController::class, 'payment'])->name('initiate_payment');
     Route::get('/success', [CartController::class, 'success'])->name('payment.success');
     //subscription
     Route::get('/subscription/carts/{id}', [CartController::class, 'create_cart_subscription'])->name('cartSubscription.create');

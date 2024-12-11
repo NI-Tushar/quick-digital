@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="banner_img">
-                    <img class="w-100" src="{{ asset('front/assets/images/about-img.JPG') }}" alt="">
+                    <img class="w-100" src="{{ asset('front/assets/images/about-img.jpg') }}" alt="">
                 </div>
             </div>
 
@@ -268,24 +268,24 @@
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/fb_marketing.png') }}" alt="">
                     <p>ফেসবুক মার্কেটিংয়ের কার্যকরী কৌশল শিখে আপনার ব্যবসা বা ব্র্যান্ডকে নতুন উচ্চতায় নিয়ে যান।</p>
-                    <a href=""><button>এখনই বুক করুন</button></a>
+                    <a href="#"><button>এখনই বুক করুন</button></a>
                 </div>
                 <div class="img">
                     <img src="{{ asset('front/assets/images/courses/thumnail.jpg') }}" alt="">
                     <p>থাম্বনেল ডিজাইন কৌশল শিখে আপনার কনটেন্টকে আকর্ষণীয় ও নজরকাড়া করুন।</p>
-                    <a href=""><button>এখনই বুক করুন</button></a>
+                    <a href="#"><button>এখনই বুক করুন</button></a>
                 </div>
             </div>
             <div class="centered_part">
                 <div class="img">
-                    <img src="{{ asset('front/assets/images/courses/book1.png') }}" alt="">
+                    <img src="{{ asset('front/assets/books/cover/book1.png') }}" alt="">
                     <p>লাভের খনি পাইকারি বাজার" বইটি আপনাকে টাকার খনি খুঁজে দিবে</p>
-                    <a href=""><button>এখনই কিনুন</button></a>
+                    <a href="{{ url('quick-digital/paikari_bazar') }}"><button>এখনই কিনুন</button></a>
                 </div>
                 <div class="img">
-                    <img src="{{ asset('front/assets/images/courses/book2.jpeg') }}" alt="">
+                    <img src="{{ asset('front/assets/books/cover/book3.jpeg') }}" alt="">
                     <p>এই বইটি পড়ে আপনি ১০০ টি সফল অনলাইন ব্যবসার আইডিয়া পাবেন</p>
-                    <a href=""><button>এখনই কিনুন</button></a>
+                    <a href="{{ url('quick-digital/100-business-idea') }}"><button>এখনই কিনুন</button></a>
                 </div>
             </div>
         </div>
