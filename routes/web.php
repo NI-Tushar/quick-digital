@@ -1,7 +1,8 @@
     <?php
 
     use App\Http\Controllers\Admin\InstructorRequestController;
-    use App\Http\Controllers\CartController;
+use App\Http\Controllers\BootcampController;
+use App\Http\Controllers\CartController;
     use App\Http\Controllers\PaymentController;
     use App\Http\Controllers\Front\HomeController;
     use App\Http\Controllers\PDFController;
@@ -87,20 +88,11 @@ use App\Http\Controllers\SslCommerzPaymentController;
                 Route::get('delete-subadmin/{id?}', 'AdminController@deleteSubadmin');
                 Route::match(['get', 'post'], 'update-permission/{id}', 'AdminController@updatePermission');
             });
-
-            // E-commerce All Route Here
-
-            // Quick Shopping Categories
-            Route::get('/quick-shopping-category', [QuickShopCategoryController::class, 'index'])->name('quick-shopping-category.index');
-            Route::post('/quick-shopping-category', [QuickShopCategoryController::class, 'store'])->name('quick-shopping-category.store');
-            Route::get('/quick-shopping-category/{quickShopCategory}/edit', [QuickShopCategoryController::class, 'edit'])->name('quick-shopping-category.edit');
-            Route::post('/quick-shopping-category-update', [QuickShopCategoryController::class, 'update'])->name('quick-shopping-category.update');
-            Route::delete('/quick-shopping-category/{quickShopCategory}', [QuickShopCategoryController::class, 'destroy'])->name('quick-shopping-category.destroy');
-
-            // Quick Shopping Products
-            Route::resource('/quick-shopping-product', QuickShopProductController::class);
         });
     });
+
+
+
 
 
     // E-commerce All Route Here
@@ -116,6 +108,14 @@ use App\Http\Controllers\SslCommerzPaymentController;
         // Quick Shopping Products
         Route::resource('/quick-shopping-product', QuickShopProductController::class);
     });
+
+    // Boot Camp
+    Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
+    Route::post('/bootcamp', [BootcampController::class, 'store'])->name('bootcamp.store');
+
+
+
+
 
 
 //front - user

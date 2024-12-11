@@ -20,7 +20,7 @@
                             quickdigital121@gmail.com
                         </span>
                     </a>
-   
+
                     <a class="phone_number" href="tel:01973784959">
                         <svg height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -78,6 +78,12 @@
 
                     <div class="offcanvas-body">
                         <ul class="navbar-nav d-flex pe-2" style="width:auto; height:auto;">
+                            <li class="nav-item">
+                                <a class="nav-link fw-semibold px-md-3" aria-current="page"
+                                    href="{{ route('bootcamp.index') }}" style="background: #eb29a1;color:#ffff !important">
+                                    বুট ক্যাম্প
+                                </a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle fw-semibold px-md-3"
                                     href="{{ url('quick-digital/ebook-list') }}" role="button"
@@ -85,7 +91,7 @@
                                     ই-বুক
                                 </a>
                                 <ul class="dropdown-menu">
-                                    
+
                                     <li>
                                         <a class="dropdown-item fw-semibold px-md-4 nav-link"
                                             href="{{ url('quick-digital/paikari_bazar') }}">
@@ -155,7 +161,7 @@
                                     সফটওয়্যার
                                 </a>
                             </li>
-                          
+
                             <li class="nav-item">
                                 <a class="nav-link fw-semibold px-md-3" aria-current="page"
                                     href="{{ url('/quick-digital/contact-us') }}">যোগাযোগ</a>
@@ -173,7 +179,7 @@
                 </div> --}} -->
             </div>
         </nav>
-    </div>        
+    </div>
 </div>
 
 <div class="header_gap"></div>
