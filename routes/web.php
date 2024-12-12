@@ -8,6 +8,7 @@ use App\Http\Controllers\CartController;
     use App\Http\Controllers\PDFController;
     use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\QuickShopCategoryController;
+use App\Http\Controllers\QuickShopOrderController;
 use App\Http\Controllers\QuickShopProductController;
 use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
@@ -116,6 +117,9 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Convert Affiliator to Bootcamp Request
         Route::get('/create-affiliator/{bootcamp}', [BootcampController::class, 'creatAffiliator'])->name('bootcamp.creatAffiliator');
+
+        // Orders
+        Route::get('/quick-shopping-order', [QuickShopOrderController::class, 'index'])->name('quick-shopping-order.index');
     });
 
     // Boot Request Form

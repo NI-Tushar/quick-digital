@@ -179,7 +179,7 @@
                 <ul class="menu-content">
 
                     <li>
-                        <a class="menu-item" href="{{ route('bootcamp.index') }}" data-i18n="Vertical">All Request</a>
+                        <a class="menu-item" href="{{ route('bootcamp.index') }}" data-i18n="Vertical">Registration List</a>
                     </li>
                     <li>
                         <a class="menu-item" href="{{ route('bootcamp.affiliators') }}" data-i18n="Vertical">Affiliator List</a>
@@ -236,6 +236,9 @@
                     </li>
                     <li>
                         <a class="menu-item" href="{{ route('quick-shopping-product.index') }}" data-i18n="Vertical">Manage Products</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{{ route('quick-shopping-order.index') }}" data-i18n="Vertical">All  Orders</a>
                     </li>
 
                 </ul>
