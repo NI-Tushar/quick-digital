@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\QuickShopOrder;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class QuickShopOrderController extends Controller
 {
@@ -29,6 +30,28 @@ class QuickShopOrderController extends Controller
         // Pass calculated values to the view
         return view('admin.quickShop.order.details', compact('order', 'subTotal', 'shipping', 'total'));
     }
+
+    public function DownloadOrderPDF(QuickShopOrder $quickShopOrder)
+    {
+        $order = $quickShopOrder;
+
+        // Calculate subtotal from related items
+        $subTotal = $order->items->sum('total');
+
+        // Define fixed shipping cost
+        $shipping = 120;
+
+        // Calculate total with or without a coupon
+        $total = $subTotal + $shipping - ($order->coupon ?? 0);
+
+        // Generate PDF using the specified view
+        $pdf = Pdf::loadView('admin.quickShop.order.order_pdf', compact('order', 'subTotal', 'shipping', 'total'));
+
+        // Return the PDF as a stream
+        return $pdf->stream();
+        return $pdf->download('order.pdf');
+    }
+
 
 
     public function paymentStatus(Request $request, QuickShopOrder $quickShopOrder)

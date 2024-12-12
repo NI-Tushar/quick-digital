@@ -169,7 +169,8 @@
                                 </div>
 
                                 <div class="row justify-content-end">
-                                    <a href="" style="width: 50px;height:50px;background:#00a4f0;color:#fff;text-align:center;line-height:50px;border-radius:5px;margin-right:10px;">
+                                    <a target="_blank" href="{{ route('quick-shopping-order.DownloadOrderPDF', $order->id) }}"
+                                       style="width: 50px; height: 50px; background: #00a4f0; color: #fff; text-align: center; line-height: 50px; border-radius: 5px; margin-right: 10px;">
                                         <i class="fa-solid fa-print" style="font-size: 20px"></i>
                                     </a>
                                 </div>
