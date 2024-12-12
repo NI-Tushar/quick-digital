@@ -69,4 +69,28 @@ class QuickShopOrderController extends Controller
 
         return redirect()->back()->with('success', 'Order Status updated successfully!');
     }
+
+    public function destroy(QuickShopOrder $quickShopOrder)
+    {
+        $items = $quickShopOrder->items;
+
+        // Delete old images associated with the items
+        if ($items) {
+            foreach ($items as $item) {
+                if ($item->product_image) { // Check if the image exists
+                    $imagePath = public_path($item->product_image);
+
+                    if (file_exists($imagePath)) { // Ensure the file exists before deleting
+                        unlink($imagePath);
+                    }
+                }
+            }
+        }
+
+        // Delete the order itself
+        $quickShopOrder->delete();
+
+        return redirect()->back()->with('success', 'Order Deleted successfully!');
+    }
+
 }

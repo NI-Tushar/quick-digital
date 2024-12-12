@@ -56,14 +56,14 @@
                                                 <td>{{ $order->total }}</td>
                                                 <td>{{ $order->delivery_status }}</td>
                                                 <td>
-                                                    <span class="badge badge-primary">{{ $order->payment_status }}</span>
+                                                    <span class="badge badge-{{ $order->payment_status == 'Paid' ? 'success' : 'primary' }}">{{ $order->payment_status }}</span>
                                                 </td>
                                                 <td>
                                                     <div class="d-flex" style="gap: 1em">
                                                         <a href="{{ route('quick-shopping-order.details', $order->id) }}" class="btn btn-sm btn-info">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
-                                                        <form action="{{ route('quick-shopping-product.destroy', $order->id) }}"
+                                                        <form action="{{ route('quick-shopping-order.destroy', $order->id) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
