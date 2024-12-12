@@ -120,6 +120,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Orders
         Route::get('/quick-shopping-order', [QuickShopOrderController::class, 'index'])->name('quick-shopping-order.index');
+        Route::post('/quick-shopping-order', [QuickShopOrderController::class, 'store'])->name('quick-shopping-order.store');
         Route::delete('/quick-shopping-order/{quickShopOrder}', [QuickShopOrderController::class, 'destroy'])->name('quick-shopping-order.destroy');
         Route::get('/quick-shopping-order-details/{quickShopOrder}/details', [QuickShopOrderController::class, 'details'])->name('quick-shopping-order.details');
         Route::get('/quick-shopping-order-details/{quickShopOrder}/DownloadOrderPDF', [QuickShopOrderController::class, 'DownloadOrderPDF'])->name('quick-shopping-order.DownloadOrderPDF');
