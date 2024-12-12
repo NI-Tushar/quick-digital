@@ -58,6 +58,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url('admin/assets/css/style.css') }}">
     <!-- END: Custom CSS-->
+    <script src="https://kit.fontawesome.com/9f57283aa3.js" crossorigin="anonymous"></script>
     @stack('css')
 
 </head>

@@ -120,6 +120,9 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Orders
         Route::get('/quick-shopping-order', [QuickShopOrderController::class, 'index'])->name('quick-shopping-order.index');
+        Route::get('/quick-shopping-order-details/{quickShopOrder}/details', [QuickShopOrderController::class, 'details'])->name('quick-shopping-order.details');
+        Route::put('/quick-shopping-order-details/{quickShopOrder}/paymentStatus', [QuickShopOrderController::class, 'paymentStatus'])->name('quick-shopping-order.paymentStatus');
+        Route::put('/quick-shopping-order-details/{quickShopOrder}/orderStatus', [QuickShopOrderController::class, 'orderStatus'])->name('quick-shopping-order.orderStatus');
     });
 
     // Boot Request Form

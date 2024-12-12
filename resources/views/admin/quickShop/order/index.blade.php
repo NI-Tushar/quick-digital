@@ -51,14 +51,16 @@
                                             <tr>
                                                 <td>{{ $loop->index + 1 }}</td>
                                                 <td>{{ $order->order_code }}</td>
-                                                <td>{{ $order->qty }}</td>
+                                                <td>{{ $order->items->sum('qty') }}</td>
                                                 <td>{{ $order->user ? $order->user->name : '' }}</td>
-                                                <td>{{ $order->price }}</td>
+                                                <td>{{ $order->total }}</td>
                                                 <td>{{ $order->delivery_status }}</td>
-                                                <td>{{ $order->order_status }}</td>
+                                                <td>
+                                                    <span class="badge badge-primary">{{ $order->payment_status }}</span>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex" style="gap: 1em">
-                                                        <a href="{{ route('quick-shopping-product.edit', $order->id) }}" class="btn btn-sm btn-info">
+                                                        <a href="{{ route('quick-shopping-order.details', $order->id) }}" class="btn btn-sm btn-info">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
                                                         <form action="{{ route('quick-shopping-product.destroy', $order->id) }}"

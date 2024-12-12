@@ -15,16 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->string('order_code');
-            $table->string('product_name');
-            $table->string('product_image')->nullable();
-            $table->string('color')->nullable();
-            $table->string('size')->nullable();
-            $table->string('qty')->nullable();
-            $table->string('price')->nullable();
-            $table->string('discount')->nullable();
+            $table->string('sub_total')->nullable();
+            $table->string('shipping')->nullable();
+            $table->string('coupon')->nullable();
             $table->string('total')->nullable();
             $table->enum('delivery_status', ['Pending', 'Confirmed', 'Picked Up', 'On The Way', 'Delivered'])->default('Pending');
             $table->enum('payment_status', ['Un-paid', 'Paid'])->default('Un-paid');
+            $table->enum('payment_method', ['Cash on delivery', 'Bkash', 'Nagad', 'Upay', 'Card'])->nullable();
             $table->timestamps();
         });
     }

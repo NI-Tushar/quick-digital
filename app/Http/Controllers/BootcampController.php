@@ -98,10 +98,6 @@ class BootcampController extends Controller
         $user->email = $bootcamp->email;
         $user->password = bcrypt('123456');
         $user->address = $bootcamp->address;
-        $user->city = '';
-        $user->state = '';
-        $user->country = '';
-        $user->zipcode = '';
         $user->status = 1;
         $user->is_instructor = 0;
         $user->save();
