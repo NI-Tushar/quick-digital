@@ -16,8 +16,14 @@ class BootcampController extends Controller
 
     public function index()
     {
-        $bootcamps = Bootcamp::latest()->paginate(50);
+        $bootcamps = Bootcamp::where('type', 'normal')->latest()->paginate(50);
         return view('quick_digital.boot_camp.index', compact('bootcamps'));
+    }
+
+    public function affiliators()
+    {
+        $bootcamps = Bootcamp::where('type', 'affiliator')->latest()->paginate(50);
+        return view('quick_digital.boot_camp.affiliator', compact('bootcamps'));
     }
 
     public function store(Request $request)
@@ -99,6 +105,11 @@ class BootcampController extends Controller
         $user->status = 1;
         $user->is_instructor = 0;
         $user->save();
+
+        if($user){
+            $bootcamp->type = 'affiliator';
+            $bootcamp->save();
+        }
 
         // Send Email or SMS Affiliator
         //

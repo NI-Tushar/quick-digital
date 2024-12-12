@@ -110,6 +110,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Bootcamp
         Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
+        Route::get('/bootcamp/affiliator', [BootcampController::class, 'affiliators'])->name('bootcamp.affiliators');
         Route::get('/bootcamp/{bootcamp}/show', [BootcampController::class, 'show'])->name('bootcamp.show');
         Route::delete('/bootcamp/{bootcamp}', [BootcampController::class, 'destroy'])->name('bootcamp.destroy');
 
