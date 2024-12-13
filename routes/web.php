@@ -8,6 +8,7 @@ use App\Http\Controllers\CartController;
     use App\Http\Controllers\PDFController;
     use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\QuickShopCategoryController;
+use App\Http\Controllers\QuickShopOrderController;
 use App\Http\Controllers\QuickShopProductController;
 use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
@@ -110,11 +111,21 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
         // Bootcamp
         Route::get('/bootcamp', [BootcampController::class, 'index'])->name('bootcamp.index');
+        Route::get('/bootcamp/affiliator', [BootcampController::class, 'affiliators'])->name('bootcamp.affiliators');
         Route::get('/bootcamp/{bootcamp}/show', [BootcampController::class, 'show'])->name('bootcamp.show');
         Route::delete('/bootcamp/{bootcamp}', [BootcampController::class, 'destroy'])->name('bootcamp.destroy');
 
         // Convert Affiliator to Bootcamp Request
         Route::get('/create-affiliator/{bootcamp}', [BootcampController::class, 'creatAffiliator'])->name('bootcamp.creatAffiliator');
+
+        // Orders
+        Route::get('/quick-shopping-order', [QuickShopOrderController::class, 'index'])->name('quick-shopping-order.index');
+        Route::post('/quick-shopping-order', [QuickShopOrderController::class, 'store'])->name('quick-shopping-order.store');
+        Route::delete('/quick-shopping-order/{quickShopOrder}', [QuickShopOrderController::class, 'destroy'])->name('quick-shopping-order.destroy');
+        Route::get('/quick-shopping-order-details/{quickShopOrder}/details', [QuickShopOrderController::class, 'details'])->name('quick-shopping-order.details');
+        Route::get('/quick-shopping-order-details/{quickShopOrder}/DownloadOrderPDF', [QuickShopOrderController::class, 'DownloadOrderPDF'])->name('quick-shopping-order.DownloadOrderPDF');
+        Route::put('/quick-shopping-order-details/{quickShopOrder}/paymentStatus', [QuickShopOrderController::class, 'paymentStatus'])->name('quick-shopping-order.paymentStatus');
+        Route::put('/quick-shopping-order-details/{quickShopOrder}/orderStatus', [QuickShopOrderController::class, 'orderStatus'])->name('quick-shopping-order.orderStatus');
     });
 
     // Boot Request Form

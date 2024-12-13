@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('district');
             $table->string('address');
             $table->string('agree');
+            $table->enum('type', ['normal', 'affiliator'])->default('normal');
             $table->timestamps();
         });
     }

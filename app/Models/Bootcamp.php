@@ -21,6 +21,7 @@ class Bootcamp extends Model
         'division',
         'district',
         'address',
-        'agree'
+        'agree',
+        'type'
     ];
 }
