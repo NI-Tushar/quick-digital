@@ -64,7 +64,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="contact-page-form" method="post">
-          <h2>মেসেজ পাঠান</h2>
+          <h2>যোগাযোগ করুন</h2>
           <form action="contact-mail.php" method="post">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">

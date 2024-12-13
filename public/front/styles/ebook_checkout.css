@@ -7,7 +7,8 @@
   }
   .container .order_div .active {
       border:1px solid #a00de9;
-      padding: 10px;
+      border:1px solid #e7c1fa;
+      padding: 10px;    
       border-radius:10px;
       display:flex;
     }
@@ -52,7 +53,7 @@ input[type=number] {
 
 
 .submit_btn{
-    background-color:#a00de9;
+    background-color:var(--primary-color);
     color:aliceblue;
     border:1px solid transparent;
     padding-top:5px;

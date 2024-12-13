@@ -5,9 +5,7 @@
     font-family: "Hind Siliguri", sans-serif;
 }
 
-:root {
-    --plyr-color-main: #c21ac2;
-}
+
 
 /*---------------------------------------
 |            header section             |
@@ -56,7 +54,7 @@
 }
 
 .nav-link:hover {
-    background-color: #eb29a1 !important;
+    background-color: var(--primary-color) !important;
     color: #fff !important;
     transition: all 0.5s ease-in-out;
 }
@@ -139,7 +137,7 @@
 
 .about-heading {
     font-size: 40px;
-    color: #E81F64;
+    color: var(--primary-color);
 }
 
 .b-bottom {
@@ -342,7 +340,7 @@
 }
 
 .course_title_style:hover {
-    color: #E81F64;
+    color: var(--primary-color);
 }
 
 .course__play__lessons {
@@ -350,11 +348,11 @@
 }
 
 .course_button {
-    background-color: #E81F64;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     font-weight: 500;
-    border: 1px solid #E81F64;
+    border: 1px solid var(--primary-color);
     transition: all 1s ease-in-out;
 }
 
@@ -383,7 +381,7 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 50px;
-    color: #E81F64;
+    color: var(--primary-color);
 }
 
 .b-bottom-middle {
@@ -632,8 +630,8 @@ footer {
 
 .subscription_badge{
     padding: 5px 10px;
-    border: 0.5px solid #eb29a1;
-    color: #eb29a1;
+    border: 0.5px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
@@ -643,10 +641,10 @@ footer {
 }
 
 .col-12 .link-fb:hover svg{
-    color: #eb29a1;
+    color: var(--primary-color);
 }
 .col-12 .link-fb:hover .text-control-6{
-    color: #eb29a1;
+    color: var(--primary-color);
 }
 .offcanvas-body{
     display:flex;

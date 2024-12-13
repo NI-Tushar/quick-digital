@@ -60,6 +60,7 @@
     padding-bottom:0px;
 }
 
+
 .header_bar  .navbar a img{
     height:auto;
     max-width:180px;
@@ -122,9 +123,6 @@
 
 
 
-
-
-
 .header_gap{
     height: 80px;
     width: 100%;
@@ -145,3 +143,5 @@
         width: 100%;
     }
 }
+
+

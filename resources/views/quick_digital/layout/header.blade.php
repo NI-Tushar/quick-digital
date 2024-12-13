@@ -64,7 +64,7 @@
             </div>
         </div>
     </div>
-
+    <!-- ______________________________________________________________ -->
     <div class="container max-width header_bar" style="padding:0px;">
         <nav class="navbar custom-padding navbar-expand-lg" style="width:100%;">
             <div class="container-fluid">
@@ -91,7 +91,7 @@
                         <ul class="navbar-nav d-flex pe-2" style="width:auto; height:auto;">
                             <li class="nav-item">
                                 <a class="nav-link fw-semibold px-md-3" aria-current="page"
-                                    href="{{ route('bootcamp.requestForm') }}" style="background: #eb29a1;color:#ffff !important">
+                                    href="{{ route('bootcamp.requestForm') }}" style="background: var(--primary-color);color:#ffff !important">
                                     বুট ক্যাম্প
                                 </a>
                             </li>
@@ -191,6 +191,7 @@
             </div>
         </nav>
     </div>
+    <!-- ______________________________________________________________ -->
 </div>
 
 <div class="header_gap"></div>

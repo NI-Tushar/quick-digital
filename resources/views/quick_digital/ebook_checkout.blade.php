@@ -11,7 +11,8 @@
                     <h4 class="p-2 bg-black text-white rounded" style="text-align:center;">আপনি এই পর্যন্ত এসেছেন,তারমানে আপনি একজন একশন টেকার 💪
                     </h4>
                     <input type="hidden" name="book_id" value="{{ $book->id }}">
-                    <input type="hidden" name="amount" value="{{ $book->price }}">
+                    <input type="hidden" name="price" value="{{ $book->price }}">
+                    <input type="hidden" name="book_title" value="{{ $book->title }}">
                     <div class="px-4"  style="border: 2px solid rgb(181, 181, 181); padding-top:15px;" style="height:auto;">
                         <h4 class="order_heading">আপনার অর্ডার</h4>
 
@@ -22,10 +23,12 @@
                                 <label for="number">আপনার মোবাইল নম্বর</label>
                                 <br>
                                 <input type="number" name="phone" placeholder="01700000000">
+                                <p style="color:red;text-align:left;width:100%;padding:0;margin:0;">@error('phone'){{$message}}@enderror</p>
                                 <br>
                                 <label for="email">আপনার ই-মেইল</label>
                                 <br>
                                 <input type="email" name="email" placeholder="ই-মেইল দিন">
+                                <p style="color:red;text-align:left;width:100%;padding:0;margin:0;">@error('email'){{$message}}@enderror</p>
                             </div>
                           </div>
 
@@ -34,22 +37,22 @@
                             <table class="table">
                               <thead>
                                   <tr style="background-color:red;">
-                                      <th style="background-color:#dda3f9;" scope="col">ই-বুক</th>
-                                      <th style="background-color:#dda3f9;" scope="col" class="text-end">সাবটোটাল</th>
+                                      <th style="background-color:#e7c1fa;" scope="col">ই-বুক</th>
+                                      <th style="background-color:#e7c1fa;" scope="col" class="text-end">সাবটোটাল</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <tr>
-                                      <td style="background-color:#eed0fd;" class="py-3">{{ $book->title }}</td>
-                                      <td style="background-color:#eed0fd;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
+                                      <td style="background-color:#eed0fd8b;" class="py-3">{{ $book->title }}</td>
+                                      <td style="background-color:#eed0fd8b;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
                                   </tr>
                                   <tr>
-                                      <td style="background-color:#eed0fd;" class="py-3">সাবটোটাল</td>
-                                      <td style="background-color:#eed0fd;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
+                                      <td style="background-color:#eed0fd8b;" class="py-3">সাবটোটাল</td>
+                                      <td style="background-color:#eed0fd8b;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
                                   </tr>
                                   <tr>
-                                      <th style="background-color:#eed0fd;" class="py-3" scope="row">টোটাল</th>
-                                      <td style="background-color:#eed0fd;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
+                                      <th style="background-color:#eed0fd8b;" class="py-3" scope="row">টোটাল</th>
+                                      <td style="background-color:#eed0fd8b;" class="py-3 text-end font_change">{{ $book->price }} ৳</td>
                                   </tr>
                               </tbody>
                             </table>
