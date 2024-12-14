@@ -59,7 +59,7 @@ class BootcampController extends Controller
         $bootcamp->agree = $request->agree;
         $bootcamp->save();
 
-        return redirect()->back()->with('success', 'Your Request Send successfully!');
+        return redirect()->back()->with('success', 'আপনার রিকোয়েস্ট সফলভাবে সাবমিট হয়েছে!');
     }
 
     public function show(Bootcamp $bootcamp)

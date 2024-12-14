@@ -14,12 +14,19 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->integer('ebook_id');
+            $table->text('order_id')->nullable();
+            $table->text('ebook_id')->nullable();
             $table->string('ebook_title', 255);
             $table->decimal('price', 10, 2);
-            $table->text('customer_info')->nullable();
-            $table->text('payment_info')->nullable();
-            $table->string('status',20)->nullable();
+            $table->string('name',30)->nullable();
+            $table->string('phone',20)->nullable();
+            $table->string('email',40)->nullable();
+            $table->text('bank_trx_id')->nullable();
+            $table->text('invoice_no')->nullable();
+            $table->text('transaction_status')->nullable();
+            $table->string('method',20)->nullable();
+            $table->string('sp_message',20)->nullable();
+            $table->enum('status', ['Pending', 'InProgress', 'Completed'])->nullable();
             $table->timestamps();
         });
     }
@@ -32,3 +39,6 @@ return new class extends Migration
         Schema::dropIfExists('orders');
     }
 };
+
+
+

@@ -12,9 +12,9 @@
 
 
 <style>
-    input[type="checkbox"],
-    input[type="radio"] {
-        accent-color: rgb(58, 2, 86);
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        accent-color: var(--primary-color); 
     }
     button[type="submit"]{
         background-color:rgb(58, 2, 86); 
@@ -66,7 +66,7 @@
                             <div class="form-group mb-3">
                                 <label for="profession" class="mb-1">আপনার পেশা</label>
                                 <select class="form-control @error('profession') is-invalid @enderror" name="profession" id="profession">
-                                    <option value="">Select Your Profession</option>
+                                    <option value=""disabled selected>আপনার পেশা সিলেক্ট করুন</option>
                                     <option value="Student">ছাত্র/ছাত্রী</option>
                                     <option value="Thacher">শিক্ষক/শিক্ষিকা</option>
                                     <option value="Employee">চাকরিজীবি</option>
@@ -79,7 +79,7 @@
 
                             <div class="form-group mb-3">
                                 <label for="institute" class="mb-1">কোম্পানি / প্রতিষ্ঠান</label>
-                                <input type="text" class="form-control @error('institute') is-invalid @enderror" id="institute" name="institute" placeholder="আপানার কোম্পানির নাম / প্রতিষ্ঠানের নাম - Company, ZYZ School, XYZ Collage" value="{{ old('institute') }}">
+                                <input type="text" class="form-control @error('institute') is-invalid @enderror" id="institute" name="institute" placeholder="আপানার কোম্পানির নাম / প্রতিষ্ঠানের নাম - Company, XYZ School, XYZ Collage" value="{{ old('institute') }}">
                                 @error('institute')
                                     <span class="text-danger bold">{{ $message }}</span>
                                 @enderror
@@ -89,14 +89,14 @@
                                 <label for="gender" class="mb-1">Gender সিলেক্ট করুন</label>
                                 <div class="d-flex" style="gap: 1em">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" checked>
+                                        <input type="radio" name="gender" id="gender" value="Male" checked>
                                         <label class="form-check-label" for="gender">
                                           Male
                                         </label>
                                       </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                                        <input type="radio" name="gender" id="gender" value="Female">
                                         <label class="form-check-label" for="gender">
                                           Female
                                         </label>
@@ -108,7 +108,7 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="interests" class="mb-1">Interest In </label>
+                                <label for="interests" class="mb-1">আপনি কোনটিতে আগ্রহী</label>
                                 <select class="form-control select2 @error('interests') is-invalid @enderror" name="interests[]" id="interest" multiple="multiple">
                                     <option value="">Select Your Interest</option>
                                     <option value="Software">Software</option>
@@ -122,7 +122,7 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="division" class="mb-1">Division</label>
+                                <label for="division" class="mb-1">বিভাগ</label>
                                 <select name="division" id="division" class="form-control select2 @error('division') is-invalid @enderror">
                                     <option value="">Select Division</option>
                                     <option value="Barisal">Barisal</option>
@@ -140,7 +140,7 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="district" class="mb-1">District</label>
+                                <label for="district" class="mb-1">জেলা</label>
                                 <select name="district" id="district" class="form-control select2 @error('district') is-invalid @enderror">
                                     <option value="">Select District</option>
                                     <optgroup label="Barishal">
@@ -230,8 +230,8 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="address" class="mb-1">Full Address</label>
-                                <textarea class="form-control @error('address') is-invalid @enderror" id="address" name="address" placeholder="Enter Your Full Address Here" cols="30" rows="2">{{ old('address') }}</textarea>
+                                <label for="address" class="mb-1">এড্রেস দিন</label>
+                                <textarea class="form-control @error('address') is-invalid @enderror" id="address" name="address" placeholder="আপনার সম্পুর্ন এড্রেস দিন" cols="30" rows="2">{{ old('address') }}</textarea>
                                 @error('address')
                                     <span class="text-danger bold">{{ $message }}</span>
                                 @enderror
@@ -239,9 +239,9 @@
 
                             <div class="form-group mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="agree" name="agree" checked>
+                                    <input type="checkbox" id="agree" name="agree" checked>
                                     <label class="form-check-label" for="agree">
-                                        I Agree All Trams & Conditions
+                                       আমি ওয়েবসাইটের সকল নীতি এবং শর্তাবলীতে সম্মতি দিচ্ছি
                                     </label>
                                 </div>
                                 @error('agree')
@@ -250,7 +250,7 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <button type="submit" class="btn">Sub Infomation</button>
+                                <button type="submit" class="btn">সাবমিট করুন</button>
                             </div>
 
                         </form>

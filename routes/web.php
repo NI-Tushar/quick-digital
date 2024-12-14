@@ -1,16 +1,18 @@
     <?php
 
     use App\Http\Controllers\Admin\InstructorRequestController;
-use App\Http\Controllers\BootcampController;
-use App\Http\Controllers\CartController;
+    use App\Http\Controllers\BootcampController;
+    use App\Http\Controllers\CartController;
     use App\Http\Controllers\PaymentController;
     use App\Http\Controllers\Front\HomeController;
     use App\Http\Controllers\PDFController;
     use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\QuickShopCategoryController;
-use App\Http\Controllers\QuickShopOrderController;
-use App\Http\Controllers\QuickShopProductController;
-use App\Http\Controllers\SslCommerzPaymentController;
+    use App\Http\Controllers\SmsController;
+    use App\Http\Controllers\MailSendController;
+    use App\Http\Controllers\QuickShopCategoryController;
+    use App\Http\Controllers\QuickShopOrderController;
+    use App\Http\Controllers\QuickShopProductController;
+    use App\Http\Controllers\SslCommerzPaymentController;
     use Illuminate\Support\Facades\Route;
 
     Route::get('/', function () {
@@ -58,6 +60,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
             // Route::get('orders/filter/{status}', 'OrderController@filterByStatus')->name('admin.order.filter');
             Route::get('orders/filter/{status}', 'OrderController@filterByStatus')->name('admin.order.filter');
 
+
             //Order Products
             Route::get('product/orders', 'OrderProductController@index')->name('admin.order.product');
             Route::post('product/order/update-status/{order_id}', 'OrderProductController@updateStatus')->name('admin.order.updateStatus.product');
@@ -93,6 +96,13 @@ use App\Http\Controllers\SslCommerzPaymentController;
     });
 
 
+
+    // sms sending to customer
+    Route::get('/send-sms',[SmsController::class,'sendSms'])->name('sendSMS');
+    Route::get('/send-sms',[SmsController::class,'sendSmsNewUser'])->name('sendNewUserSMS');
+    
+    // Mail send to customer for order confirmation
+    Route::get('/mailsend/{order_id}/{book_title}/{price}/{email}', [MailSendController::class, 'sendEMail'])->name('mailsend');
 
 
 
@@ -234,6 +244,19 @@ use App\Http\Controllers\SslCommerzPaymentController;
     Route::post('/payment', [PaymentController::class, 'payment'])->name('initiate_payment');
     Route::get('/success', [PaymentController::class, 'success'])->name('payment.success');
     Route::get('/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+    Route::get('/successful/{order_id}/{book_id}/{book_title}/{price}/{email}',[PaymentController::class, 'successPay'])->name('successPay');
+
+
+
+    // test pay pruduct
+    Route::get('/test_order', function () {
+        return view('quick_digital.static_product_page.test_product_pay');
+    });
+    Route::get('/test_pay',[HomeController::class, 'testPay']);
+
+
+ 
+
 
     //subscription
     Route::get('/subscription/carts/{id}', [CartController::class, 'create_cart_subscription'])->name('cartSubscription.create');

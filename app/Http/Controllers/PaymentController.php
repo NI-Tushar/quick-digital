@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use App\Models\Cart;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -249,7 +249,7 @@ class PaymentController extends Controller
                             $price = session()->get('price');
 
                             // _______________________Genereting a default or random password to store and mail
-                            if (!Auth::guard('user')->check()) { 
+                            if (!Auth::guard('user')->check()) { // if not login
                                 $existing_user = User::where('email', $email)->first();
 
                                 if ($existing_user) {  // WHEN UESR ALREADY REGISTERED   
@@ -260,11 +260,10 @@ class PaymentController extends Controller
                                         session()->put('user_id', $user_id);
                                         session()->put('phone', $phone);
                                         session()->put('email', $email);
+
                                         // Call the SMS controller method
                                         $smsController = new SmsController();
-                                        $smsSent = $smsController->sendSms($phone, $order_id, $name, $package_name, $delivery_time);
-                                        
-
+                                        $smsSent = $smsController->sendSms($phone, $book_title);
                                     }else{
                                         // creating default pass
                                         $length = 12;
@@ -276,25 +275,23 @@ class PaymentController extends Controller
                                             }
                                         session()->put('default_pass', $randomPassword);  //=========== send this password in user email and number
                                         $add_user= new User();
-                                        $add_user->name= $name;
                                         $add_user->mobile= $phone;
                                         $add_user->email= $email;
                                         $add_user->password= bcrypt($randomPassword);
+                                        $add_user->status = 1;
                                         $add_user->save(); // save newly created user_id into session
 
                                         $user_id = $add_user->id;
                                         session()->put('user_id', $user_id);
                                         // Call the SMS controller method
                                         $smsController = new SmsController();
-                                        $smsSent = $smsController->sendSmsNewUser($phone, $order_id,$name, $package_name, $delivery_time, $email, $randomPassword);
-                                         
+                                        $smsSent = $smsController->sendSmsNewUser($phone, $book_title);
                                     }
                                 }else{
                                     // ALREADY LOGGED IN
-
                                     // sending confirmation sms
                                     $smsController = new SmsController();
-                                    $smsSent = $smsController->sendSms($phone, $order_id,$name, $package_name, $delivery_time);
+                                    $smsSent = $smsController->sendSms($phone, $book_title);
 
                                     $user_id = Auth::guard('user')->id();
                                     session()->put('user_id', $user_id);
@@ -304,36 +301,30 @@ class PaymentController extends Controller
                             // __________________ here data will be store in order page
                             $user_id = session()->get('user_id');
                     
-                            $add_cart= new Cart();
-                            $add_cart->user_id= $user_id;
-                            $add_cart->order_id= $order_id;
-                            $add_cart->book_id= $book_id;
-                            $add_cart->package_name= $package_name;
-                            $add_cart->delivery_time= $delivery_time;
-                            $add_cart->book_title= $book_title;
-                            $add_cart->service_type= $service_type;
-                            $add_cart->price= $price;
-                            $add_cart->user_name= $name;
-                            $add_cart->phone= $phone;
-                            $add_cart->email= $email;
-                            $add_cart->bank_trx_id= $resObject[0]['bank_trx_id'];
-                            $add_cart->invoice_no= $resObject[0]['invoice_no'];
-                            $add_cart->transaction_status= $resObject[0]['transaction_status'];
-                            $add_cart->method= $resObject[0]['method'];
-                            $add_cart->sp_massage= $resObject[0]['sp_message'];
-                            $add_cart->save();
+                            $add_order= new Order();
+                            $add_order->user_id= $user_id;
+                            $add_order->order_id= $order_id;
+                            $add_order->ebook_id= $book_id;
+                            $add_order->ebook_title= $book_title;
+                            $add_order->price= $price;
+                            $add_order->phone= $phone;
+                            $add_order->email= $email;
+                            $add_order->bank_trx_id= $resObject[0]['bank_trx_id'];
+                            $add_order->invoice_no= $resObject[0]['invoice_no'];
+                            $add_order->transaction_status= $resObject[0]['transaction_status'];
+                            $add_order->method= $resObject[0]['method'];
+                            $add_order->sp_message= $resObject[0]['sp_message'];
+                            $add_order->save();
                     
 
        
                         
                             // __________ sending order info to customer mail
                             return redirect()->route('mailsend', [
-                                'name' => $name,
                                 'order_id' => $order_id,
                                 'book_title' => $book_title,
-                                'package_name' => $package_name,
                                 'price' => $price,
-                                'user_email' => $email,
+                                'email' => $email,
                             ]);
 
                             
@@ -341,7 +332,7 @@ class PaymentController extends Controller
 
                 }else{
 
-                    return view('wise_corporation.payment_pages.cancelPay');
+                    return view('quick_digital.payment_pages.cancelPay');
 
                     // GO TO THE FAILED PAGE
                     session()->forget('token');
@@ -362,17 +353,16 @@ class PaymentController extends Controller
         }
     }
 
-    public function successPay($order_id, $book_id, $package_name,  $delivery_time, $book_title, $service_type, $order_cust_price, $order_cust_name, $order_cust_phone, $order_cust_email)
+
+    public function successPay($order_id, $book_id, $book_title, $price, $email )
     {
        
-        return view('wise_corporation.payment_pages.successPay',[
+        return view('quick_digital.payment_pages.successPay',[
             'order_id' => $order_id,
-            'package_name' => $package_name,
-            'delivery_time' => $delivery_time,
-            'price' => $order_cust_price,
-            'order_cust_email' => $order_cust_email,
+            'book_id' => $book_id,
             'book_title' => $book_title,
-            'service_type' => $service_type
+            'price' => $price,
+            'email' => $email
         ]);
 
 
@@ -381,8 +371,7 @@ class PaymentController extends Controller
 
     public function cancel()
     {
-        dd('success');
-        return view('wise_corporation.payment_pages.cancelPay');
+        return view('quick_digital.payment_pages.cancelPay');
     }
 
 }

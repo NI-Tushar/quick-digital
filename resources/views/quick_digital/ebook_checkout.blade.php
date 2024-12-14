@@ -27,7 +27,11 @@
                                 <br>
                                 <label for="email">আপনার ই-মেইল</label>
                                 <br>
-                                <input type="email" name="email" placeholder="ই-মেইল দিন">
+                                @if (Auth::guard('user')->check())
+                                    <input type="email" name="email" value="{{Auth::guard('user')->user()->email;}}" readonly required>
+                                @else
+                                    <input type="email" name="email" placeholder="ই-মেইল দিন">
+                                @endif
                                 <p style="color:red;text-align:left;width:100%;padding:0;margin:0;">@error('email'){{$message}}@enderror</p>
                             </div>
                           </div>

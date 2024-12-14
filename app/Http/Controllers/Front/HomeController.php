@@ -63,10 +63,23 @@ class HomeController extends Controller
 
         return view('quick_digital.ebook_single')->with(compact('ebook', 'ebooks'));
     }
-    // DIRECTE TO CHECKOUT PAGE
+
+
+    // DIRECT TO CHECKOUT PAGE
     public function ebook_checkout($id)
     {
         $book = Ebook::findOrFail($id);
+        return view('quick_digital.ebook_checkout')->with(compact('book'));
+    }
+
+    // DIRECT TO CHECKOUT PAGE FOR TEST PAY
+    public function testPay()
+    {
+        $book = (object) [
+            'id' => '4',
+            'title' => "লাভের খনি পাইকারি বাজার",
+            'price' => 1,
+        ];
         return view('quick_digital.ebook_checkout')->with(compact('book'));
     }
 
