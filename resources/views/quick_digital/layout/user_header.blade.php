@@ -65,6 +65,50 @@
     </div>
     <!-- ______________________________________________________________ -->
 
+    <style>
+        .user_name{
+            max-width:120px;
+            width:100%;
+            height:auto;
+            font-size:15px; 
+            overflow:hidden;
+            margin-top:15px;
+        }
+            
+        .nav-item .nav-link .nav__user__img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+   
+        .navbar-nav{
+            display:flex;
+        }
+        .nav-item{
+            margin:auto;
+        }
+        .nav-item .nav-link { 
+            padding-top:5px !important;
+            padding-bottom:5px !important;
+            padding:8px;
+        } 
+        .nav-item .nav-link:hover{
+            background:transparent;
+        }
+
+        .custom-padding{
+            padding:0px !important;
+        }
+
+        @media (max-width: 995px) {
+            .navbar-nav .nav-item{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+
     <div class="container max-width header_bar" style="padding:0px;">
             <nav class="navbar custom-padding navbar-expand-lg" style="width:100%;">
                 <div class="container-fluid">
@@ -88,7 +132,7 @@
                         </div>
 
                         <div class="offcanvas-body">
-                            <ul class="navbar-nav d-flex pe-2" style="width:auto; height:auto;">
+                            <ul class="navbar-nav" style="width:auto; height:auto;">
                                 <li class="nav-item">
                                     <a class="nav-link fw-semibold px-md-3" aria-current="page" 
                                         href="{{ route('bootcamp.requestForm') }}" style="background: var(--primary-color);color:#ffff !important;">
@@ -177,8 +221,9 @@
                                     <a class="nav-link fw-semibold px-md-3" aria-current="page"
                                         href="{{ url('/quick-digital/contact-us') }}">যোগাযোগ</a>
                                 </li>
-                                            <!-- __________________________ user profile li start -->
-                                            <li class="nav-item dropdown">
+                                    <!-- __________________________ user profile li start -->
+                                  
+                                    <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle d-flex gap-1 align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         @if (Auth::guard('user')->check())
                                         @php
@@ -192,12 +237,12 @@
                                             </path>
                                         </svg>
                                         @endif
-                                        <h5 class="m-0">{{ $user->name }}</h5>
+                                            <!-- <h5 class="m-0" >{{ $user->name }}</h5> -->
                                         @else
-                                        <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M20 22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13Z">
-                                            </path>
-                                        </svg>
+                                            <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M20 22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13Z">
+                                                </path>
+                                            </svg>
                                         Guest
                                         @endif
                                     </a>
@@ -292,10 +337,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item user__nav__item"
-                                                href="{{ url('/quick-digital/track-order') }}">
-                                        ট্র্যাক অর্ডার
-                                        </a>
+                                            <a class="dropdown-item user__nav__item" href="{{ url('/quick-digital/track-order') }}">ট্র্যাক অর্ডার</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">

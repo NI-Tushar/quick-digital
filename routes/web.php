@@ -159,9 +159,13 @@
             //  Route::match(['get','post'], '')
             Route::post('check_current_password', 'UserController@checkCurrentPassword');
             Route::match(['get', 'post'], 'update_password', 'UserController@updatePassword');
-            Route::match(['get', 'post'], 'update_user_details', 'UserController@updateUserDetails');
             Route::get('logout', 'UserController@logoutUser');
         });
+        
+        // _______________ CUSTOMER/USER DASHBOARD CONTROLLER
+        Route::get('/dashboard', 'UserDashboardController@index')->name('user.dashboard');;
+        Route::get('/update-info', 'UserDashboardController@update_info')->name('user.update');;
+        Route::match(['get', 'post'], 'update_user_details', 'UserDashboardController@updateUserDetails');
     });
 
 
@@ -203,13 +207,13 @@
         Route::get('order-success-product/{orderId}', 'HomeController@product_order_success')->name('product.order.success');
         Route::get('order-success-subscription/{orderId}', 'HomeController@order_success_subscription')->name('order.successSubscription');
 
-        //Product Order Tracking
-        Route::get('track-order/{id}', 'HomeController@track_order_product')->name('track.order');
-        Route::get('update-password', 'HomeController@update_password');
-        Route::get('update-profile', 'HomeController@update_profile');
-        Route::get('my-orders', 'HomeController@my_orders');
-        Route::get('my-courses', 'HomeController@my_courses');
-        Route::get('my-order-product', 'HomeController@my_order_products');
+        //Product Order Tracking // OLD ROUTER FOR USER UPDATE
+        // Route::get('track-order/{id}', 'HomeController@track_order_product')->name('track.order');
+        // Route::get('update-password', 'HomeController@update_password');
+        // Route::get('update-profile', 'HomeController@update_profile');
+        // Route::get('my-orders', 'HomeController@my_orders');
+        // Route::get('my-courses', 'HomeController@my_courses');
+        // Route::get('my-order-product', 'HomeController@my_order_products');
 
         //subscription
         Route::get('subscription', 'HomeController@subscription');

@@ -59,11 +59,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-.nav__user__img {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
+
 
 .dropdown-toggle::after {
     content: "" !important;

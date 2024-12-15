@@ -1,153 +1,119 @@
+
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
-<!-- BEGIN: Head-->
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="A brief description of your website">
-    <meta name="keywords" content="keywords, separated, by, commas">
-    <meta name="author" content="Your Name">
-    <title>Register</title>
-    <link rel="apple-touch-icon" href="{{ asset('admin/images/ico/apple-icon-120.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/images/ico/favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/vendors/css/vendors.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/vendors/css/forms/icheck/icheck.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/vendors/css/forms/icheck/custom.css') }}">
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/bootstrap-extended.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/colors.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/components.css') }}">
-    <!-- END: Theme CSS-->
-
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/core/menu/menu-types/vertical-menu-modern.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/core/colors/palette-gradient.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/css/pages/login-register.css') }}">
-    <!-- END: Page CSS-->
-
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ url('admin/assets/css/style.css') }}">
-    <!-- END: Custom CSS-->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেজিস্ট্রেশন | Quick Digital</title>
+    <link rel="stylesheet" href="{{ url ('front/styles/user_login.css') }}">
+    <link rel="icon" href="{{ url('icon.PNG') }}" type="image/x-icon">
 </head>
-<!-- END: Head-->
 
-<!-- BEGIN: Body-->
+<body>
 
-<body class="vertical-layout vertical-menu-modern 1-column bg-full-screen-image menu-collapsed blank-page blank-page"
-    data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
-        <div class="content-overlay"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-            </div>
-            <div class="content-body">
-                <section class="row flexbox-container">
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
-                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
-                                <div class="card-header border-0 pb-0">
-                                    <div class="card-title text-center">
-                                        <img height="50px" width="auto" src="{{ asset('front/assets/images/logo.png') }}" alt="branding logo">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1 mt-2"><span>রেজিস্ট্রেশন ফর্ম</span></p>
-                                    <div class="card-body">
-                                        @if (Session::has('error_message'))
-                            <div class="alert bg-danger alert-icon-left alert-dismissible mb-2" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <strong>Oh snap! </strong>{{ Session::get('error_message') }}
-                            </div>
-                        @endif
-                        @if (Session::has('success_message'))
-                            <div class="alert bg-success alert-icon-left alert-dismissible mb-2" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <strong>Well done!</strong> {{ Session::get('success_message') }}
-                            </div>
-                        @endif
-                                        <form id="registerForm" class="form-horizontal" action="{{ route('user.register') }}" method="post" novalidate>
-                                            @csrf
-                                            <label for="name">নাম:</label>
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="আপনার নাম লিখুন">
-                                                <div class="form-control-position">
-                                                    <i class="feather icon-user"></i>
-                                                </div>
-                                            </fieldset>
-                                            <label for="mobile">ফোন নম্বর:</label>
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="আপনার ফোন নম্বর লিখুন">
-                                                <div class="form-control-position">
-                                                    <i class="feather icon-phone-call"></i>
-                                                </div>
-                                            </fieldset>
-                                            <label for="email">ইমেইল এড্রেস:</label>
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="আপনার ইমেইল এড্রেস লিখুন" required>
-                                                <div class="form-control-position">
-                                                    <i class="feather icon-mail"></i>
-                                                </div>
-                                            </fieldset>
-                                            <label for="password">পাসওয়ার্ড:</label>
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="আপনার পাসওয়ার্ড লিখুন" required>
-                                                <div class="form-control-position">
-                                                    <i class="fa fa-key"></i>
-                                                </div>
-                                            </fieldset>
-                                            <button type="submit" class="btn btn-outline-primary btn-block"><i class="feather icon-user"></i> রেজিস্টার করুন</button>
-                                        </form>
-                                        <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-2"><span>অথবা</span></p>
-                                        <a href="{{ url('user/login') }}" class="btn btn-outline-danger btn-block mt-2"><i class="feather icon-unlock"></i> লগইন  করুন</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="user_login_section">
+
+    <div class="centered_login">
+        <!-- ________________________________________________________________________ login -->
+        <div class="update_form_wrapper active">
+            <div class="form_container">
+
+                <div class="logo_section">
+                  <img src="{{ asset('front/assets/images/primary_logo2.png') }}" alt="Wise-Corporation" style="width: 150px;">
+                </div>
+
+                <div class="title_container">
+                  <h2>রেজিস্ট্রেশন করুন</h2>
+                </div>
+
+                @if (Session::has('error_message'))
+                    <div class="error_msg" role="alert">
+                        <strong>Oh snap! </strong>{{ Session::get('error_message') }}
                     </div>
-                </section>
+                @endif
+
+                <div class="row clearfix">
+
+                  <div class="">
+                    <form method="POST" action="{{ route('user.register') }}" method="post" novalidate>
+                      @csrf
+
+                      <div class="input_field"> 
+                        <!-- Icon on the left -->
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M12 14c-5.33 0-8 2.67-8 6v1h16v-1c0-3.33-2.67-6-8-6z" />
+                            </svg>
+                        </span>
+                        <!-- Email input field -->
+                        <input type="text" id="emailInput" name="name" placeholder="আপনার নাম লিখুনঃ" value="{{ old('name') }}" />
+                    </div>
+
+                      <div class="input_field"> 
+                        <!-- Icon on the left -->
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M6.62 10.79a15.72 15.72 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.23 11.72 11.72 0 0 0 3.64 1.17 1 1 0 0 1 .86.99v3.12a1 1 0 0 1-.91 1c-8.42.48-15.2-6.3-14.72-14.72a1 1 0 0 1 1-.91h3.12a1 1 0 0 1 1 .86 11.72 11.72 0 0 0 1.17 3.64 1 1 0 0 1-.23 1.11l-2.2 2.2z" />
+                            </svg>
+                        </span>
+                        <!-- Email input field -->
+                        <input type="number" id="emailInput" name="mobile" placeholder="আপনার মোবাইল নম্বর লিখুনঃ" value="{{ old('mobile') }}" />
+                    </div>
+
+                      <div class="input_field"> 
+                        <!-- Icon on the left -->
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.06-8 4.99-8-4.99V6l8 5 8-5v2.06z" />
+                            </svg>
+                        </span>
+                        <!-- Email input field -->
+                        <input type="email" id="emailInput" name="email" placeholder="আপনার ইমেইলঃ" value="{{ old('email') }}" />
+                    </div>
+
+                
+
+                      <div class="input_field">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12.65 10a5.5 5.5 0 1 0-1.65 1.65L15 16v2h2v-2h2v-2h-2v-2h-2l-4.35-4.35zM7 9a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                          </svg>
+                      </span>
+                        <input type="password" name="password" id="passInput" placeholder="পাসওয়ার্ড দিন" value="{{ old('password') }}" required />
+                         <!-- Eye icon on the right -->
+                         <span class="toggle-icon" id="passwordInput">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 4.5C7.26 4.5 3.23 7.11 1.5 12c1.73 4.89 5.76 7.5 10.5 7.5s8.77-2.61 10.5-7.5c-1.73-4.89-5.76-7.5-10.5-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z"/>
+                            </svg>
+                        </span>
+                      </div>
+    
+                  <a href="{{ url('user/forgot-password') }}">পাসওয়ার্ড ভুলে গিয়েছেন?</a>
+
+                    <input class="button" type="submit" value="সাবমিট করুন" />
+                </form>
+            </div>
+            </div>
+
+            <div class="new_reg active">
+                <p>অলরেডি একাউন্ট আছে?</p>
+                <a href="{{ url('user/login') }}"><button>লগইন করুন</button></a>
             </div>
         </div>
     </div>
-    <!-- END: Content-->
+    <!-- ________________________________________________________________________ login -->
+     
+    </div>
 
-    <!-- BEGIN: Vendor JS-->
-    <script src="{{ url('admin/vendors/js/vendors.min.js') }}"></script>
-    <!-- END: Vendor JS-->
 
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="{{ url('admin/vendors/js/forms/validation/jqBootstrapValidation.js') }}"></script>
-    <script src="{{ url('admin/vendors/js/forms/icheck/icheck.min.js') }}"></script>
-    <!-- END: Page Vendor JS-->
 
-    <!-- BEGIN: Theme JS-->
-    <script src="{{ url('admin/js/core/app-menu.js') }}"></script>
-    <script src="{{ url('admin/js/core/app.js') }}"></script>
-    <!-- END: Theme JS-->
+    </div>
 
-    <!-- BEGIN: Custom JS-->
-    <script src="{{ url('front/assets/js/custom.js') }}"></script>
-    <!-- END: Custom JS-->
-
-    <!-- BEGIN: Page JS-->
-    <script src="{{ url('admin/js/scripts/forms/form-login-register.js') }}"></script>
-    <!-- END: Page JS-->
-
+        <!--  Custom JS-->
+    <script src="{{ url('front/js/login.js') }}"></script> 
 </body>
-<!-- END: Body-->
-
 </html>
+
+
+

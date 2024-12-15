@@ -276,10 +276,7 @@ class HomeController extends Controller
         return view('quick_digital.update_password');
     }
 
-    public function update_profile()
-    {
-        return view('quick_digital.update_profile');
-    }
+
 
 
 

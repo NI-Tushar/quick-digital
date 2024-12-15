@@ -32,9 +32,9 @@ class UserController extends Controller
             ];
 
             $customMessage = [
-                'email.required' => "Email is required",
-                'email.email' => "Valid email is required",
-                'password.required' => 'Password is required'
+                'email.required' => "আপনার ই-মেইল দিন",
+                'email.email' => "সঠিক ই-মেইল দিন",
+                'password.required' => 'পাসওয়ার্ড দিন'
             ];
 
             $request->validate($rules, $customMessage);
@@ -44,13 +44,13 @@ class UserController extends Controller
             if (Auth::guard('user')->attempt(['email' => $data['email'], 'password' => $data['password']], $remember)) {
                 $user = Auth::guard('user')->user();
                 if ($user->status == 1) {
-                    return redirect("quick-digital/index");
+                    return redirect()->route('user.dashboard');
                 } else {
                     Auth::guard('user')->logout();
-                    return redirect()->back()->with("error_message", "Your account is not active.");
+                    return redirect()->back()->with("error_message", "আপনার একাউন্ট এখনও এক্টিভ হয়নি.");
                 }
             } else {
-                return redirect()->back()->with("error_message", "Invalid Email or Password");
+                return redirect()->back()->with("error_message", "ই-মেইল অথবা পাসওয়ার্ড ভুল");
             }
         }
         return view('front.users.login');
@@ -78,9 +78,9 @@ class UserController extends Controller
                 'mobile.digits' => 'মোবাইল নম্বর ১১ টি সংখ্যা হতে হবে',
                 'email.required' => 'ইমেইল লিখুন',
                 'email.email' => 'Invalid email format',
-                'email.unique' => 'Email is already taken',
-                'password.required' => 'Password is required',
-                'password.min' => 'Password must be at least 6 characters long',
+                'email.unique' => 'ইমেইলটি ইতোমদ্ধেই ব্যবহৃত হয়েছে',
+                'password.required' => 'পাসওয়ার্ড দিন',
+                'password.min' => 'পাসওয়ার্ড অবশ্যই ৬ টি লেটারের বেশি হতে হবে',
             ];
 
             $validator = Validator::make($data, $rules, $customMessages);
@@ -105,7 +105,7 @@ class UserController extends Controller
             $user->save();
 
             // Redirect to the login page
-            return redirect()->route('user.login')->with('success_message', 'Registration successful. Please login.');
+            return redirect()->route('user.login')->with('reg_success_message', 'আপনি সফল ভাবে রেজিস্ট্রেশন করেছেন, লগইন করুন.');
         } else {
             // Handle GET request for displaying the registration form
             return view('front.users.register');
@@ -169,83 +169,7 @@ class UserController extends Controller
         }
     }
 
-    public function updateUserDetails(Request $request)
-    {
-        if ($request->isMethod('post')) {
-            $data = $request->all();
-
-            $rules = [
-                'user_name' => 'required|max:255',
-                'user_mobile' => ['required', 'numeric', 'digits:11'],
-                'user_image' => 'image',
-                'user_address' => 'required',
-                'user_city' => 'required',
-                'user_state' => 'required',
-                'user_country' => 'required',
-                'user_zipcode' => 'required',
-
-            ];
-
-            $customMessage = [
-                'user_name.required' => "নাম খালি রাখা যাবে না",
-                'user_mobile.required' => 'মোবাইল নম্বর খালি রাখা যাবে না',
-                'user_mobile.numeric' => 'মোবাইল নম্বর অবশ্যই সংখ্যামূলক হতে হবে।',
-                'user_mobile.digits' => 'মোবাইল নম্বর ১১ টি সংখ্যা হতে হবে',
-                'user_image.image' => "valid image required",
-                'user_address.required' => "Address is required",
-                'user_city.required' => "City is required",
-                'user_state.required' => "State is required",
-                'user_country.required' => "Country is required",
-                'user_zipcode.required' => "Zipcode/Postal code is required",
-            ];
-
-            $validator = Validator::make($data, $rules, $customMessage);
-
-            if ($validator->fails()) {
-                return redirect()->back()->with('error_message', $validator->errors()->first());
-            }
-
-            // Upload images
-            if ($request->hasFile('user_image')) {
-                $image_tmp = $request->file('user_image');
-                if ($image_tmp->isValid()) {
-                    // Get image extension
-                    $extension = $image_tmp->getClientOriginalExtension();
-                    // Generate new image name
-                    $image_name = rand(111, 99999) . '.' . $extension;
-                    // Save image
-                    $image_path = 'admin/images/user_images/' . $image_name;
-                    Image::make($image_tmp)->save($image_path);
-                    // Update image field in database
-                    User::where('email', Auth::guard('user')->user()->email)->update([
-                        'image' => $image_name, // Assuming 'image' is the field in your database
-                    ]);
-                }
-            }
-
-            if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput();
-            }
-
-
-            // Update User Details
-            User::where('email', Auth::guard('user')->user()->email)->update([
-                'name' => $data['user_name'],
-                'address' => $data['user_address'],
-                'city' => $data['user_city'],
-                'state' => $data['user_state'],
-                'country' => $data['user_country'],
-                'zipcode' => $data['user_zipcode'],
-                'mobile' => $data['user_mobile'],
-            ]);
-
-            return view('quick_digital.index');
-            // return redirect()->back()->with('success_message', 'Details Updated Successfully!☙');
-        }
-
-        return view('quick_digital.index');
-        // return view('front.users.update_user_details');
-    }
+   
 
     public function logoutUser(Request $request)
     {
