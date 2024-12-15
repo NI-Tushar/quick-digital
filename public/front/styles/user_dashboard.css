@@ -238,7 +238,6 @@ padding-left: 10px;
 
 
 .home-section {
-padding-top: 10rem;
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
@@ -258,7 +257,6 @@ padding-top: 10rem;
 }
 .home-section .expend_icon,
 .home-section .home-content .text {
-  /* color: #11101d; */
   color: var(--primary-color);
   font-size: 35px;
 }
@@ -273,7 +271,7 @@ padding-top: 10rem;
   display: none;
   position: fixed;
   left: 10px;
-  top: 9rem;
+  top: 5rem;
   z-index: 200;
 }
 .mov_arrow svg{
@@ -288,6 +286,7 @@ padding-top: 10rem;
   .sidebar.close .nav-links li .expend_icon {
     display: none;
   }
+
 }
 
 @media (max-width: 520px) { 
@@ -301,7 +300,6 @@ padding-top: 10rem;
     width: 10px;
   }
   .sidebar.close ~ .home-section {
-      padding-top: 7rem;
       left: 0px;
       width:100%;
       transition: all 0.5s ease;

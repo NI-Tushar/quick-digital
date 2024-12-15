@@ -271,11 +271,7 @@ class HomeController extends Controller
         return view('quick_digital.track_order', compact('orderStatus'));
     }
 
-    public function update_password()
-    {
-        return view('quick_digital.update_password');
-    }
-
+ 
 
 
 

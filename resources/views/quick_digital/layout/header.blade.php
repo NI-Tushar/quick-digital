@@ -11,6 +11,51 @@
 </script>
 
 
+<style>
+        .user_name{
+            max-width:120px;
+            width:100%;
+            height:auto;
+            font-size:15px; 
+            overflow:hidden;
+            margin-top:15px;
+        }
+            
+        .nav-item .nav-link .nav__user__img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+   
+        .navbar-nav{
+            display:flex;
+        }
+        .nav-item{
+            margin:auto;
+        }
+        .nav-item .nav-link { 
+            padding-top:5px !important;
+            padding-bottom:5px !important;
+            padding:8px;
+        } 
+        .nav-item .nav-link:hover{
+            background:transparent;
+        }
+
+        .custom-padding{
+            padding:0px !important;
+        }
+
+        @media (max-width: 995px) {
+            .navbar-nav .nav-item{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+
+
 
 <div class="sticky_bar">
 

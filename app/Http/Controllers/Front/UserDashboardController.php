@@ -20,8 +20,7 @@ class UserDashboardController extends Controller
         return view('front.users.user_dashboard.index');
     }
     public function update_info()
-    {
-        // $profile_data = User::where('id', Auth::guard('user')->user()->id)->get();          
+    {         
         return view('front.users.user_dashboard.update_info');
     }
 
@@ -98,4 +97,11 @@ class UserDashboardController extends Controller
         }
         return view('front.users.user_dashboard.update_info');
     }
+
+
+    public function update_password()
+    {
+        return view('front.users.user_dashboard.update_password');
+    }
+
 }

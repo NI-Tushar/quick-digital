@@ -158,14 +158,15 @@
             Route::get('index', 'UserController@index')->name('user.index');
             //  Route::match(['get','post'], '')
             Route::post('check_current_password', 'UserController@checkCurrentPassword');
-            Route::match(['get', 'post'], 'update_password', 'UserController@updatePassword');
             Route::get('logout', 'UserController@logoutUser');
         });
         
         // _______________ CUSTOMER/USER DASHBOARD CONTROLLER
-        Route::get('/dashboard', 'UserDashboardController@index')->name('user.dashboard');;
-        Route::get('/update-info', 'UserDashboardController@update_info')->name('user.update');;
+        Route::get('/dashboard', 'UserDashboardController@index')->name('user.dashboard');
+        Route::get('/update-info', 'UserDashboardController@update_info')->name('user.update');
         Route::match(['get', 'post'], 'update_user_details', 'UserDashboardController@updateUserDetails');
+        Route::get('update-password', 'UserDashboardController@update_password')->name('password.update');
+        Route::match(['get', 'post'], 'update_password', 'UserDashboardController@updatePassword');
     });
 
 

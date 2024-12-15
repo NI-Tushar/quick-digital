@@ -132,7 +132,7 @@ document.getElementById('imageUpload').addEventListener('change', function(event
        </div>
 
        </div>
-       <button type="submit">সেভ করুন</button>
+       <button type="submit">আফডেট করুন</button>
      </form>   
    </div>
  </div>

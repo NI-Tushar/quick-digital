@@ -40,7 +40,7 @@
 
 
         <li>
-          <a href="{{ url('/user/update_user_password') }}">
+          <a href="{{ route('password.update') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="5" y="11" width="14" height="10" rx="2" ry="2"></rect>
           <path d="M12 11V7a4 4 0 0 1 8 0v4"></path>
@@ -147,22 +147,22 @@
       </li>
 
 
-      @if (Auth::guard('user')->check())
-            <li>
-                <a href="{{ url('user/logout') }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                        <polyline points="16 17 21 12 16 7"></polyline>
-                        <line x1="21" y1="12" x2="9" y2="12"></line>
-                    </svg>
-                    <span class="link_name" style="font-size: 15px;">লগ-আউট করুন</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li>
-                        <a class="link_name" style="font-size: 15px;" href="{{ url('user/logout') }}">লগ-আউট করুন</a>
-                    </li>
-                </ul>
-            </li>
+        @if (Auth::guard('user')->check())
+          <li>
+              <a href="{{ url('user/logout') }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span class="link_name" style="font-size: 15px;">লগ-আউট করুন</span>
+              </a>
+              <ul class="sub-menu blank">
+                  <li>
+                      <a class="link_name" style="font-size: 15px;" href="{{ url('user/logout') }}">লগ-আউট করুন</a>
+                  </li>
+              </ul>
+          </li>
         @endif
 
 
@@ -188,19 +188,13 @@
 
 
 
-
-
-
-
-
-
     
 <script>
     function show_sidebar_mov() {
       const sidebar = document.querySelector(".sidebar.close");
       const homeSection = document.querySelector(".home-section");
       const top_icon = document.querySelector(".toggle_expend");
-      top_icon.style.display = "none";
+
 
       // Check the current width of the sidebar
       if (sidebar.style.width === "78px") {
