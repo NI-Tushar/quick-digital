@@ -1,6 +1,4 @@
-:root{
-    --primery-color:#3A0256;
-  }
+
   body{
     width: 100%;
     padding: 0;
@@ -36,7 +34,7 @@
           margin: auto;
           max-width: 400px;
           width: 100%;
-          border: 2px solid var( --primery-color);
+          border: 2px solid var( --primary-color);
           display: flex;
           border-radius: 10px;
       }
@@ -53,7 +51,7 @@
       /* box-sizing: border-box; */
       padding: 25px;
       position: relative;
-      /* border-top: 5px solid var( --primery-color); */
+      /* border-top: 5px solid var( --primary-color); */
       -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -136,28 +134,28 @@
       display: flex;
   }
   .update_form_wrapper .input_field > span > svg {
-        margin: auto;
+      margin: auto;
       font-size: 15px;
   }
   .update_form_wrapper .textarea_field > span > svg {
       padding-top: 10px;
       font-size: 15px;
-    }
-  
-    /* ________________________ eye icon start */
-    .update_form_wrapper .input_field .toggle-icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-      color: #333;
-      height: 100%;
-      border-right: 1px solid #cccccc;
-      text-align: center;
-      width: 30px;
-      display: flex;
-      cursor: pointer;
   }
-    /* ________________________ eye icon end */
+  
+  /* ________________________ eye icon start */
+  .update_form_wrapper .input_field .toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #333;
+    height: 100%;
+    border-right: 1px solid #cccccc;
+    text-align: center;
+    width: 30px;
+    display: flex;
+    cursor: pointer;
+  }
+  /* ________________________ eye icon end */
   
   
   
@@ -198,7 +196,7 @@
       -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
       -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
       box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-      border: 1px solid var( --primery-color);
+      border: 1px solid var( --primary-color);
       background: #fafafa;
     }
   
@@ -218,15 +216,15 @@
       transition: all 0.3s ease-in-out;
       margin-top: 15px;
       background: transparent;
-      color: var( --primery-color);
-      border: 2px solid var( --primery-color);
+      color: var( --primary-color);
+      border: 2px solid var( --primary-color);
     }
     .update_form_wrapper input[type=submit]:hover {
-        background: var( --primery-color);
+        background: var( --primary-color);
         color: #fff;
     }
     /* .update_form_wrapper input[type=submit]:focus {
-      background: var( --primery-color);
+      background: var( --primary-color);
     } */
     .update_form_wrapper input[type=checkbox], .update_form_wrapper input[type=radio] {
       border: 0;
@@ -371,14 +369,14 @@
       z-index: 1;
       text-align: center;
       padding: 15px;
-      color: var( --primery-color);
+      color: var( --primary-color);
     }
     .update_form_wrapper .credit a {
-      color: var( --primery-color);
+      color: var( --primary-color);
     }
   
     .user_login_section .centered_login .title_container p{
-      color: var( --primery-color);
+      color: var( --primary-color);
     }
   
 
@@ -387,7 +385,7 @@
         padding-top: 25px;
     }
     .new_reg p{
-        color: var(--primery-color);
+        color: var(--primary-color);
         margin: 0;
         padding: 0;
         font-weight: 700;
@@ -407,14 +405,14 @@
         -ms-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         margin-top: 15px;
-        background: var( --primery-color);
+        background: var( --primary-color);
         color: #fff;
         border-radius: 5px;
     }
     .new_reg a button:hover {
         background: transparent;
-        color: var( --primery-color);
-        border: 2px solid var( --primery-color);
+        color: var( --primary-color);
+        border: 2px solid var( --primary-color);
     }
 
     .active p{
@@ -438,7 +436,7 @@
     /* ____________________________________ ACTIVE */
   
     .user_login_section .centered_login .active{
-      background-color: var( --primery-color);
+      background-color: var( --primary-color);
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       border-top-right-radius: 10px;
@@ -454,11 +452,11 @@
   }
   .user_login_section .centered_login .active input[type='submit']{
       background-color: aliceblue;
-      color: var( --primery-color);
+      color: var( --primary-color);
       border: 1px solid aliceblue;
   }
   .user_login_section .centered_login .active input[type='submit']:hover{
-      background-color: var( --primery-color);
+      background-color: var( --primary-color);
       color: aliceblue;
   }
     
@@ -587,7 +585,7 @@
         padding: 15px;
       }
       .user_login_section .centered_login .update_form_wrapper{
-        border: 2px solid var(--primery-color);
+        border: 2px solid var(--primary-color);
         padding: 0px;
         padding-top: 15px;
         width: 100%;
@@ -600,7 +598,7 @@
   
     .user_login_section .centered_login .active{
       padding-top: 15px;
-        background-color: var(--primery-color);
+        background-color: var(--primary-color);
         /* border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 10px;

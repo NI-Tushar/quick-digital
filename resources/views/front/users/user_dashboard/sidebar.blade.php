@@ -92,7 +92,7 @@
         
 
         <li>
-          <a href="">
+          <a href="{{ route('user.ebook') }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
             <path d="M4 4a2 2 0 0 1 2-2h13.5v17H6.5A2.5 2.5 0 0 0 4 19.5V4z" />

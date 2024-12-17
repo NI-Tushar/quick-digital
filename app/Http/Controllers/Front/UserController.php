@@ -112,53 +112,7 @@ class UserController extends Controller
         }
     }
 
-    public function updatePassword(Request $request)
-    {
-        if ($request->isMethod('post')) {
-            $data = $request->all();
-
-            // Check if the new password matches the confirmation password
-            if ($data['new_password'] !== $data['confirm_password']) {
-                return redirect()->back()->with('error_message', 'The new password and confirmation password do not match.');
-            }
-
-            // Define validation rules
-            $rules = [
-                'current_password_user' => 'required',
-                'new_password' => 'required|string|min:6|max:30',
-                'confirm_password' => 'required',
-            ];
-
-            // Define custom error messages
-            $messages = [
-                'new_password.min' => 'The new password must be at least 6 characters.',
-                'new_password.max' => 'The new password must not exceed 30 characters.',
-            ];
-
-            // Validate the request data
-            $validator = Validator::make($data, $rules, $messages);
-
-            // Check if validation fails
-            if ($validator->fails()) {
-                // If validation fails, set error message and redirect back
-                return redirect()->back()->with('error_message', $validator->errors()->first());
-            }
-
-            // Check current password
-            if (Hash::check($data['current_password_user'], Auth::guard('user')->user()->password)) {
-                // Update password
-                User::where('id', Auth::guard('user')->user()->id)->update([
-                    'password' => bcrypt($data['new_password'])
-                ]);
-                return view('quick_digital.index');
-                // return redirect()->back()->with('success_message', 'Password has been updated successfully!');
-            } else {
-                return redirect()->back()->with('error_message', 'Your current password is incorrect!');
-            }
-        }
-        return view('front.users.update_password');
-    }
-
+ 
     public function checkCurrentPassword(Request $request)
     {
         $data = $request->all();
@@ -168,8 +122,6 @@ class UserController extends Controller
             return "false";
         }
     }
-
-   
 
     public function logoutUser(Request $request)
     {

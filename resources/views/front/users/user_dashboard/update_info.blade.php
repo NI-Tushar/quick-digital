@@ -3,6 +3,7 @@
 @extends('front.users.user_dashboard.sidebar')
 
 <script src="https://kit.fontawesome.com/5f7bc44e9f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ url ('front/styles/update_user_details.css') }}">
 
 @section('content')
 
@@ -10,7 +11,6 @@
   <section class="home-section">
       <div class="home-content">
 
-      <link rel="stylesheet" href="{{ url ('front/styles/update_user_details.css') }}">
 
   <div class="form_section">
 

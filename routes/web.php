@@ -167,6 +167,8 @@
         Route::match(['get', 'post'], 'update_user_details', 'UserDashboardController@updateUserDetails');
         Route::get('update-password', 'UserDashboardController@update_password')->name('password.update');
         Route::match(['get', 'post'], 'update_password', 'UserDashboardController@updatePassword');
+
+        Route::get('your-ebook', 'UserDashboardController@your_ebook')->name('user.ebook');
     });
 
 

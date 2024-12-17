@@ -15,6 +15,12 @@
     <link rel="icon" href="{{ url('icon.png') }}" type="image/png">
     <!-- index -->
 
+    
+    <!-- Flipbook StyleSheet -->
+    <link href="{{ url ('front/dflip/css/dflip.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- Icons Stylesheet -->
+    <link href="{{ url ('front/dflip/css/themify-icons.min.css') }}" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="{{ url('front/styles/color.css') }}">
 
     <link rel="stylesheet" href="{{ url('front/styles/style.css') }}">
@@ -113,6 +119,13 @@
 
     {{-- video js --}}
     <script src="//vjs.zencdn.net/8.3.0/video.min.js"></script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url('front/dflip/js/libs/jquery.min.js') }}" type="text/javascript"></script>
+    <!-- Flipbook main Js file -->
+    <script src="{{ url('front/dflip/js/dflip.min.js') }}" type="text/javascript"></script>
 
 
 
