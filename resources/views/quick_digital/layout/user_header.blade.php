@@ -135,8 +135,8 @@
                             <ul class="navbar-nav" style="width:auto; height:auto;">
                                 <li class="nav-item">
                                     <a class="nav-link fw-semibold px-md-3" aria-current="page" 
-                                        href="{{ route('bootcamp.requestForm') }}" style="background: var(--primary-color);color:#ffff !important;">
-                                        বুট ক্যাম্প
+                                        href="{{ route('rep.requestForm') }}" style="background: var(--primary-color);color:#ffff !important;">
+                                        কুইক ব্যাবসা
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">

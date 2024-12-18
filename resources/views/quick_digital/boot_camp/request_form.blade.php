@@ -25,18 +25,169 @@
         background:transparent;
         border:1px solid rgb(58, 2, 86);
     }
-</style>
 
-    <main>
+    .hero {
+    background-image: linear-gradient(to bottom, #000000, #461E59);
+}
+.page_head_text{
+    height:auto;
+    width: 100%;
+    padding-top:25px;
+    color:var(--plyr-color-main);
+    font-size:35px;
+}
+.page_head_text h1{
+    width: 100%;
+    text-align:center;
+}
+.rounded{
+}
+.reg_button{
+    padding-left:10px;
+    padding-right:10px;
+    padding:20px;
+    background-color:var(--primary-color);
+    border:2px solid var(--plyr-color-main);
+    border-radius:10px;
+    font-size:25px;
+    font-weight:700;
+}
+.reg_button:hover{
+    background-color:var(--plyr-color-main);
+    border:2px solid var(--primary-color);
+}
+.iframe-wrapper{
+    border:1px solid red;
+}
+</style>
+<section class="hero text-white">
+        <div class="d-flex flex-column">
+            <div class="container max-width d-flex flex-column align-items-center">
+              <div class="page_head_text">
+                <h1>আমাদের কুইক ব্যাবসায় জয়েন করুন</h1>
+              </div>
+                <div class="d-flex flex-column justify-content-center align-items-center col-md-8 py-3">
+                    <div class="iframe-wrapper">
+                        <iframe src="{{ asset('front/assets/vid/quick_business.mp4') }}" title="" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-two lh-base pp__description py-3 fw-semibold">
+                    কুইক ব্যাবসা হলো অ্যাফিলিয়েট মার্কেটারদের জন্য একটি অনন্য সুযোগ! এখানে আপনি শিখবেন কীভাবে আমাদের প্রোডাক্ট এবং সার্ভিস বিভিন্ন জেলায় সেল করতে হয়। 
+                    আমাদের কুইক ব্যাবসা থেকে প্রয়োজনীয় দিকনির্দেশনা এবং সাপোর্ট পেয়ে, আপনি সেল বাড়িয়ে আমাদের কাছ থেকে সরাসরি প্রফিট অর্জন করতে পারবেন। ক্যারিয়ার গড়তে 
+                    এবং আয়ের নতুন পথ তৈরি করতে আজই জয়েন করুন আমাদের কুইক ব্যাবসা-এ!
+                    </h4>
+                </div>
+
+               
+                <p class="text-white text-center fw-bold fs-4 fs-sm-5 pt-4 pb-2">আমাদের সাথে জয়েন করতে রেজিস্ট্রেশন করুন</p>
+                <div class="justify-content-center">
+                    <div class="rounded my-2"href="" onclick="showPDF()">
+                        <button class="text-white reg_button">রেজিস্ট্রেশন করুন</button>
+                    </div>
+                </div>
+    
+        </div>
+        <div class="shapes-container d-flex mt-3">
+            <div id="right-box"></div>
+            <div id="left-box"></div>
+        </div>
+        </div>
+    </section>
+ <main>
         <section class="my-5">
             <div class="container">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h3 style="color: rgb(58, 2, 86);font-weight:900;">আমাদের Bootcamp এ জয়েন করুন</h3>
-                        <p>BootCamp হলো অ্যাফিলিয়েট মার্কেটারদের জন্য একটি অনন্য সুযোগ! এখানে আপনি শিখবেন কীভাবে আমাদের প্রোডাক্ট এবং সার্ভিস বিভিন্ন জেলায় সেল করতে হয়। আমাদের BootCamp থেকে প্রয়োজনীয় দিকনির্দেশনা এবং সাপোর্ট পেয়ে, আপনি সেল বাড়িয়ে আমাদের কাছ থেকে সরাসরি প্রফিট অর্জন করতে পারবেন। ক্যারিয়ার গড়তে এবং আয়ের নতুন পথ তৈরি করতে আজই জয়েন করুন আমাদের BootCamp-এ!</p>
+                        <h3 style="color: rgb(58, 2, 86);font-weight:900;">আমাদের কুইক ব্যাবসায় জয়েন করুন</h3>
                     </div>
                     <div  style="background-color:rgb(223, 223, 223);" class="card-body">
-                        <form action="{{ route('bootcamp.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('rep.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
+                            <div class="form-group mb-3">
+                                <label for="name" class="mb-1">আপনার পুরো নাম দিন</label>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="আপানার নাম" value="{{ old('name') }}">
+                                @error('name')
+                                    <span class="text-danger bold">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="email" class="mb-1">আপানার ই-মেইল দিন</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="আপানার ই-মেইল এড্রেস" value="{{ old('email') }}">
+                                @error('email')
+                                    <span class="text-danger bold">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="phone" class="mb-1">আপনার মোবাইল নম্বর দিন</label>
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="মোবাইল নম্বর- 01648800000" value="{{ old('phone') }}">
+                                @error('phone')
+                                <span class="text-danger bold">{{ $message }}</span>
+                            @enderror
+                            </div>
+
+                           
+
+                           
+                            <div class="form-group mb-3">
+                                <label for="gender" class="mb-1">Gender সিলেক্ট করুন</label>
+                                <div class="d-flex" style="gap: 1em">
+                                    <div class="form-check">
+                                        <input type="radio" name="gender" id="gender" value="Male" checked>
+                                        <label class="form-check-label" for="gender">
+                                          Male
+                                        </label>
+                                      </div>
+
+                                    <div class="form-check">
+                                        <input type="radio" name="gender" id="gender" value="Female">
+                                        <label class="form-check-label" for="gender">
+                                          Female
+                                        </label>
+                                    </div>
+                                </div>
+                                @error('gender')
+                                    <span class="text-danger bold">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            
+
+
+
+                            <div class="form-group mb-3">
+                                <button type="submit" class="btn">সাবমিট করুন</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+
+    <!-- <main>
+        <section style="display:none;" class="my-5">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3 style="color: rgb(58, 2, 86);font-weight:900;">আমাদের কুইক ব্যাবসায় জয়েন করুন</h3>
+                        <p>কুইক ব্যাবসা হলো অ্যাফিলিয়েট মার্কেটারদের জন্য একটি অনন্য সুযোগ! এখানে আপনি শিখবেন কীভাবে আমাদের প্রোডাক্ট এবং সার্ভিস বিভিন্ন জেলায় সেল করতে হয়। আমাদের কুইক ব্যাবসা থেকে প্রয়োজনীয় দিকনির্দেশনা এবং সাপোর্ট পেয়ে, আপনি সেল বাড়িয়ে আমাদের কাছ থেকে সরাসরি প্রফিট অর্জন করতে পারবেন। ক্যারিয়ার গড়তে এবং আয়ের নতুন পথ তৈরি করতে আজই জয়েন করুন আমাদের কুইক ব্যাবসা-এ!</p>
+                    </div>
+                    <div  style="background-color:rgb(223, 223, 223);" class="card-body">
+                        <form action="{{ route('rep.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="form-group mb-3">
@@ -262,7 +413,9 @@
 
 
 
-    </main>
+    </main> -->
+
+
 @endsection
 @push('script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

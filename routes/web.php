@@ -139,8 +139,8 @@
     });
 
     // Boot Request Form
-    Route::get('/bootcamp', [BootcampController::class, 'requestForm'])->name('bootcamp.requestForm');
-    Route::post('/bootcamp', [BootcampController::class, 'store'])->name('bootcamp.store');
+    Route::get('/rep', [BootcampController::class, 'requestForm'])->name('rep.requestForm');
+    Route::post('/rep', [BootcampController::class, 'store'])->name('rep.store');
 
 
 
